@@ -1,0 +1,20 @@
+{
+  "api_key_fields": {
+    "original": "",
+    "non_equivalent": "",
+    "equivalent": ""
+
+  },
+  "input_paths": {
+    "original": "output_mbppplus_new",
+    "non_equivalent": "output_mbppplus_new",
+    "equivalent": "output_mbppplus_new"
+  },
+  "output_paths": {
+    "original": "sample_output_LLMs_original_code/minimax",
+    "non_equivalent": "sample_output_LLMs_non_equivalent_code/minimax",
+    "equivalent": "sample_output_LLMs_equivalent_code/minimax"
+  },
+  "model_name": "minimaxai/minimax-m2.5",
+  "api_base_url": "https://integrate.api.nvidia.com/v1"
+}
