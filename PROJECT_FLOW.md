@@ -40,6 +40,7 @@
 **入口文件**: `load_dataset.py`
 
 **功能**:
+
 1. 从 HuggingFace 加载 evalplus/mbppplus 数据集
 2. 为每个任务创建独立的文件夹结构
 3. 生成关键文件:
@@ -48,6 +49,7 @@
    - `results.txt`: 预期的测试结果
 
 **关键处理逻辑** (load_dataset.py:15-36):
+
 ```
 process_test_field()
 ├── 定位 "inputs" 关键字
@@ -56,6 +58,7 @@ process_test_field()
 ```
 
 **输出结构**:
+
 ```
 output_mbppplus_new/
 └── task_{task_id}/
@@ -74,6 +77,7 @@ output_mbppplus_new/
 **功能**: 使用 LLM 生成语义等价的变异代码
 
 **变异规则** (equivalent_transform.py:124-146):
+
 1. **标识符与数据(ID)**: 函数/变量重命名、常量替换
 2. **语法简化(TSS)**: 简写展开、操作数交换
 3. **控制流(CF)**: for/while 循环互换、条件重构
@@ -81,6 +85,7 @@ output_mbppplus_new/
 5. **API重构(AFR)**: 等价API调用替换
 
 **LLM 调用流程** (equivalent_transform.py:33-68):
+
 ```
 call_llm()
 ├── 构建包含变异规则的系统提示
@@ -90,6 +95,7 @@ call_llm()
 ```
 
 **输出结构**:
+
 ```
 equivalent_transform_new/
 └── task_{task_id}.py    # LLM 生成的变异代码(语义等价)
@@ -104,6 +110,7 @@ equivalent_transform_new/
 **功能**: 将变异代码与测试框架拼接，生成可执行的测试文件
 
 **拼接逻辑** (splice_main_and_function.py:32-72):
+
 ```
 输入:
 ├── task_{id}.py (变异代码)
@@ -120,6 +127,7 @@ sample_inputs_equivalent.py = 变异代码 + 测试输入 + 结果写入逻辑
 ```
 
 **生成文件类型**:
+
 - `sample_inputs_equivalent.py`: 语义等价的测试代码
 - `sample_inputs_non_equivalent.py`: 语义不等价的测试代码
 - `sample_original_correct.py`: 原始正确代码
@@ -134,6 +142,7 @@ sample_inputs_equivalent.py = 变异代码 + 测试输入 + 结果写入逻辑
 **功能**: 在本地执行测试代码，收集实际运行结果
 
 **执行流程** (run_code.py:24-58):
+
 ```
 for each task_folder:
     1. 定位 sample_inputs_{type}.py
@@ -143,6 +152,7 @@ for each task_folder:
 ```
 
 **输出目录结构**:
+
 ```
 # 根据执行结果分类存储
 original_local/correct/      # 原始代码执行成功
@@ -154,6 +164,7 @@ non_equivalent_local/error/  # 非等价变异执行失败
 ```
 
 **输出文件格式** (task_{id}.txt):
+
 ```
 'result': [val1, val2, val3]
 'var1': [val1, val2]
@@ -169,6 +180,7 @@ non_equivalent_local/error/  # 非等价变异执行失败
 **功能**: 将代码发送给 LLM，获取 LLM 输出的执行结果
 
 **配置** (config1.json):
+
 ```json
 {
   "api_key_fields": {
@@ -185,6 +197,7 @@ non_equivalent_local/error/  # 非等价变异执行失败
 ```
 
 **执行流程** (run_tasks.py:31):
+
 ```
 execute_task_with_threads()
 ├── 并发处理多个任务
@@ -197,6 +210,7 @@ execute_task_with_threads()
 ```
 
 **Prompt 构建** (utils.py:59-93):
+
 ```
 You must execute the following Python code EXACTLY and return only the final results.
 
@@ -220,15 +234,16 @@ line2
 **功能**: 对比 LLM 输出与本地运行输出，找出第一个正确和第一个错误的测试用例
 
 **评估流程** (evaluate.py:17-122):
+
 ```
 对每个任务(task):
     1. 读取 LLM 输出 (sample_code_results.txt)
     2. 读取本地输出 (sample_code_compare_results.txt)
     3. 逐行对比过滤后的测试用例
-    
+  
     4. 找出第一个输出相同的输入 → 写入 *correct_inputs.txt
     5. 找出第一个输出不同的输入 → 写入 *error_inputs.txt
-    
+  
     6. 统计:
        - 完全正确: 所有测试用例输出相同
        - 部分正确: 部分测试用例输出相同
@@ -236,6 +251,7 @@ line2
 ```
 
 **关键过滤逻辑** (evaluate.py:75-79):
+
 ```python
 # 过滤掉无效行(变异前后结果相同，认为该测试用例无效)
 filtered_pairs = [
@@ -246,6 +262,7 @@ filtered_pairs = [
 ```
 
 **输出文件**:
+
 ```
 output_mbppplus_new/task_{id}/
 ├── original_correct_inputs.txt   # 第一个输出相同的输入
@@ -265,6 +282,7 @@ output_mbppplus_new/task_{id}/
 **功能**: 通过 Python sys.settrace 追踪代码执行过程中的变量变化序列
 
 **追踪原理** (analysis_tracer.py:14-46):
+
 ```
 sys.settrace(tracer)
 ├── 监听 line/return 事件
@@ -275,6 +293,7 @@ sys.settrace(tracer)
 ```
 
 **变量变化检测** (analysis_tracer.py:32-44):
+
 ```python
 prev_val = prev_locals.get(var, object())
 if var not in prev_locals or prev_val != val:
@@ -284,6 +303,7 @@ if var not in prev_locals or prev_val != val:
 ```
 
 **输出格式**:
+
 ```
 'result': [val1, val2, val3]
 'a': [1, 3, 7, 15]
@@ -292,6 +312,7 @@ if var not in prev_locals or prev_val != val:
 ```
 
 **批量执行** (run_tracer.py:20-52):
+
 ```
 run_tracer.py
 ├── 扫描 target_dir 下的目标文件
@@ -308,6 +329,7 @@ run_tracer.py
 **功能**: 将代码发送给 LLM，请求 LLM 模拟执行并返回变量变化序列
 
 **Prompt 构建** (run_llm_tracer.py:63-94):
+
 ```
 You must execute the following Python code EXACTLY and trace all variable changes.
 
@@ -327,6 +349,7 @@ Rules:
 ```
 
 **文件配置** (run_llm_tracer.py:15-22):
+
 ```python
 FILE_CONFIG = {
     "sample_original_correct.py": ("original_llm", "correct", "original"),
@@ -339,6 +362,7 @@ FILE_CONFIG = {
 ```
 
 **并发处理** (run_llm_tracer.py:148-157):
+
 - 6 路并发，每路处理一种文件类型
 - 内部串行执行确保稳定性
 
@@ -351,6 +375,7 @@ FILE_CONFIG = {
 **功能**: 对比 LLM 输出的变量序列与本地追踪的变量序列
 
 **对比流程** (evaluate_trace.py:50-126):
+
 ```
 compare_directories(llm_dir, local_dir)
 ├── 找到共同的文件 (task_*.txt)
@@ -365,11 +390,13 @@ compare_directories(llm_dir, local_dir)
 ```
 
 **评估指标**:
+
 - **result 相同率**: 最终结果相同的任务比例
 - **全变量相同率**: 所有变量变化序列都相同的任务比例
 - **变量匹配率**: 相同变量数量 / 基准变量数量
 
 **输出分类** (evaluate_trace.py:119-124):
+
 - `all_match_files`: 所有变量都相同的文件
 - `result_only_match_files`: result 相同但其他变量不同的文件
 
@@ -378,6 +405,7 @@ compare_directories(llm_dir, local_dir)
 ## 关键技术点
 
 ### 1. 线程安全的 LLM 客户端 (utils.py:9-14)
+
 ```python
 thread_local = threading.local()
 
@@ -388,6 +416,7 @@ def get_client(api_key):
 ```
 
 ### 2. 指数退避重试机制 (utils.py:21-39)
+
 ```python
 for attempt in range(max_retries):
     try:
@@ -397,6 +426,7 @@ for attempt in range(max_retries):
 ```
 
 ### 3. sys.settrace 变量追踪 (analysis_tracer.py:14-46)
+
 ```python
 def tracer(frame, event, arg):
     if event in ("line", "return"):

@@ -2,7 +2,15 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../empirical"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"python-envs.pythonProjects": [
+			
+		],
+		"git.ignoreLimitWarning": true
+	}
 }

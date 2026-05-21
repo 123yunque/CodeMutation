@@ -1,0 +1,13 @@
+{
+    "task_id": 269,
+    "code": "\ndef ascii_value(k):\n  return ord(k)\n",
+    "prompt": "Write a function to find the ascii value of a character.",
+    "source_file": "Benchmark Questions Verification V2.ipynb",
+    "test_imports": [],
+    "test_list": [
+        "assert ascii_value('A')==65",
+        "assert ascii_value('R')==82",
+        "assert ascii_value('S')==83"
+    ],
+    "test": "import numpy as np\nfrom math import inf\n\ndef is_floats(x) -> bool:\n    # check if it is float; List[float]; Tuple[float]\n    if isinstance(x, float):\n        return True\n    if isinstance(x, (list, tuple)):\n        return all(isinstance(i, float) for i in x)\n    if isinstance(x, np.ndarray):\n        return x.dtype == np.float64 or x.dtype == np.float32\n    return False\n\n\ndef assertion(out, exp, atol):\n    if atol == 0 and is_floats(exp):\n        atol = 1e-6\n    if out != exp and atol != 0:\n        assert np.allclose(out, exp, rtol=1e-07, atol=atol)\n    else:\n        assert out == exp, f\"out: {out}, exp: {exp}\"\n\n\ninputs = [['A'], ['R'], ['S'], ['@'], ['®'], ['!'], [' '], ['ص'], ['&'], ['\\n'], ['€'], ['^'], ['ä'], ['π'], ['~'], ['\\t'], ['©'], ['๑'], ['$'], ['7'], ['%'], ['['], ['{'], ['é'], ['\\x00'], ['\\x1d'], ['♥'], ['\\uffff'], ['\\x7f'], ['\\x80'], ['™'], ['文'], ['→'], ['F'], ['q'], ['E'], ['o'], ['W'], ['U'], ['O'], ['K'], ['v'], ['Z'], ['N'], ['P'], ['b'], ['y'], ['l'], ['V'], ['D'], ['u'], ['s'], ['I'], ['h'], ['H'], ['B'], ['k'], ['X'], ['L'], ['p'], ['Y'], ['c'], ['J'], ['T'], ['a'], ['e'], ['r'], ['G'], ['j'], ['m'], ['z'], ['n'], ['g'], ['t'], ['i'], ['d'], ['M'], ['x'], ['f'], ['C'], ['Q'], ['w']]\nresults = [65, 82, 83, 64, 174, 33, 32, 1589, 38, 10, 8364, 94, 228, 960, 126, 9, 169, 3665, 36, 55, 37, 91, 123, 233, 0, 29, 9829, 65535, 127, 128, 8482, 25991, 8594, 70, 113, 69, 111, 87, 85, 79, 75, 118, 90, 78, 80, 98, 121, 108, 86, 68, 117, 115, 73, 104, 72, 66, 107, 88, 76, 112, 89, 99, 74, 84, 97, 101, 114, 71, 106, 109, 122, 110, 103, 116, 105, 100, 77, 120, 102, 67, 81, 119]\nfor i, (inp, exp) in enumerate(zip(inputs, results)):\n    assertion(ascii_value(*inp), exp, 0)\n"
+}

@@ -1,0 +1,13 @@
+{
+    "task_id": 389,
+    "code": "\ndef find_lucas(n): \n\tif (n == 0): \n\t\treturn 2\n\tif (n == 1): \n\t\treturn 1\n\treturn find_lucas(n - 1) + find_lucas(n - 2) \n",
+    "prompt": "Write a function to find the n'th lucas number.",
+    "source_file": "Benchmark Questions Verification V2.ipynb",
+    "test_imports": [],
+    "test_list": [
+        "assert find_lucas(9) == 76",
+        "assert find_lucas(4) == 7",
+        "assert find_lucas(3) == 4"
+    ],
+    "test": "import numpy as np\nfrom math import inf\n\ndef is_floats(x) -> bool:\n    # check if it is float; List[float]; Tuple[float]\n    if isinstance(x, float):\n        return True\n    if isinstance(x, (list, tuple)):\n        return all(isinstance(i, float) for i in x)\n    if isinstance(x, np.ndarray):\n        return x.dtype == np.float64 or x.dtype == np.float32\n    return False\n\n\ndef assertion(out, exp, atol):\n    if atol == 0 and is_floats(exp):\n        atol = 1e-6\n    if out != exp and atol != 0:\n        assert np.allclose(out, exp, rtol=1e-07, atol=atol)\n    else:\n        assert out == exp, f\"out: {out}, exp: {exp}\"\n\n\ninputs = [[9], [4], [3], [15], [20], [25], [30], [0], [1], [2], [10], [True], [False], [19], [11], [24], [26], [16], [31], [18], [32], [33], [29], [27], [28], [8], [17], [7], [21], [12], [23], [22], [14], [13], [6], [5]]\nresults = [76, 7, 4, 1364, 15127, 167761, 1860498, 2, 1, 3, 123, 1, 2, 9349, 199, 103682, 271443, 2207, 3010349, 5778, 4870847, 7881196, 1149851, 439204, 710647, 47, 3571, 29, 24476, 322, 64079, 39603, 843, 521, 18, 11]\nfor i, (inp, exp) in enumerate(zip(inputs, results)):\n    assertion(find_lucas(*inp), exp, 0)\n"
+}

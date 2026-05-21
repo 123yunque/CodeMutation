@@ -1,0 +1,13 @@
+{
+    "task_id": 59,
+    "code": "\ndef is_octagonal(n): \n\treturn 3 * n * n - 2 * n \n",
+    "prompt": "Write a function to find the nth octagonal number.",
+    "source_file": "Mike's Copy of Benchmark Questions Verification V2.ipynb",
+    "test_imports": [],
+    "test_list": [
+        "assert is_octagonal(5) == 65",
+        "assert is_octagonal(10) == 280",
+        "assert is_octagonal(15) == 645"
+    ],
+    "test": "import numpy as np\nfrom math import inf\n\ndef is_floats(x) -> bool:\n    # check if it is float; List[float]; Tuple[float]\n    if isinstance(x, float):\n        return True\n    if isinstance(x, (list, tuple)):\n        return all(isinstance(i, float) for i in x)\n    if isinstance(x, np.ndarray):\n        return x.dtype == np.float64 or x.dtype == np.float32\n    return False\n\n\ndef assertion(out, exp, atol):\n    if atol == 0 and is_floats(exp):\n        atol = 1e-6\n    if out != exp and atol != 0:\n        assert np.allclose(out, exp, rtol=1e-07, atol=atol)\n    else:\n        assert out == exp, f\"out: {out}, exp: {exp}\"\n\n\ninputs = [[5], [10], [15], [100], [99], [98], [96], [101], [97], [102], [22], [True], [23], [103], [104], [21], [95], [105], [20], [7], [9], [8], [6], [4], [106], [24], [19], [11], [94], [25], [3], [26], [93], [12], [108], [92], [42], [41], [43], [107], [2], [1], [13], [14], [38], [39], [53], [37], [52], [18], [54], [91], [55], [51], [50], [40], [90], [89], [56], [17], [76], [109], [110], [111], [27], [16], [44], [57], [88], [77], [58], [75], [28], [113], [112], [87], [59], [78], [70], [71], [69], [86], [72], [45], [47], [46], [49], [29], [60], [36], [30], [85], [48], [73], [84], [114], [31], [35], [34], [79], [83]]\nresults = [65, 280, 645, 29800, 29205, 28616, 27456, 30401, 28033, 31008, 1408, 1, 1541, 31621, 32240, 1281, 26885, 32865, 1160, 133, 225, 176, 96, 40, 33496, 1680, 1045, 341, 26320, 1825, 21, 1976, 25761, 408, 34776, 25208, 5208, 4961, 5461, 34133, 8, 1, 481, 560, 4256, 4485, 8321, 4033, 8008, 936, 8640, 24661, 8965, 7701, 7400, 4720, 24120, 23585, 9296, 833, 17176, 35425, 36080, 36741, 2133, 736, 5720, 9633, 23056, 17633, 9976, 16725, 2296, 38081, 37408, 22533, 10325, 18096, 14560, 14981, 14145, 22016, 15408, 5985, 6533, 6256, 7105, 2465, 10680, 3816, 2640, 21505, 6816, 15841, 21000, 38760, 2821, 3605, 3400, 18565, 20501]\nfor i, (inp, exp) in enumerate(zip(inputs, results)):\n    assertion(is_octagonal(*inp), exp, 0)\n"
+}

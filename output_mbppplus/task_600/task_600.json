@@ -1,0 +1,13 @@
+{
+    "task_id": 600,
+    "code": "\ndef is_Even(n) : \n    return n % 2 == 0\n",
+    "prompt": "Write a python function to check whether the given number is even or not.",
+    "source_file": "Benchmark Questions Verification V2.ipynb",
+    "test_imports": [],
+    "test_list": [
+        "assert is_Even(1) == False",
+        "assert is_Even(2) == True",
+        "assert is_Even(3) == False"
+    ],
+    "test": "import numpy as np\nfrom math import inf\n\ndef is_floats(x) -> bool:\n    # check if it is float; List[float]; Tuple[float]\n    if isinstance(x, float):\n        return True\n    if isinstance(x, (list, tuple)):\n        return all(isinstance(i, float) for i in x)\n    if isinstance(x, np.ndarray):\n        return x.dtype == np.float64 or x.dtype == np.float32\n    return False\n\n\ndef assertion(out, exp, atol):\n    if atol == 0 and is_floats(exp):\n        atol = 1e-6\n    if out != exp and atol != 0:\n        assert np.allclose(out, exp, rtol=1e-07, atol=atol)\n    else:\n        assert out == exp, f\"out: {out}, exp: {exp}\"\n\n\ninputs = [[1], [2], [3], [-10], [-283], [-1000], [1000000000], [-999], [999999999], [-284], [-9], [False], [-282], [True], [999999998], [999999997], [-281], [-73], [-279], [-74], [94], [-280], [-72], [-278], [93], [-276], [999999995], [-285], [-277], [95], [-11], [-75], [-76], [1000000001], [-286], [-71], [92], [91], [-12], [-8], [1000000002], [90], [999999994], [89], [-1001], [1000000003], [-13], [-14], [-94], [999999996], [-95], [-98], [999999993], [-15], [76], [74], [40], [-96], [-70], [-97], [75], [41], [-99], [-19], [96], [88], [73], [39], [-16], [59], [16], [-69], [-77], [-43], [-44], [999999992], [77], [87], [-78], [18], [45], [8], [-100], [14], [-68], [-101], [13], [-79], [-287], [-102], [58], [-17], [38], [98], [-1002], [15], [1000000004], [57], [-288], [-1003], [60], [-20], [-998], [-7], [1000000005], [-18], [-1005]]\nresults = [False, True, False, True, False, True, True, False, False, True, False, True, True, False, True, False, False, False, False, True, True, True, True, True, False, True, False, False, False, False, False, False, True, False, True, False, True, False, True, True, True, True, True, False, False, False, False, True, True, True, False, True, False, False, True, True, True, True, True, False, False, False, False, False, True, True, False, False, True, False, True, False, False, False, True, True, False, False, True, True, False, True, True, True, True, False, False, False, False, True, True, False, True, True, True, False, True, False, True, False, True, True, True, False, False, True, False]\nfor i, (inp, exp) in enumerate(zip(inputs, results)):\n    assertion(is_Even(*inp), exp, 0)\n"
+}

@@ -1,0 +1,13 @@
+{
+    "task_id": 583,
+    "code": "\ndef catalan_number(num):\n    if num <= 1:\n         return 1   \n    res_num = 0\n    for i in range(num):\n        res_num += catalan_number(i) * catalan_number(num - i - 1)\n    return res_num\n",
+    "prompt": "Write a function which returns nth catalan number.",
+    "source_file": "Benchmark Questions Verification V2.ipynb",
+    "test_imports": [],
+    "test_list": [
+        "assert catalan_number(10)==16796",
+        "assert catalan_number(9)==4862",
+        "assert catalan_number(7)==429"
+    ],
+    "test": "import numpy as np\nfrom math import inf\n\ndef is_floats(x) -> bool:\n    # check if it is float; List[float]; Tuple[float]\n    if isinstance(x, float):\n        return True\n    if isinstance(x, (list, tuple)):\n        return all(isinstance(i, float) for i in x)\n    if isinstance(x, np.ndarray):\n        return x.dtype == np.float64 or x.dtype == np.float32\n    return False\n\n\ndef assertion(out, exp, atol):\n    if atol == 0 and is_floats(exp):\n        atol = 1e-6\n    if out != exp and atol != 0:\n        assert np.allclose(out, exp, rtol=1e-07, atol=atol)\n    else:\n        assert out == exp, f\"out: {out}, exp: {exp}\"\n\n\ninputs = [[10], [9], [7], [0], [1], [2], [3], [True], [4], [False], [5], [6], [8], [11], [12], [13], [15], [14]]\nresults = [16796, 4862, 429, 1, 1, 2, 5, 1, 14, 1, 42, 132, 1430, 58786, 208012, 742900, 9694845, 2674440]\nfor i, (inp, exp) in enumerate(zip(inputs, results)):\n    assertion(catalan_number(*inp), exp, 0)\n"
+}

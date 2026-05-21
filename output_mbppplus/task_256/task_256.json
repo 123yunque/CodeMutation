@@ -1,0 +1,13 @@
+{
+    "task_id": 256,
+    "code": "\ndef count_Primes_nums(n):\n    return sum(all(i % j != 0 for j in range(2, i)) for i in range(2, n))\n",
+    "prompt": "Write a python function that takes in a non-negative number and returns the number of prime numbers less than the given non-negative number.",
+    "source_file": "Benchmark Questions Verification V2.ipynb",
+    "test_imports": [],
+    "test_list": [
+        "assert count_Primes_nums(5) == 2",
+        "assert count_Primes_nums(10) == 4",
+        "assert count_Primes_nums(100) == 25"
+    ],
+    "test": "import numpy as np\nfrom math import inf\n\ndef is_floats(x) -> bool:\n    # check if it is float; List[float]; Tuple[float]\n    if isinstance(x, float):\n        return True\n    if isinstance(x, (list, tuple)):\n        return all(isinstance(i, float) for i in x)\n    if isinstance(x, np.ndarray):\n        return x.dtype == np.float64 or x.dtype == np.float32\n    return False\n\n\ndef assertion(out, exp, atol):\n    if atol == 0 and is_floats(exp):\n        atol = 1e-6\n    if out != exp and atol != 0:\n        assert np.allclose(out, exp, rtol=1e-07, atol=atol)\n    else:\n        assert out == exp, f\"out: {out}, exp: {exp}\"\n\n\ninputs = [[5], [10], [100], [1000], [1001], [1002], [1003], [999], [True], [False], [998], [65], [66], [67], [997], [68], [64], [1004], [1005], [99], [996], [63], [995], [1006], [1007], [1008], [62], [994], [86], [1009], [85], [61], [87], [60], [44], [1010], [1011], [45], [59], [80], [69], [70], [71], [98], [97], [79], [1012], [2], [1013], [84], [56], [1], [0], [81], [78], [43], [1014], [72], [1015], [90], [42], [41], [46], [88], [3], [1016], [57], [4], [38], [993], [1017], [77], [101], [1018], [83], [82], [76], [58], [73], [39], [74], [89], [40], [75], [1019], [96], [47], [94], [95], [55], [48], [54], [1020], [102], [53], [91], [992], [1021], [991], [11], [92], [37]]\nresults = [2, 4, 25, 168, 168, 168, 168, 168, 0, 0, 168, 18, 18, 18, 167, 19, 18, 168, 168, 25, 167, 18, 167, 168, 168, 168, 18, 167, 23, 168, 23, 17, 23, 17, 14, 169, 169, 14, 16, 22, 19, 19, 19, 25, 24, 21, 169, 0, 169, 23, 16, 0, 0, 22, 21, 13, 170, 20, 170, 24, 13, 12, 14, 23, 1, 170, 16, 2, 12, 167, 170, 21, 25, 170, 22, 22, 21, 16, 20, 12, 21, 23, 12, 21, 170, 24, 14, 24, 24, 16, 15, 16, 171, 26, 15, 24, 167, 171, 166, 4, 24, 11]\nfor i, (inp, exp) in enumerate(zip(inputs, results)):\n    assertion(count_Primes_nums(*inp), exp, 0)\n"
+}
