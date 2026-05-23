@@ -13,5 +13,5 @@ non_equivalent_local/
 original_llm/
 equivalent_llm/
 non_equivalent_llm/
-
+.vscode/
 
