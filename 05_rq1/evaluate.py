@@ -1,9 +1,21 @@
+# [auto-patched by patch_imports.py]
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).parent.parent))
+from paths import (
+    ROOT, CONFIG, CONFIG1, MBPP_DIR,
+    EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM,
+    LLM_ORIGINAL, LLM_EQUIV, LLM_NON_EQUIV,
+    LOCAL_ORIGINAL, LOCAL_EQUIV, LOCAL_NON_EQUIV,
+    LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
+)
+
 import os
 
-original_dir = "sample_output_LLMs_original_code/minimax"
-mbpp_dir = "output_mbppplus_new"
-equivalent_dir = "sample_output_LLMs_equivalent_code/minimax"
-non_equivalent_dir = "sample_output_LLMs_non_equivalent_code/minimax"
+original_dir = str(LLM_ORIGINAL / "minimax")
+mbpp_dir = str(MBPP_DIR)
+equivalent_dir = str(LLM_EQUIV / "minimax")
+non_equivalent_dir = str(LLM_NON_EQUIV / "minimax")
 """
 对比本地输出结果以及LLM输出结果，上面dir部分修改模型目录
 """

@@ -1,3 +1,15 @@
+# [auto-patched by patch_imports.py]
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).parent.parent))
+from paths import (
+    ROOT, CONFIG, CONFIG1, MBPP_DIR,
+    EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM,
+    LLM_ORIGINAL, LLM_EQUIV, LLM_NON_EQUIV,
+    LOCAL_ORIGINAL, LOCAL_EQUIV, LOCAL_NON_EQUIV,
+    LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
+)
+
 import os
 import json
 import re
@@ -12,7 +24,7 @@ from datasets import load_dataset
 ds = load_dataset("evalplus/mbppplus")["test"]
 output_model = "model.py"
 # 输出主目录
-output_dir = "output_mbppplus_new"
+output_dir = str(MBPP_DIR)
 os.makedirs(output_dir, exist_ok=True)
 
 
@@ -38,10 +50,10 @@ def process_test_field(test_str):
 def save_item(item):
     task_id = int(item["task_id"])
 
-    # 如果 task_id 小于 226，则直接跳过
-    if task_id < 226:
-        print(f"⏭ 跳过任务: task_{task_id} (ID < 226)")
-        return
+    # # 如果 task_id 小于 226，则直接跳过
+    # if task_id < 226:
+    #     print(f"⏭ 跳过任务: task_{task_id} (ID < 226)")
+    #     return
 
     # 创建任务文件夹
     folder_path = os.path.join(output_dir, f"task_{task_id}")

@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+
+# Generated datasets and outputs
+output_*/
+output_mbppplus*/
+equivalent_transform_new/
+non_equivalent_transform_new/
+sample_output_LLMs_*/
+original_local/
+equivalent_local/
+non_equivalent_local/
+original_llm/
+equivalent_llm/
+non_equivalent_llm/
+
+

@@ -1,22 +1,34 @@
+# [auto-patched by patch_imports.py]
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).parent.parent))
+from paths import (
+    ROOT, CONFIG, CONFIG1, MBPP_DIR,
+    EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM,
+    LLM_ORIGINAL, LLM_EQUIV, LLM_NON_EQUIV,
+    LOCAL_ORIGINAL, LOCAL_EQUIV, LOCAL_NON_EQUIV,
+    LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
+)
+
 import os
 
 # ================= 目录配置 =================
 llm_dirs = {
-    "Equivalent Correct": "equivalent_llm/correct",
-    "Equivalent Error": "equivalent_llm/error",
-    "Non-Equivalent Correct": "non_equivalent_llm/correct",
-    "Non-Equivalent Error": "non_equivalent_llm/error",
-    "Original Correct": "original_llm/correct",
-    "Original Error": "original_llm/error"
+    "Equivalent Correct": str(LLM_TRACE_EQUIV / "correct"),
+    "Equivalent Error": str(LLM_TRACE_EQUIV / "error"),
+    "Non-Equivalent Correct": str(LLM_TRACE_NON_EQUIV / "correct"),
+    "Non-Equivalent Error": str(LLM_TRACE_NON_EQUIV / "error"),
+    "Original Correct": str(LLM_TRACE_ORIGINAL / "correct"),
+    "Original Error": str(LLM_TRACE_ORIGINAL / "error")
 }
 
 local_dirs = {
-    "Equivalent Correct": "equivalent_local/correct",
-    "Equivalent Error": "equivalent_local/error",
-    "Non-Equivalent Correct": "non_equivalent_local/correct",
-    "Non-Equivalent Error": "non_equivalent_local/error",
-    "Original Correct": "original_local/correct",
-    "Original Error": "original_local/error"
+    "Equivalent Correct": str(LOCAL_EQUIV / "correct"),
+    "Equivalent Error": str(LOCAL_EQUIV / "error"),
+    "Non-Equivalent Correct": str(LOCAL_NON_EQUIV / "correct"),
+    "Non-Equivalent Error": str(LOCAL_NON_EQUIV / "error"),
+    "Original Correct": str(LOCAL_ORIGINAL / "correct"),
+    "Original Error": str(LOCAL_ORIGINAL / "error")
 }
 
 

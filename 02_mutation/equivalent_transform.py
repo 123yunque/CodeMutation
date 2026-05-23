@@ -1,3 +1,15 @@
+# [auto-patched by patch_imports.py]
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).parent.parent))
+from paths import (
+    ROOT, CONFIG, CONFIG1, MBPP_DIR,
+    EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM,
+    LLM_ORIGINAL, LLM_EQUIV, LLM_NON_EQUIV,
+    LOCAL_ORIGINAL, LOCAL_EQUIV, LOCAL_NON_EQUIV,
+    LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
+)
+
 import json
 import os
 import re
@@ -10,10 +22,10 @@ from httpx import ReadTimeout, ConnectError, HTTPStatusError
 API_BASE_URL = "https://api3.wlai.vip/v1"
 NVIDA_URL = "https://integrate.api.nvidia.com/v1"
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-config_path = os.path.join(current_dir, "config.json")
-output_path = os.path.join(current_dir, "equivalent_transform_new")
-input_dir = os.path.join(current_dir, "output_mbppplus_new")
+current_dir = str(ROOT)
+config_path = str(CONFIG)
+output_path = str(EQUIV_TRANSFORM)
+input_dir = str(MBPP_DIR)
 model_name = "gpt-5.1"
 """
 等价变异

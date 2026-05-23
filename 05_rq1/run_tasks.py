@@ -1,3 +1,15 @@
+# [auto-patched by patch_imports.py]
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).parent.parent))
+from paths import (
+    ROOT, CONFIG, CONFIG1, MBPP_DIR,
+    EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM,
+    LLM_ORIGINAL, LLM_EQUIV, LLM_NON_EQUIV,
+    LOCAL_ORIGINAL, LOCAL_EQUIV, LOCAL_NON_EQUIV,
+    LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
+)
+
 import argparse
 import json
 import os
@@ -17,7 +29,7 @@ python run_tasks.py --mode original --output_name gpt51 --model_name gpt-5.1
 """
 def main():
     # 加载配置文件
-    with open("config1.json", "r", encoding="utf-8") as f:
+    with open(str(CONFIG1), "r", encoding="utf-8") as f:
         config = json.load(f)
     # 设置命令行参数解析
     parser = argparse.ArgumentParser()

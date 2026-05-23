@@ -11,6 +11,7 @@
 		"python-envs.pythonProjects": [
 			
 		],
-		"git.ignoreLimitWarning": true
+		"git.ignoreLimitWarning": true,
+		"commentTranslate.targetLanguage": "zh-CN"
 	}
 }

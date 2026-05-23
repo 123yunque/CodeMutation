@@ -1,4 +1,16 @@
 # batch_llm_tracer.py
+# [auto-patched by patch_imports.py]
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).parent.parent))
+from paths import (
+    ROOT, CONFIG, CONFIG1, MBPP_DIR,
+    EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM,
+    LLM_ORIGINAL, LLM_EQUIV, LLM_NON_EQUIV,
+    LOCAL_ORIGINAL, LOCAL_EQUIV, LOCAL_NON_EQUIV,
+    LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
+)
+
 import json
 import os
 import threading
@@ -9,18 +21,18 @@ from openai import OpenAI, APITimeoutError
 from httpx import ReadTimeout, ConnectError, HTTPStatusError
 
 # ================= 配置区 =================
-INPUT_DIR = "output_mbppplus_new"
+INPUT_DIR = str(MBPP_DIR)
 
 """
 让LLM给变量变化序列
 """
 # 目标文件 -> (输出基目录, 输出子目录, api_key_fields中的key)
 FILE_CONFIG = {
-    "sample_original_correct.py":       ("original_llm",       "correct", "original"),
+    "sample_original_correct.py":       (str(LLM_TRACE_ORIGINAL),       "correct", "original"),
     "sample_original_error.py":         ("original_llm",       "error",   "original"),
-    "sample_equivalent_correct.py":     ("equivalent_llm",     "correct", "equivalent"),
+    "sample_equivalent_correct.py":     (str(LLM_TRACE_EQUIV),     "correct", "equivalent"),
     "sample_equivalent_error.py":       ("equivalent_llm",     "error",   "equivalent"),
-    "sample_non_equivalent_correct.py": ("non_equivalent_llm", "correct", "non_equivalent"),
+    "sample_non_equivalent_correct.py": (str(LLM_TRACE_NON_EQUIV), "correct", "non_equivalent"),
     "sample_non_equivalent_error.py":   ("non_equivalent_llm", "error",   "non_equivalent"),
 }
 # ==========================================
@@ -163,7 +175,7 @@ def run(model_name, api_key_fields):
 
 
 def main():
-    with open("config1.json", "r", encoding="utf-8") as f:
+    with open(str(CONFIG1), "r", encoding="utf-8") as f:
         config = json.load(f)
 
     import argparse
