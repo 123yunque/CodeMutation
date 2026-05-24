@@ -10,6 +10,7 @@ from paths import (
     LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
 )
 
+import json
 import os
 
 base_dir = str(MBPP_DIR)
@@ -29,6 +30,23 @@ with open(results_file, 'w', encoding='utf-8') as f:
     for item in result:
         f.write(str(item) + "\n")
 """
+
+
+def parse_input_lines(path):
+    parsed_inputs = []
+    if not os.path.exists(path):
+        return parsed_inputs
+
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                parsed_inputs.append(json.loads(line))
+            except json.JSONDecodeError:
+                parsed_inputs.append(line)
+    return parsed_inputs
 
 for folder in os.listdir(base_dir):
     subdir = os.path.join(base_dir, folder)
@@ -56,11 +74,7 @@ for folder in os.listdir(base_dir):
 
     # 读取 code_inputs.txt，逐行加入 inputs 数组
     if os.path.exists(input_txt_path):
-        with open(input_txt_path, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:  # 跳过空行
-                    inputs.append(line)
+        inputs = parse_input_lines(input_txt_path)
     else:
         print(f"提示：{subdir} 下没有 code_inputs.txt，inputs 将为空数组")
 
@@ -78,7 +92,7 @@ for folder in os.listdir(base_dir):
         f.write(code_content)
         f.write("\n\ninputs = [\n")
         for item in inputs:
-            f.write(f"    {item},\n")
+            f.write(f"    {repr(item)},\n")
         f.write("]\n\n")
         f.write(base_output_path)
         # f.writelines(last_11_lines)

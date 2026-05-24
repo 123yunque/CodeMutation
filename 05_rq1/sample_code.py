@@ -1,8 +1,11 @@
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).parent.parent))
+from paths import ROOT, MBPP_DIR
+
 import os
 
-base_dir = "output_mbppplus_new"
-# 获取当前脚本所在目录
-current_dir = os.path.dirname(os.path.abspath(__file__))
+base_dir = str(MBPP_DIR)
 
 base_output_path = """
 import os
@@ -12,8 +15,8 @@ inputs_file = os.path.join(current_dir, 'sample_code_inputs.txt')
 results_file = os.path.join(current_dir, 'sample_code_results.txt')
 """
 
-# ✨ 新增：在外层提前读取同级目录下的 model.py
-model_path = os.path.join(current_dir, "model.py")
+# ✨ 新增：在外层提前读取目录下的 model.py
+model_path = str( "model.py")
 model_content = ""
 if os.path.exists(model_path):
     with open(model_path, "r", encoding="utf-8") as f:

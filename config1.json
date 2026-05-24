@@ -1,8 +1,8 @@
 {
   "api_key_fields": {
-    "original": "",
-    "non_equivalent": "",
-    "equivalent": ""
+    "original": "${NVIDIA_API_KEY}",
+    "non_equivalent": "${NVIDIA_API_KEY}",
+    "equivalent": "${NVIDIA_API_KEY}"
 
   },
   "input_paths": {

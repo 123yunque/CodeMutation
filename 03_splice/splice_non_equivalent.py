@@ -10,6 +10,8 @@ from paths import (
     LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
 )
 
+import ast
+import json
 import os
 
 base_dir = str(MBPP_DIR)
@@ -23,7 +25,7 @@ results_file = os.path.join(current_dir, 'sample_code_results_non_equivalent.txt
 
 result = []
 for inp in inputs:
-    result.append(fun1(*inp))
+    result.append({func_name}(*inp))
 # 写 results，每项一行
 with open(results_file, 'w', encoding='utf-8') as f:
     for item in result:
@@ -41,6 +43,35 @@ with open(results_file, 'w', encoding='utf-8') as f:
 """
 
 
+def parse_input_lines(path):
+    parsed_inputs = []
+    if not os.path.exists(path):
+        return parsed_inputs
+
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                parsed_inputs.append(json.loads(line))
+            except json.JSONDecodeError:
+                parsed_inputs.append(line)
+    return parsed_inputs
+
+
+def get_first_function_name(code_text):
+    try:
+        tree = ast.parse(code_text)
+    except SyntaxError:
+        return "fun1"
+
+    for node in tree.body:
+        if isinstance(node, ast.FunctionDef):
+            return node.name
+    return "fun1"
+
+
 for folder in os.listdir(base_dir):
     subdir = os.path.join(base_dir, folder)
 
@@ -50,7 +81,6 @@ for folder in os.listdir(base_dir):
         continue
 
     code_path = os.path.join(fun_dir, fun_name)
-    combined_path = os.path.join(subdir, "combined.py")
     input_txt_path = os.path.join(subdir, "sample_code_inputs.txt")
     output_path = os.path.join(subdir, "sample_inputs_non_equivalent.py")
 
@@ -69,32 +99,22 @@ for folder in os.listdir(base_dir):
 
     # 读取 code_inputs.txt，逐行加入 inputs 数组
     if os.path.exists(input_txt_path):
-        with open(input_txt_path, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line:  # 跳过空行
-                    inputs.append(line)
+        inputs = parse_input_lines(input_txt_path)
     else:
         print(f"提示：{subdir} 下没有 code_inputs.txt，inputs 将为空数组")
 
     # 读取 code.py
     with open(code_path, "r", encoding="utf-8") as f:
         code_content = f.read()
-
-    # 读取 combined.py 的最后 11 行
-    with open(combined_path, "r", encoding="utf-8") as f:
-        combined_lines = f.readlines()
-        last_11_lines = combined_lines[-11:-8]
+    func_name = get_first_function_name(code_content)
 
     # 合并写入新的文件
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(code_content)
         f.write("\n\ninputs = [\n")
         for item in inputs:
-            f.write(f"    {item},\n")
+            f.write(f"    {repr(item)},\n")
         f.write("]\n\n")
-        # f.write(base_output_path)
-        f.writelines(last_11_lines)
-        f.write(write_file_lines)
+        f.write(base_output_path.format(func_name=func_name))
 
     print(f"已生成: {output_path}")
