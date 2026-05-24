@@ -15,6 +15,6 @@
     "non_equivalent": "sample_output_LLMs_non_equivalent_code/minimax",
     "equivalent": "sample_output_LLMs_equivalent_code/minimax"
   },
-  "model_name": "minimaxai/minimax-m2.5",
+  "model_name": "minimaxai/minimax-m2.7",
   "api_base_url": "https://integrate.api.nvidia.com/v1"
 }

@@ -2,10 +2,10 @@
   "API_KEY": "${YUNWU_API_KEY}",
   "GUIJI_API_KEY": "",
   "SPARK_API_KEY": "",
-  "NVIDA_API_KEY": "",
+  "NVIDA_API_KEY": "${NVIDIA_API_KEY}",
   "NVIDA_2" : "",
   "NVIDA_3" : "",
-  "original": "",
+  "original": "${NVIDIA_API_KEY}",
   "non_equivalent": "",
-  "equivalent": ""
+  "equivalent": "${NVIDIA_API_KEY}"
 }

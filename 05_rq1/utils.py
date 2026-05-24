@@ -11,7 +11,7 @@ from httpx import ReadTimeout, ConnectError, HTTPStatusError
 run_tasks.py 用到的工具 👇base_url写api的地址 config1.json里定义好apikey
 """
 thread_local = threading.local()
-def get_client(api_key, base_url="https://integrate.api.nvidia.com/v1"):
+def get_client(api_key=os.getenv("NVIDIA_API_KEY"), base_url="https://integrate.api.nvidia.com/v1"):
     """生成线程安全的 OpenAI 客户端"""
     if not hasattr(thread_local, "client"):
         thread_local.client = OpenAI(api_key=api_key, base_url=base_url)
