@@ -1,8 +1,8 @@
 {
   "api_key_fields": {
     "original": "${YUNWU_API_KEY}",
-    "non_equivalent": "${NVIDIA_API_KEY}",
-    "equivalent": "${NVIDIA_API_KEY}"
+    "non_equivalent": "${YUNWU_API_KEY}",
+    "equivalent": "${YUNWU_API_KEY}"
 
   },
   "input_paths": {

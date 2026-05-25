@@ -1,7 +1,12 @@
+import json
 import threading
 import os
 import re
 import time
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).parent.parent))
+from paths import CONFIG1
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from openai import OpenAI, APITimeoutError
 from httpx import ReadTimeout, ConnectError, HTTPStatusError
@@ -10,9 +15,22 @@ from httpx import ReadTimeout, ConnectError, HTTPStatusError
 """
 run_tasks.py 用到的工具 👇base_url写api的地址 config1.json里定义好apikey
 """
+with open(str(CONFIG1), "r", encoding="utf-8") as f:
+    config = json.load(f)
+
+_API_BASE_URL = config.get("yunwu_base_url")
+if not _API_BASE_URL:
+    raise ValueError("api_base_url is required in config1.json")
+
 thread_local = threading.local()
-def get_client(api_key=os.getenv("NVIDIA_API_KEY"), base_url="https://integrate.api.nvidia.com/v1"):
+
+api_key  =  config["api_key_fields"].get("non_equivalent")
+
+def get_client(api_key=None, base_url=_API_BASE_URL):
     """生成线程安全的 OpenAI 客户端"""
+
+    if not api_key:
+        raise ValueError("api_key is required (config1.json or environment variable)")
     if not hasattr(thread_local, "client"):
         thread_local.client = OpenAI(api_key=api_key, base_url=base_url)
     return thread_local.client

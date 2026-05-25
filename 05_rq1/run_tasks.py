@@ -46,7 +46,10 @@ def main():
     model_name = args.model_name
     # 配置其他路径和参数
     api_key = config["api_key_fields"][mode]
-    #api_key = os.getenv("NVIDIA_API_KEY")
+    if isinstance(api_key, str) and api_key.startswith("${") and api_key.endswith("}"):
+            api_key = os.getenv(api_key[2:-1])
+    
+    print(api_key[:4] + "..." + api_key[-4:])
     input_dir = config["input_paths"][mode]
     filename = ""
     if mode == "original":
