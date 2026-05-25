@@ -1,6 +1,6 @@
 {
   "api_key_fields": {
-    "original": "${NVIDIA_API_KEY}",
+    "original": "${YUNWU_API_KEY}",
     "non_equivalent": "${NVIDIA_API_KEY}",
     "equivalent": "${NVIDIA_API_KEY}"
 
@@ -15,6 +15,7 @@
     "non_equivalent": "sample_output_LLMs_non_equivalent_code/minimax",
     "equivalent": "sample_output_LLMs_equivalent_code/minimax"
   },
-  "model_name": "minimaxai/minimax-m2.7",
-  "api_base_url": "https://integrate.api.nvidia.com/v1"
+  "model_name": "gpt-5.1",
+  "api_base_url": "https://integrate.api.nvidia.com/v1",
+  "yunwu_base_url": "https://api3.wlai.vip/v1"
 }

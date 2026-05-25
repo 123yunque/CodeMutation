@@ -19,14 +19,18 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from openai import OpenAI, APITimeoutError
 from httpx import ReadTimeout, ConnectError, HTTPStatusError
 
-API_BASE_URL = "https://api3.wlai.vip/v1"
-NVIDA_URL = "https://integrate.api.nvidia.com/v1"
-
 current_dir = str(ROOT)
 config_path = str(CONFIG)
+config1_path = str(CONFIG1)
 output_path = str(EQUIV_TRANSFORM)
 input_dir = str(MBPP_DIR)
-model_name = "gpt-5.1"
+
+with open(config1_path, "r", encoding="utf-8") as _f:
+    _cfg = json.load(_f)
+model_name = _cfg.get("model_name", "gpt-5.1")
+API_BASE_URL = _cfg.get("yunwu_base_url")
+if not API_BASE_URL:
+    raise ValueError("yunwu_base_url is required in config1.json")
 """
 等价变异
 """
