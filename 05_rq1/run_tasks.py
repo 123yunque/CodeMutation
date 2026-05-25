@@ -19,7 +19,7 @@ from utils import execute_task_with_threads
 RQ1:让模型给输出结果  控制台输入命令 👇是格式
 python run_tasks.py --mode non_equivalent --output_name minimax --model_name minimaxai/minimax-m2.7
 python run_tasks.py --mode non_equivalent --output_name glm --model_name z-ai/glm5
-python run_tasks.py --mode equivalent --output_name minimax --model_name minimaxai/minimax-m2.7
+python 05_rq1/run_tasks.py --mode equivalent --output_name minimax --model_name minimaxai/minimax-m2.7
 python run_tasks.py --mode equivalent --output_name glm --model_name z-ai/glm5
 python 05_rq1/run_tasks.py --mode original --output_name minimax --model_name minimaxai/minimax-m2.7
 python 05_rq1/run_tasks.py --mode original --output_name glm --model_name z-ai/glm5
@@ -46,6 +46,7 @@ def main():
     model_name = args.model_name
     # 配置其他路径和参数
     api_key = config["api_key_fields"][mode]
+    #api_key = os.getenv("NVIDIA_API_KEY")
     input_dir = config["input_paths"][mode]
     filename = ""
     if mode == "original":

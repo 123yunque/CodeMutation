@@ -15,3 +15,5 @@ equivalent_llm/
 non_equivalent_llm/
 .vscode/
 
+test.api.py
+config_loader.py
