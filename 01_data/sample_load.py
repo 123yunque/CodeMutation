@@ -22,7 +22,8 @@ from datasets import load_dataset
 """
 # 加载数据集（这里使用 evalplus/mbppplus）
 ds = load_dataset("evalplus/mbppplus")["test"]
-output_model = "model.py"
+#model_path = os.path.join(os.path.dirname(__file__), "model.py")
+output_model = os.path.join(os.path.dirname(__file__), "model.py")
 # 输出主目录
 output_dir = str(MBPP_DIR)
 os.makedirs(output_dir, exist_ok=True)
@@ -91,14 +92,14 @@ def save_item(item):
             # 1. 保存所有输入到 code_inputs.txt
             with open(inputs_path, "w", encoding="utf-8") as f:
                 for inp in inputs_list:
-                    f.write(json.dumps(inp, ensure_ascii=False) + "\n")
+                    f.write(repr(inp) + "\n")
 
             # 2. 随机保留 10 行到 sample_code_inputs.txt
             with open(sample_inputs_path, "w", encoding="utf-8") as f:
                 sample_size = min(10, len(inputs_list))
                 sampled_inputs = random.sample(inputs_list, sample_size)
                 for inp in sampled_inputs:
-                    f.write(json.dumps(inp, ensure_ascii=False) + "\n")
+                    f.write(repr(inp) + "\n")
         except Exception as e:
             print(f"Warning: Failed to parse inputs for task {task_id}: {e}")
     # ===============================================================

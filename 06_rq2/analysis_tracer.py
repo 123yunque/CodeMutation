@@ -49,7 +49,7 @@ def trace_variables(filepath: str) -> dict:
         source = f.read()
 
     code = compile(source, filepath, "exec")
-    ns = {}
+    ns = {"__file__": filepath, "__name__": "__main__"}
     sys.settrace(tracer)
     try:
         exec(code, ns)

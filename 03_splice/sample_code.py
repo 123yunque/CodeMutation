@@ -16,7 +16,7 @@ results_file = os.path.join(current_dir, 'sample_code_results.txt')
 """
 
 # ✨ 新增：在外层提前读取目录下的 model.py
-model_path = str( "model.py")
+model_path = os.path.join(os.path.dirname(__file__), "model.py")
 model_content = ""
 if os.path.exists(model_path):
     with open(model_path, "r", encoding="utf-8") as f:
@@ -33,7 +33,7 @@ for folder in os.listdir(base_dir):
     code_path = os.path.join(subdir, "code.py")
     combined_path = os.path.join(subdir, "combined.py")
     input_txt_path = os.path.join(subdir, "sample_code_inputs.txt")
-    output_path = os.path.join(subdir, "sample_original.py")
+    output_path = os.path.join(subdir, "sample_inputs.py")
 
     inputs = []
 
@@ -68,12 +68,12 @@ for folder in os.listdir(base_dir):
         for item in inputs:
             f.write(f"    {item},\n")
         f.write("]\n\n")
-        # f.write(base_output_path)
+        f.write(base_output_path)
         f.writelines(last_11_lines)
 
-        # ✨ 追加提取好的 model.py 内容
-        # if model_content:
-        #     f.write("\n")  # 换行，确保与上一段代码隔开
-        #     f.write(model_content)
+        #✨ 追加提取好的 model.py 内容
+        if model_content:
+            f.write("\n")  # 换行，确保与上一段代码隔开
+            f.write(model_content)
 
     print(f"已生成: {output_path}")

@@ -125,7 +125,7 @@ for folder in os.listdir(base_dir):
     if not os.path.isdir(subdir):
         continue
 
-    code_path = os.path.join(base_dir,folder, "new_sample_inputs.py")
+    code_path = os.path.join(base_dir,folder, "sample_inputs.py")
     output_path = os.path.join(subdir, "output_log.py")
 
     inputs = []

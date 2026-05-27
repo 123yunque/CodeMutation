@@ -17,7 +17,7 @@ from analysis_tracer import trace_variables
 
 # ================= 配置区 =================
 TARGET_DIR = str(MBPP_DIR)
-OUTPUT_DIR = str(LOCAL_NON_EQUIV / "error")
+OUTPUT_DIR = str(LOCAL_ORIGINAL / "error")
 TARGET_FILE = "sample_non_equivalent_error.py"
 # ==========================================
 

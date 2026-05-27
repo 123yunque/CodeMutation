@@ -1,6 +1,10 @@
 import os
+import sys as _sys
+from pathlib import Path as _Path
+_sys.path.insert(0, str(_Path(__file__).parent.parent))
+from paths import MBPP_DIR
 
-base_dir = "output_mbppplus"
+base_dir = str(MBPP_DIR)
 
 for root, dirs, files in os.walk(base_dir):
     # 只检查第一层子目录

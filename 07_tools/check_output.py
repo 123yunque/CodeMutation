@@ -1,8 +1,8 @@
 import os
 
-original_dir = "sample_output_LLMs_original_code/minimax"
-equivalent_dir = "sample_output_LLMs_equivalent_code/minimax"
-non_equivalent_dir = "sample_output_LLMs_non_equivalent_code/minimax"
+original_dir = "sample_output_LLMs_original_code/gpt51"
+equivalent_dir = "sample_output_LLMs_equivalent_code/gpt51"
+non_equivalent_dir = "sample_output_LLMs_non_equivalent_code/gpt51"
 
 def get_one_line_files(dir_path):
     """
@@ -47,7 +47,8 @@ def main():
     print("🚀 开始统计单行文件...")
 
     for label, path in directories.items():
-        print(f"\n{"=" * 10} 【{label}】目录 {"=" * 10}")
+        sep = "=" * 10
+        print(f"\n{sep} 【{label}】目录 {sep}")
 
         files_list = get_one_line_files(path)
         count = len(files_list)

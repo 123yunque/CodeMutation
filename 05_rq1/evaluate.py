@@ -12,10 +12,10 @@ from paths import (
 
 import os
 
-original_dir = str(LLM_ORIGINAL / "minimax")
+original_dir = str(LLM_ORIGINAL / "gpt51")
 mbpp_dir = str(MBPP_DIR)
-equivalent_dir = str(LLM_EQUIV / "minimax")
-non_equivalent_dir = str(LLM_NON_EQUIV / "minimax")
+equivalent_dir = str(LLM_EQUIV / "gpt51")
+non_equivalent_dir = str(LLM_NON_EQUIV / "gpt51")
 """
 对比本地输出结果以及LLM输出结果，上面dir部分修改模型目录
 """
@@ -50,7 +50,7 @@ def calculate_LLM_and_local(file_path):
     elif "non_equivalent" in file_path:
         file_type = "non_equivalent"
         result_path = non_equivalent_dir
-        sample_code_name = "sample_code_compare_results.txt"
+        sample_code_name = "sample_code_results_non_equivalent.txt"
         fileter_correct_inputs_name = "non_equivalent_correct_inputs.txt"
         fileter_error_inputs_name = "non_equivalent_error_inputs.txt"
     else:

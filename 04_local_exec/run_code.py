@@ -37,7 +37,7 @@ def main():
 
     for folder in folders:
         subdir = os.path.join(base_dir, folder)
-        script_path = os.path.join(subdir, "sample_inputs_non_equivalent.py")#等价sample_inputs_equivalent.py  非等价sample_inputs_non_equivalent.py
+        script_path = os.path.join(subdir, "sample_original.py")#等价sample_inputs_equivalent.py  非等价sample_inputs_non_equivalent.py
 
         if not os.path.exists(script_path):
             print(f"⏭ 跳过 {folder}: 找不到 new_sample_inputs.py")
@@ -49,7 +49,7 @@ def main():
             # 使用 subprocess.run 执行脚本
             # cwd=subdir 非常关键，它保证脚本的工作目录是该子文件夹，从而正确解析 __file__
             result = subprocess.run(
-                ["python", "sample_inputs_non_equivalent.py"],
+                ["python", "sample_inputs.py"],
                 cwd=subdir,
                 capture_output=True,  # 捕获输出，不在控制台刷屏
                 text=True,  # 将输出解码为字符串
