@@ -1,0 +1,16 @@
+{
+  "equivalent": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "missing": 0,
+    "failures": []
+  },
+  "non_equivalent": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "missing": 0,
+    "failures": []
+  }
+}
