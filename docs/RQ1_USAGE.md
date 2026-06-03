@@ -16,8 +16,7 @@ pipeline_main.py              # RQ1 本地执行/验证/重试总入口
   mutation_main.py            # 变异代码生成入口
   mutation_utils.py           # prompt 与变异生成工具
   mutation_runner.py          # LLM 调用和代码校验
-  pipeline/
-    pipeline_lib.py           # pipeline 业务编排函数
+pipeline_lib.py               # pipeline 业务编排函数
 
 03_splice/
   splice_main.py              # sample 脚本生成入口
@@ -166,22 +165,34 @@ sample_code_compare_results.txt
 
 ## 7. 本地验证变异质量
 
-只使用已有执行结果验证：
+只使用已有执行结果验证。默认不重新执行本地 sample，不调用 LLM retry：
 
 ```powershell
-python pipeline_main.py --skip_exec --skip_retry
+python pipeline_main.py
 ```
 
-重新执行并验证：
+重新执行本地 sample 后再验证：
 
 ```powershell
-python pipeline_main.py --skip_retry
+python pipeline_main.py --run_exec
 ```
 
 快速验证：
 
 ```powershell
-python pipeline_main.py --skip_exec --skip_retry --limit 5
+python pipeline_main.py --limit 5
+```
+
+对失败变异进行 LLM feedback retry：
+
+```powershell
+python pipeline_main.py --retry
+```
+
+retry 前后都重新执行本地 sample：
+
+```powershell
+python pipeline_main.py --run_exec --retry
 ```
 
 报告输出：
@@ -254,7 +265,7 @@ python 05_rq1\rq1_main.py evaluate --mode all --output_name gpt51 --no_write_inp
 ```powershell
 python 03_splice\splice_main.py --mode all
 python 04_local_exec\exec_main.py --mode all --timeout 30 --compare_non_equivalent
-python pipeline_main.py --skip_exec --skip_retry
+python pipeline_main.py
 ```
 
 完整前置流程：
@@ -264,7 +275,7 @@ python 02_mutation\mutation_main.py --mode equivalent --max_workers 2
 python 02_mutation\mutation_main.py --mode non_equivalent --max_workers 2
 python 03_splice\splice_main.py --mode all
 python 04_local_exec\exec_main.py --mode all --timeout 30 --compare_non_equivalent
-python pipeline_main.py --skip_exec --skip_retry
+python pipeline_main.py
 ```
 
 完整 RQ1 正式流程：
@@ -313,7 +324,6 @@ python 05_rq1\rq1_main.py evaluate --mode all --output_name gpt51 --report repor
 01_data/load_dataset_new.py
 02_mutation/equivalent_transform.py
 02_mutation/noequivalent_transform.py
-02_mutation/pipeline/pipeline_main.py
 03_splice/sample_code.py
 03_splice/splice_equivalent.py
 03_splice/splice_non_equivalent.py

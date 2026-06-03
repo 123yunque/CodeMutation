@@ -27,11 +27,13 @@ from paths import MBPP_DIR, EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM
 
 import json
 import os
-import subprocess
-import sys
 
 
-RUN_CODE = ROOT / "04_local_exec" / "exec_main.py"
+LOCAL_EXEC_DIR = ROOT / "04_local_exec"
+if str(LOCAL_EXEC_DIR) not in _sys.path:
+    _sys.path.insert(0, str(LOCAL_EXEC_DIR))
+
+from exec_utils import print_exec_summary, run_mode
 
 
 def read_lines(path):
@@ -418,27 +420,17 @@ def retry_with_feedback(report, mode, limit=None, max_examples=3, max_attempts=3
     return summary
 
 
-def run_script(args, label, stop_on_error):
-    print(f"\n>>> {label}")
-    result = subprocess.run(args, cwd=str(ROOT))
-    if result.returncode != 0:
-        print(f"[warn] {label} exited with code {result.returncode}")
-        if stop_on_error:
-            sys.exit(result.returncode)
-    return result.returncode
-
-
-def add_arg(args, flag, value):
-    if value is None:
-        return args
-    return args + [flag, str(value)]
-
-
 def run_local_exec(mode, timeout, limit, stop_on_error):
-    args = [sys.executable, str(RUN_CODE), "--mode", mode]
-    args = add_arg(args, "--timeout", timeout)
-    args = add_arg(args, "--limit", limit)
-    return run_script(args, f"Local exec: {mode}", stop_on_error)
+    print(f"\n>>> Local exec: {mode}")
+    summary = run_mode(mode, timeout, limit)
+    if summary is None:
+        if stop_on_error:
+            raise RuntimeError(f"Local exec failed to start for mode={mode}")
+        return 1
+    print_exec_summary(mode, summary)
+    if stop_on_error and (summary["failed"] or summary["missing"] or summary["timeout"]):
+        raise RuntimeError(f"Local exec failed for mode={mode}: {summary}")
+    return 0
 
 
 def print_report_summary(title, report):
@@ -464,9 +456,9 @@ def run_pipeline(
     report_dir="reports",
     overwrite=False,
     include_missing=False,
-    skip_exec=False,
-    skip_retry=False,
-    skip_revalidate=False,
+    run_exec=False,
+    retry=False,
+    revalidate_after_retry=True,
     skip_original=False,
     stop_on_error=False,
 ):
@@ -475,7 +467,7 @@ def run_pipeline(
     report_path = report_dir / "mutation_failures.json"
     report_path_after = report_dir / "mutation_failures_after_retry.json"
 
-    if not skip_exec:
+    if run_exec:
         if not skip_original:
             run_local_exec("original", timeout, limit, stop_on_error)
         run_local_exec("equivalent", timeout, limit, stop_on_error)
@@ -483,7 +475,7 @@ def run_pipeline(
 
     report = validate_mutations(report_path, limit, max_examples)
 
-    if not skip_retry:
+    if retry:
         retry_with_feedback(
             report,
             "equivalent",
@@ -503,14 +495,17 @@ def run_pipeline(
             include_missing,
         )
 
-        if not skip_exec:
+        if run_exec:
             run_local_exec("equivalent", timeout, limit, stop_on_error)
             run_local_exec("non_equivalent", timeout, limit, stop_on_error)
 
-    if not skip_revalidate:
-        report_after = validate_mutations(report_path_after, limit, max_examples)
-        print_report_summary("Final report", report_after)
-        return report_after
+        if revalidate_after_retry:
+            report_after = validate_mutations(report_path_after, limit, max_examples)
+            print_report_summary("Final report", report_after)
+            return report_after
 
-    print_report_summary("Initial report", report)
+        print_report_summary("Initial report", report)
+        return report
+
+    print_report_summary("Validation report", report)
     return report
