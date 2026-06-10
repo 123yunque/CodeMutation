@@ -1,0 +1,871 @@
+[
+  {
+    "mode": "original",
+    "output_name": "gpt51_20_npflower",
+    "tasks": [
+      {
+        "task_id": "task_100",
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 10,
+        "diff_lines": [
+          4,
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_101",
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 10,
+        "diff_lines": [
+          6,
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_102",
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_103",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_104",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_105",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_106",
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 10,
+        "diff_lines": [
+          7,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_108",
+        "status": "partial_same",
+        "same_count": 7,
+        "total_count": 10,
+        "diff_lines": [
+          2,
+          3,
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_109",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          5,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_11",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          4,
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_111",
+        "status": "partial_same",
+        "same_count": 5,
+        "total_count": 10,
+        "diff_lines": [
+          3,
+          4,
+          7,
+          8,
+          9
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_113",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_116",
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 10,
+        "diff_lines": [
+          2,
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_118",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          6
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_119",
+        "status": "partial_same",
+        "same_count": 5,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          3,
+          6,
+          8,
+          9
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_12",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_120",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_123",
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          4,
+          7,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_124",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 10,
+        "diff_lines": [
+          3,
+          5,
+          7,
+          8
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_125",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      }
+    ],
+    "summary": {
+      "task_count": 20,
+      "valid_task_count": 20,
+      "same_cases": 128,
+      "total_cases": 200,
+      "accuracy": 0.64,
+      "full_same_tasks": 4,
+      "partial_same_tasks": 15,
+      "all_diff_tasks": 1,
+      "missing_file_tasks": 0,
+      "no_valid_case_tasks": 0,
+      "missing_output_lines": 0,
+      "extra_output_lines": 0
+    }
+  },
+  {
+    "mode": "equivalent",
+    "output_name": "gpt51_20_npflower",
+    "tasks": [
+      {
+        "task_id": "task_100",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_101",
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 10,
+        "diff_lines": [
+          5,
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_102",
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_103",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_104",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_105",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_106",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          4,
+          5,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_108",
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 10,
+        "diff_lines": [
+          3,
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_109",
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_11",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          4,
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_111",
+        "status": "partial_same",
+        "same_count": 5,
+        "total_count": 10,
+        "diff_lines": [
+          4,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_113",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_116",
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 10,
+        "diff_lines": [
+          2,
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_118",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          6
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_119",
+        "status": "partial_same",
+        "same_count": 5,
+        "total_count": 10,
+        "diff_lines": [
+          3,
+          6,
+          7,
+          8,
+          9
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_12",
+        "status": "partial_same",
+        "same_count": 3,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_120",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_123",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_124",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 10,
+        "diff_lines": [
+          3,
+          5,
+          7,
+          8
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_125",
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      }
+    ],
+    "summary": {
+      "task_count": 20,
+      "valid_task_count": 20,
+      "same_cases": 127,
+      "total_cases": 200,
+      "accuracy": 0.635,
+      "full_same_tasks": 4,
+      "partial_same_tasks": 16,
+      "all_diff_tasks": 0,
+      "missing_file_tasks": 0,
+      "no_valid_case_tasks": 0,
+      "missing_output_lines": 0,
+      "extra_output_lines": 0
+    }
+  },
+  {
+    "mode": "non_equivalent",
+    "output_name": "gpt51_20_npflower",
+    "tasks": [
+      {
+        "task_id": "task_100",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_101",
+        "status": "no_valid_cases",
+        "same_count": 0,
+        "total_count": 0,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 10
+      },
+      {
+        "task_id": "task_102",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          8
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_103",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_104",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_105",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_106",
+        "status": "no_valid_cases",
+        "same_count": 0,
+        "total_count": 0,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 10
+      },
+      {
+        "task_id": "task_108",
+        "status": "no_valid_cases",
+        "same_count": 0,
+        "total_count": 0,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 10
+      },
+      {
+        "task_id": "task_109",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          5,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_11",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 9,
+        "diff_lines": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 1,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_111",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_113",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_116",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_118",
+        "status": "no_valid_cases",
+        "same_count": 0,
+        "total_count": 0,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 10
+      },
+      {
+        "task_id": "task_119",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_12",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_120",
+        "status": "partial_same",
+        "same_count": 7,
+        "total_count": 10,
+        "diff_lines": [
+          2,
+          6,
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_123",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_124",
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          3,
+          5,
+          6,
+          7,
+          8
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_125",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          8,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      }
+    ],
+    "summary": {
+      "task_count": 20,
+      "valid_task_count": 16,
+      "same_cases": 80,
+      "total_cases": 159,
+      "accuracy": 0.5031446540880503,
+      "full_same_tasks": 3,
+      "partial_same_tasks": 11,
+      "all_diff_tasks": 2,
+      "missing_file_tasks": 0,
+      "no_valid_case_tasks": 4,
+      "missing_output_lines": 1,
+      "extra_output_lines": 0
+    }
+  }
+]

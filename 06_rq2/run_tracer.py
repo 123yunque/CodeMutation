@@ -1,68 +1,115 @@
-# batch_run.py
-# [auto-patched by patch_imports.py]
-import sys as _sys
-from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).parent.parent))
-from paths import (
-    ROOT, CONFIG, CONFIG1, MBPP_DIR,
-    EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM,
-    LLM_ORIGINAL, LLM_EQUIV, LLM_NON_EQUIV,
-    LOCAL_ORIGINAL, LOCAL_EQUIV, LOCAL_NON_EQUIV,
-    LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
-)
-
+import argparse
 import os
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 from analysis_tracer import trace_variables
-
-# ================= 配置区 =================
-TARGET_DIR = str(MBPP_DIR)
-OUTPUT_DIR = str(LOCAL_ORIGINAL / "error")
-TARGET_FILE = "sample_non_equivalent_error.py"
-# ==========================================
-
-def format_result(var_sequences: dict) -> str:
-    # lines = ["=== 变量变化序列收集结果 ==="]
-    lines = []
-    for var, vals in var_sequences.items():
-        lines.append(f"'{var}': {vals}")
-    return "\n".join(lines)
+from paths import (
+    LOCAL_EQUIV,
+    LOCAL_NON_EQUIV,
+    LOCAL_ORIGINAL,
+    MBPP_DIR,
+)
 
 
-def run_batch():
-    target_path = Path(TARGET_DIR)
-    py_files = sorted(target_path.rglob(TARGET_FILE))
+TRACE_CONFIGS = {
+    "original": {
+        "root": LOCAL_ORIGINAL,
+        "script_prefix": "original",
+    },
+    "equivalent": {
+        "root": LOCAL_EQUIV,
+        "script_prefix": "equivalent",
+    },
+    "non_equivalent": {
+        "root": LOCAL_NON_EQUIV,
+        "script_prefix": "non_equivalent",
+    },
+}
 
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    abs_output_dir = Path(OUTPUT_DIR).absolute()
 
-    print(f"🔍 找到 {len(py_files)} 个目标文件，开始批量追踪...")
-    print(f"📁 结果输出至: {abs_output_dir}\n")
+def format_result(var_sequences):
+    return "\n".join(f"'{var}': {vals}" for var, vals in var_sequences.items())
 
-    success_count = 0
-    fail_count = 0
 
-    for py_file in py_files:
-        task_name = py_file.parent.name
-        print(f"▶️  [{task_name}] ", end="", flush=True)
-        # if task_name == "task_733":
-        #     continue
+def iter_task_dirs(limit=None, task=None):
+    if task:
+        task_dirs = [Path(MBPP_DIR) / task]
+    else:
+        task_dirs = sorted(path for path in Path(MBPP_DIR).glob("task_*") if path.is_dir())
+    if limit is not None:
+        task_dirs = task_dirs[:limit]
+    return task_dirs
+
+
+def run_route(mode, status, overwrite=False, limit=None, task=None):
+    config = TRACE_CONFIGS[mode]
+    target_file = f"sample_{config['script_prefix']}_{status}.py"
+    output_dir = Path(config["root"]) / status
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    stats = {"success": 0, "missing": 0, "skipped": 0, "failed": 0, "without_result": 0}
+    print(f"Tracing mode={mode}, status={status}, script={target_file}, output={output_dir}")
+
+    for task_dir in iter_task_dirs(limit, task):
+        if not task_dir.is_dir():
+            stats["missing"] += 1
+            print(f"[missing-task] {task_dir.name}")
+            continue
+
+        source_path = task_dir / target_file
+        output_path = output_dir / f"{task_dir.name}.txt"
+
+        if not source_path.exists():
+            stats["missing"] += 1
+            print(f"[missing] {task_dir.name}: {target_file}")
+            continue
+        if output_path.exists() and not overwrite:
+            stats["skipped"] += 1
+            print(f"[skip] {task_dir.name}: {output_path.name}")
+            continue
+
         try:
-            var_sequences = trace_variables(str(py_file.absolute()))
+            var_sequences = trace_variables(str(source_path.resolve()))
+        except Exception as exc:
+            stats["failed"] += 1
+            print(f"[failed] {task_dir.name}: {exc}")
+            continue
 
-            dest = abs_output_dir / f"{task_name}.txt"
-            with open(dest, "w", encoding="utf-8") as f:
-                f.write(format_result(var_sequences))
+        output_path.write_text(format_result(var_sequences), encoding="utf-8")
+        stats["success"] += 1
+        if "result" not in var_sequences:
+            stats["without_result"] += 1
+            print(f"[written-no-result] {task_dir.name}: {output_path.name}")
+        else:
+            print(f"[written] {task_dir.name}: {output_path.name} ({len(var_sequences)} vars)")
 
-            print(f"✅ 已保存 → {dest.name}  ({len(var_sequences)} 个变量)")
-            success_count += 1
+    return stats
 
-        except Exception as e:
-            print(f"❌ 失败: {e}")
-            fail_count += 1
 
-    print(f"\n🎉 完成！成功: {success_count}，失败: {fail_count}")
+def main():
+    parser = argparse.ArgumentParser(description="Generate local RQ2 variable traces.")
+    parser.add_argument("--mode", choices=("all",) + tuple(TRACE_CONFIGS), default="all")
+    parser.add_argument("--status", choices=("all", "correct", "error"), default="all")
+    parser.add_argument("--overwrite", action="store_true")
+    parser.add_argument("--limit", type=int)
+    parser.add_argument("--task", help="Optional task folder name, for example task_100")
+    args = parser.parse_args()
+
+    modes = tuple(TRACE_CONFIGS) if args.mode == "all" else (args.mode,)
+    statuses = ("correct", "error") if args.status == "all" else (args.status,)
+
+    for mode in modes:
+        for status in statuses:
+            stats = run_route(mode, status, overwrite=args.overwrite, limit=args.limit, task=args.task)
+            print(
+                f"Done {mode}/{status}. success={stats['success']}, "
+                f"missing={stats['missing']}, skipped={stats['skipped']}, "
+                f"failed={stats['failed']}, without_result={stats['without_result']}"
+            )
 
 
 if __name__ == "__main__":
-    run_batch()
+    main()

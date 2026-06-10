@@ -1,16 +1,1014 @@
 {
   "equivalent": {
-    "total": 1,
-    "passed": 1,
-    "failed": 0,
-    "missing": 0,
-    "failures": []
+    "total": 378,
+    "passed": 374,
+    "failed": 4,
+    "missing": 4,
+    "failures": [
+      {
+        "task_id": "task_592",
+        "reason": "missing_result",
+        "original_path": "",
+        "equiv_path": "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_592\\sample_code_results_equivalent.txt"
+      },
+      {
+        "task_id": "task_6",
+        "reason": "missing_result",
+        "original_path": "",
+        "equiv_path": "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_6\\sample_code_results_equivalent.txt"
+      },
+      {
+        "task_id": "task_751",
+        "reason": "missing_result",
+        "original_path": "",
+        "equiv_path": "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_751\\sample_code_results_equivalent.txt"
+      },
+      {
+        "task_id": "task_797",
+        "reason": "missing_result",
+        "original_path": "",
+        "equiv_path": "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_797\\sample_code_results_equivalent.txt"
+      }
+    ]
   },
   "non_equivalent": {
-    "total": 1,
-    "passed": 1,
-    "failed": 0,
-    "missing": 0,
-    "failures": []
+    "total": 378,
+    "passed": 328,
+    "failed": 50,
+    "missing": 5,
+    "failures": [
+      {
+        "task_id": "task_103",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[2, 5]",
+            "output": "0"
+          },
+          {
+            "line": 2,
+            "input": "[0, 1]",
+            "output": "0"
+          },
+          {
+            "line": 3,
+            "input": "[1, 9]",
+            "output": "0"
+          }
+        ]
+      },
+      {
+        "task_id": "task_12",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[[999994, 999993, 1], [1000000, 999999, 999998], [999994, 999993, 1], [999997, 999996, 999995], [999994, 999993, 1], [999997, 999996, 999995]]]",
+            "output": "[[999994, 999993, 1], [999994, 999993, 1], [999994, 999993, 1], [999997, 999996, 999995], [999997, 999996, 999995], [1000000, 999999, 999998]]"
+          },
+          {
+            "line": 2,
+            "input": "[[[9, 8, 7], [6, 5, 4], [0, -1, -2], [3, 2, 1], [3, 2, 1]]]",
+            "output": "[[0, -1, -2], [3, 2, 1], [3, 2, 1], [6, 5, 4], [9, 8, 7]]"
+          },
+          {
+            "line": 3,
+            "input": "[[[-5, -9, -8, -9, -9, -5], [-5, -9, -8, -9, -9, -5]]]",
+            "output": "[[-5, -9, -8, -9, -9, -5], [-5, -9, -8, -9, -9, -5]]"
+          }
+        ]
+      },
+      {
+        "task_id": "task_123",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[97]",
+            "output": "1"
+          },
+          {
+            "line": 2,
+            "input": "[5000]",
+            "output": "6715.0"
+          },
+          {
+            "line": 3,
+            "input": "[74]",
+            "output": "40.0"
+          }
+        ]
+      },
+      {
+        "task_id": "task_125",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "['0000001111000000000011111111111100000000100000000000011111111110000001111000000111100000011110000001111111100000000111000001011111111111111111111111111111100000000111111000000000000100000000111000001011111000000011111111111100000000100000000000000000000000011111111110000000000000000001111111111111111000000111111111011111111110000001111000000111100000011111111111111111111111111111111111111111111111111']",
+            "output": "52"
+          },
+          {
+            "line": 2,
+            "input": "['0000001110000010011111']",
+            "output": "9"
+          },
+          {
+            "line": 3,
+            "input": "['0000001111000000000001111111111111']",
+            "output": "13"
+          }
+        ]
+      },
+      {
+        "task_id": "task_128",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[3, 'python is a programming language']",
+            "output": "['python', 'programming', 'language']"
+          },
+          {
+            "line": 2,
+            "input": "[0, 'ajklamteseting']",
+            "output": "['ajklamteseting']"
+          },
+          {
+            "line": 3,
+            "input": "[2, 'heogramming language']",
+            "output": "['heogramming', 'language']"
+          }
+        ]
+      },
+      {
+        "task_id": "task_131",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "['CDFCCGBCDBDFCBG']",
+            "output": "CDFCCGBCDBDFCBG"
+          },
+          {
+            "line": 2,
+            "input": "['BCDFCCGBCDCBDFCBCD']",
+            "output": "BCDFCCGBCDCBDFCBCD"
+          },
+          {
+            "line": 3,
+            "input": "['BDFG']",
+            "output": "BDFG"
+          }
+        ]
+      },
+      {
+        "task_id": "task_133",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[19, -65, 57, 39, 152, -639, 121, 44, 90, -190]]",
+            "output": "-894"
+          },
+          {
+            "line": 2,
+            "input": "[[-10, 15, -14.2, 13, -18, 12, -20.7, 12]]",
+            "output": "-62.900000000000006"
+          },
+          {
+            "line": 3,
+            "input": "[[]]",
+            "output": "0"
+          }
+        ]
+      },
+      {
+        "task_id": "task_167",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[38]",
+            "output": "64"
+          },
+          {
+            "line": 2,
+            "input": "[987654321098]",
+            "output": "1099511627776"
+          },
+          {
+            "line": 3,
+            "input": "[1234567890122]",
+            "output": "2199023255552"
+          }
+        ]
+      },
+      {
+        "task_id": "task_20",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[-36.42835541123631]",
+            "output": "False"
+          },
+          {
+            "line": 2,
+            "input": "[-30.593131467080347]",
+            "output": "False"
+          },
+          {
+            "line": 3,
+            "input": "[-69.13149487461008]",
+            "output": "False"
+          }
+        ]
+      },
+      {
+        "task_id": "task_223",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[True, True, True], 53, 2]",
+            "output": "False"
+          },
+          {
+            "line": 2,
+            "input": "[[28.804254987535558], 5, 2]",
+            "output": "False"
+          },
+          {
+            "line": 3,
+            "input": "[[52], 3, 0]",
+            "output": "False"
+          }
+        ]
+      },
+      {
+        "task_id": "task_255",
+        "reason": "no_difference",
+        "total_lines": 0,
+        "examples": []
+      },
+      {
+        "task_id": "task_271",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[91]",
+            "output": "3129395464832"
+          },
+          {
+            "line": 2,
+            "input": "[1000005]",
+            "output": "5333509335746684266738664156640141600"
+          },
+          {
+            "line": 3,
+            "input": "[1000001]",
+            "output": "5333381333506666986666984000160000032"
+          }
+        ]
+      },
+      {
+        "task_id": "task_285",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "['icixcxhxicixcxhxhh']",
+            "output": "False"
+          },
+          {
+            "line": 2,
+            "input": "['icicichxhx']",
+            "output": "False"
+          },
+          {
+            "line": 3,
+            "input": "['iicKDZDlWIDTdicixhRhxicicicxhxhicixxhxhhixxhxhhxh']",
+            "output": "False"
+          }
+        ]
+      },
+      {
+        "task_id": "task_297",
+        "reason": "missing_result",
+        "original_path": "",
+        "mutated_path": "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_297\\sample_code_results_non_equivalent.txt"
+      },
+      {
+        "task_id": "task_3",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[9994]",
+            "output": "True"
+          },
+          {
+            "line": 2,
+            "input": "[63]",
+            "output": "True"
+          },
+          {
+            "line": 3,
+            "input": "[7918]",
+            "output": "True"
+          }
+        ]
+      },
+      {
+        "task_id": "task_311",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[98768]",
+            "output": "115152"
+          },
+          {
+            "line": 2,
+            "input": "[124]",
+            "output": "126"
+          },
+          {
+            "line": 3,
+            "input": "[89]",
+            "output": "121"
+          }
+        ]
+      },
+      {
+        "task_id": "task_414",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[1, 3, 2, 1, 2, 2], [1, 3, 2, 1, 2, 2]]",
+            "output": "True"
+          },
+          {
+            "line": 2,
+            "input": "[[3, 3000000, 1, 2, 4, 3, -93, 3, 3000000], [3, 3000000, 1, 2, 4, 3, -93, 3, 3000000]]",
+            "output": "True"
+          },
+          {
+            "line": 3,
+            "input": "[[2, 2, -34, 3], [2, 2, -34, 3]]",
+            "output": "True"
+          }
+        ]
+      },
+      {
+        "task_id": "task_433",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[76.11828953745851, -24.9567031174266, -21.950010757474818, 28.64651047073241, 39.03098002919728, -29.07079657602243, -28.530054745009153, -88.95249619481227, -29.07079657602243, 76.11828953745851, 76.11828953745851, -24.9567031174266], 3]",
+            "output": "False"
+          },
+          {
+            "line": 2,
+            "input": "[[True, True, False, True, True, True, False, False], -10]",
+            "output": "False"
+          },
+          {
+            "line": 3,
+            "input": "[[-24.9567031174266, -21.950010757474818, 28.64651047073241, 39.03098002919728, -29.07079657602243, 28.64651047073241, -28.530054745009153, -88.95249619481227, 76.11828953745851, -29.07079657602243, 76.11828953745851, 76.11828953745851], -30]",
+            "output": "False"
+          }
+        ]
+      },
+      {
+        "task_id": "task_557",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "['ABCDEFGHIJKLMNOABCDEABCDEFGHIJKLMNOPQRSTUVHWXYZFGHIJKLABCDEFGTHINJKLMNOPQRSTUABCDEABCDEFGHIJKLABCDEABCDEFGHIJKLMNOPQRSTUVHABCDEFGHIJKLMNOPEFGHIJKLMNOPQRSTUVZSTUVHWXYZWXYZFGHIJKLMNOPQRSTUVWXYZMNOPQRSTUVHABCDEFGHIJKLMABCDEFGHIJKLMNOPQRSTUVWXYZNOBPQRSTUVHWXYZWXYZFGHIJKLMNOPQRSTUVWXYZVRSTUVWXYZPUV']",
+            "output": "abcdefghijklmnoabcdeabcdefghijklmnopqrstuvhwxyzfghijklabcdefgthinjklmnopqrstuabcdeabcdefghijklabcdeabcdefghijklmnopqrstuvhabcdefghijklmnopefghijklmnopqrstuvzstuvhwxyzwxyzfghijklmnopqrstuvwxyzmnopqrstuvhabcdefghijklmabcdefghijklmnopqrstuvwxyznobpqrstuvhwxyzwxyzfghijklmnopqrstuvwxyzvrstuvwxyzpuv"
+          },
+          {
+            "line": 2,
+            "input": "['ABCDEFGHIJKLMNOABCDEABCDEFGHIJKLMNOPDQRSTUVHWXYZFGHIJKLABCDEFGTHIJKLMNOPQRSTUABCDEABCDEFGHIJKLABCDEABCDSTUVHABCDEFGHIJKLMABCDEFGHIJKLMNOPQRSTUVWXYZNOPQRSTUVHWXYZWXYZFGHIJKLMNOPQRSTUVWXYZVRSTUVWXYZPUV']",
+            "output": "abcdefghijklmnoabcdeabcdefghijklmnopdqrstuvhwxyzfghijklabcdefgthijklmnopqrstuabcdeabcdefghijklabcdeabcdstuvhabcdefghijklmabcdefghijklmnopqrstuvwxyznopqrstuvhwxyzwxyzfghijklmnopqrstuvwxyzvrstuvwxyzpuv"
+          },
+          {
+            "line": 3,
+            "input": "['ABABCABCDEABCDEFGHIJKLMNOPQRSTUVHABCBDEFGHIJKLABCDEFGHIJKLMNOABCDEABCDEFGHIJKLMNOPQRSTUVHWXYZFGHIJKLABCDEFGTHIJKLMNOPQRSTUABCDEABCDEFGHIJKLABCDEABCDEFGHIJKLMNOPQRSTUVHABCDEFGHIJKLMNOPEFGHIJKLMNOPQRSTUVZSTUVHWXYZWXYZFGHIJKLMNOPQRSTUVWXYZMNOPQRSTUVHABCDEFGHIJKLMABCDEFGHIJKLMNOPQRSTUVWXYZNOPQRSTUVHWXYZWXYZFGHIJKLMNOPQRSTUVWXYZVRSTUVWXYZPQRSTUVMNOPQRSTUVHWXYZWXYZFGHIJKLMNOWPQRSTUVWXYABCDEABCDEFGHIJKRLMNOPQRSTUVHABCDEFGHIJKLMNOPQRSTUVHWXYZWXYZFGHIJKLMNOPQRSTUVWXYZZDEFGHIJKLMNOPQRSTUVWXYZCDEFGHIJRABCDEFGHIJKLMNOPQRSTUVSTUVHWYX']",
+            "output": "ababcabcdeabcdefghijklmnopqrstuvhabcbdefghijklabcdefghijklmnoabcdeabcdefghijklmnopqrstuvhwxyzfghijklabcdefgthijklmnopqrstuabcdeabcdefghijklabcdeabcdefghijklmnopqrstuvhabcdefghijklmnopefghijklmnopqrstuvzstuvhwxyzwxyzfghijklmnopqrstuvwxyzmnopqrstuvhabcdefghijklmabcdefghijklmnopqrstuvwxyznopqrstuvhwxyzwxyzfghijklmnopqrstuvwxyzvrstuvwxyzpqrstuvmnopqrstuvhwxyzwxyzfghijklmnowpqrstuvwxyabcdeabcdefghijkrlmnopqrstuvhabcdefghijklmnopqrstuvhwxyzwxyzfghijklmnopqrstuvwxyzzdefghijklmnopqrstuvwxyzcdefghijrabcdefghijklmnopqrstuvstuvhwyx"
+          }
+        ]
+      },
+      {
+        "task_id": "task_567",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[1, 2, 4, 4, 6, 8, 10, 10, 12, 12, 6]]",
+            "output": "False"
+          },
+          {
+            "line": 2,
+            "input": "[[9, 4, 7, 3, 6, 8, 2, 5, 8, 9]]",
+            "output": "False"
+          },
+          {
+            "line": 3,
+            "input": "[[10, 4, 1, 1, 4, 4, 10]]",
+            "output": "False"
+          }
+        ]
+      },
+      {
+        "task_id": "task_576",
+        "reason": "missing_result",
+        "original_path": "",
+        "mutated_path": "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_576\\sample_code_results_non_equivalent.txt"
+      },
+      {
+        "task_id": "task_583",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[13]",
+            "output": "742900"
+          },
+          {
+            "line": 2,
+            "input": "[3]",
+            "output": "5"
+          },
+          {
+            "line": 3,
+            "input": "[4]",
+            "output": "14"
+          }
+        ]
+      },
+      {
+        "task_id": "task_592",
+        "reason": "no_difference",
+        "total_lines": 0,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[21]",
+            "output": null
+          },
+          {
+            "line": 2,
+            "input": "[1000]",
+            "output": null
+          },
+          {
+            "line": 3,
+            "input": "[104]",
+            "output": null
+          }
+        ]
+      },
+      {
+        "task_id": "task_597",
+        "reason": "missing_result",
+        "original_path": "",
+        "mutated_path": "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_597\\sample_code_results_non_equivalent.txt"
+      },
+      {
+        "task_id": "task_6",
+        "reason": "missing_result",
+        "original_path": "",
+        "mutated_path": "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_6\\sample_code_results_non_equivalent.txt"
+      },
+      {
+        "task_id": "task_605",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[3]",
+            "output": "True"
+          },
+          {
+            "line": 2,
+            "input": "[-16]",
+            "output": "False"
+          },
+          {
+            "line": 3,
+            "input": "[1572869]",
+            "output": "True"
+          }
+        ]
+      },
+      {
+        "task_id": "task_62",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[12, 12, 8, 11, 10, 12]]",
+            "output": "8"
+          },
+          {
+            "line": 2,
+            "input": "[[11, 9, 10, 9, 10, 10, 9, 10]]",
+            "output": "9"
+          },
+          {
+            "line": 3,
+            "input": "[[10, 10, 10, 10]]",
+            "output": "10"
+          }
+        ]
+      },
+      {
+        "task_id": "task_622",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[2, 4, 8, 9], [7, 13, 19, 28], 4]",
+            "output": "8.5"
+          },
+          {
+            "line": 2,
+            "input": "[[3, 3, 4, 4, 5, 3, 3], [3, 3, 4, 4, 5, 3, 3], 4]",
+            "output": "3.5"
+          },
+          {
+            "line": 3,
+            "input": "[[1, 1, 2, 3, 3], [3, 3, 4, 5], 4]",
+            "output": "3.0"
+          }
+        ]
+      },
+      {
+        "task_id": "task_626",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[-1000000001]",
+            "output": "None"
+          },
+          {
+            "line": 2,
+            "input": "[0.6844411299243851]",
+            "output": "0.468459660332169"
+          },
+          {
+            "line": 3,
+            "input": "[1.6060546715294721]",
+            "output": "2.5794116079416405"
+          }
+        ]
+      },
+      {
+        "task_id": "task_630",
+        "reason": "no_difference",
+        "total_lines": 0,
+        "examples": []
+      },
+      {
+        "task_id": "task_635",
+        "reason": "no_difference",
+        "total_lines": 4,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[]]",
+            "output": "[]"
+          },
+          {
+            "line": 2,
+            "input": "[[]]",
+            "output": "[]"
+          },
+          {
+            "line": 3,
+            "input": "[[]]",
+            "output": "[]"
+          }
+        ]
+      },
+      {
+        "task_id": "task_68",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[43.01465662466188, -34.902913681824856, 42.59716035619264, -69.38224302373561, -9.527847657655224, -10.481407073259263, -64.57664800604005, 43.01465662466188]]",
+            "output": "False"
+          },
+          {
+            "line": 2,
+            "input": "[[42.59716035619264, 43.01465662466188, 41.82235199511542, -10.481407073259263, -69.38224302373561, -10.481407073259263]]",
+            "output": "False"
+          },
+          {
+            "line": 3,
+            "input": "[[-34.902913681824856, -69.38224302373561, -10.481407073259263, -94.97100584944054]]",
+            "output": "False"
+          }
+        ]
+      },
+      {
+        "task_id": "task_71",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[500, 500, 1000, 3001, 4000, 5000, 6000, 7000, 8000, 9000, 10000]]",
+            "output": "[500, 500, 1000, 3001, 4000, 5000, 6000, 7000, 8000, 9000, 10000]"
+          },
+          {
+            "line": 2,
+            "input": "[[8, 11, 22, 33, 44, 66, 77, 88, 99]]",
+            "output": "[8, 11, 22, 33, 44, 66, 77, 88, 99]"
+          },
+          {
+            "line": 3,
+            "input": "[[11, 33, 44, 44, 55, 66, 77, 88, 88, 99]]",
+            "output": "[11, 33, 44, 44, 55, 66, 77, 88, 88, 99]"
+          }
+        ]
+      },
+      {
+        "task_id": "task_720",
+        "reason": "missing_result",
+        "original_path": "",
+        "mutated_path": "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_720\\sample_code_results_non_equivalent.txt"
+      },
+      {
+        "task_id": "task_730",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[['bb', 'apple', 'XkdbOWvF', 'wUpBgeXR', 'UKW', 'e', 'f', 'l', 'lm', 'CPAKrs']]",
+            "output": "['bb', 'apple', 'XkdbOWvF', 'wUpBgeXR', 'UKW', 'e', 'f', 'l', 'lm', 'CPAKrs']"
+          },
+          {
+            "line": 2,
+            "input": "[[1, 2, 2, 2, 3, 4, 4, 4, 4, 5, 5, 6, 6, 3, 7, 0, 2, 7, 8, 6, 8, 9, 9]]",
+            "output": "[1, 2, 3, 4, 5, 6, 3, 7, 0, 2, 7, 8, 6, 8, 9]"
+          },
+          {
+            "line": 3,
+            "input": "[['apple', 'apple', 'banana', 'lm', 'orange', 'apple', 'banana', 'banana', 'banana', 'apple', 'kiwi', 'orange']]",
+            "output": "['apple', 'banana', 'lm', 'orange', 'apple', 'banana', 'apple', 'kiwi', 'orange']"
+          }
+        ]
+      },
+      {
+        "task_id": "task_734",
+        "reason": "no_difference",
+        "total_lines": 4,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[]]",
+            "output": "0"
+          },
+          {
+            "line": 2,
+            "input": "[[]]",
+            "output": "0"
+          },
+          {
+            "line": 3,
+            "input": "[[]]",
+            "output": "0"
+          }
+        ]
+      },
+      {
+        "task_id": "task_736",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[], [-53.40737393286277]]",
+            "output": "0"
+          },
+          {
+            "line": 2,
+            "input": "[[0, 1, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30], 15]",
+            "output": "8"
+          },
+          {
+            "line": 3,
+            "input": "[[14], 1]",
+            "output": "0"
+          }
+        ]
+      },
+      {
+        "task_id": "task_737",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "['1AbAnAnnaa18nb_aBbb1AbH3!Uuiouyloelseba18']",
+            "output": "None"
+          },
+          {
+            "line": 2,
+            "input": "['1AbH3!Uuio13AbH3An_aBbbba1Anna188Uuiouylboelseu__Danielleyloele']",
+            "output": "None"
+          },
+          {
+            "line": 3,
+            "input": "['!1Abb_1AbH3!Uuiou__Danielleeyloe!AAn_aBbbba181Abb_Eels_e']",
+            "output": "None"
+          }
+        ]
+      },
+      {
+        "task_id": "task_750",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[-15, 3, 41, 52], ('gLT', 'cgbZL', 'gakjwn', 'GZGE', 'zG')]",
+            "output": "[-15, 3, 41, 52, 'gLT', 'cgbZL', 'gakjwn', 'GZGE', 'zG']"
+          },
+          {
+            "line": 2,
+            "input": "[[-10.26715024967983, 55.543216964956486, -43.46143646200369, -31.08718493477471, -31.17870476469473, 65.17669523907202, 65.17669523907202], (True, False, 'zG', 0, 'kA', -95.07998304699902, False, 'iGvRkInoya', True, 'iGvRkInoya')]",
+            "output": "[-10.26715024967983, 55.543216964956486, -43.46143646200369, -31.08718493477471, -31.17870476469473, 65.17669523907202, 65.17669523907202, True, False, 'zG', 0, 'kA', -95.07998304699902, False, 'iGvRkInoya', True, 'iGvRkInoya']"
+          },
+          {
+            "line": 3,
+            "input": "[[-95.93549064962474, -10.26715024967983, 56.561546955182706, -43.46143646200369, 56.561546955182706, -87.65973057260044, -49.52689816727833, 45.573615319483054, 47.797080090629805, 38.24361019954367, 47.797080090629805, 56.561546955182706], (2, 1, 2, 2, 1)]",
+            "output": "[-95.93549064962474, -10.26715024967983, 56.561546955182706, -43.46143646200369, 56.561546955182706, -87.65973057260044, -49.52689816727833, 45.573615319483054, 47.797080090629805, 38.24361019954367, 47.797080090629805, 56.561546955182706, 2, 1, 2, 2, 1]"
+          }
+        ]
+      },
+      {
+        "task_id": "task_751",
+        "reason": "no_difference",
+        "total_lines": 0,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[-80, 9, 8, 7, 5, 4, 3, 2, 1, 2, 2, 2]]",
+            "output": null
+          },
+          {
+            "line": 2,
+            "input": "[[10, 9, 8, 7, 5, 4, 12, 3, 2, 6, 1, 9, 1]]",
+            "output": null
+          },
+          {
+            "line": 3,
+            "input": "[[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 3, 4, 31, 3]]",
+            "output": null
+          }
+        ]
+      },
+      {
+        "task_id": "task_755",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1]]",
+            "output": "2"
+          },
+          {
+            "line": 2,
+            "input": "[[1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1]]",
+            "output": "2"
+          },
+          {
+            "line": 3,
+            "input": "[[1, 1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1]]",
+            "output": "2"
+          }
+        ]
+      },
+      {
+        "task_id": "task_759",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "['1$123.11323.1.1.1']",
+            "output": "False"
+          },
+          {
+            "line": 2,
+            "input": "['1123.1123.11111231.13.11$1123.       123.11       123.113$1111']",
+            "output": "False"
+          },
+          {
+            "line": 3,
+            "input": "['12123.  13123.1.1.1     123.11       13.1.1$11']",
+            "output": "False"
+          }
+        ]
+      },
+      {
+        "task_id": "task_785",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "['(9999799, 8888798888, 77777)']",
+            "output": "(9999799, 8888798888, 77777)"
+          },
+          {
+            "line": 2,
+            "input": "['(1000000000, 20000000, 3000000000)']",
+            "output": "(1000000000, 20000000, 3000000000)"
+          },
+          {
+            "line": 3,
+            "input": "['((1  , 22   , 3)']",
+            "output": "(1, 22, 3)"
+          }
+        ]
+      },
+      {
+        "task_id": "task_786",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[-12.02758648076636, -35.964731488229475, 82.81444880501536, 11.857449640680656, 17.182050219901072, 21.593943255744534], 57]",
+            "output": "6"
+          },
+          {
+            "line": 2,
+            "input": "[[True, True, False, False, False, False, True, True, False, True, False], True]",
+            "output": "11"
+          },
+          {
+            "line": 3,
+            "input": "[[57, 3, True], True]",
+            "output": "0"
+          }
+        ]
+      },
+      {
+        "task_id": "task_787",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "['gHZZiSWmggHZgHZgHZZiSWgZHZgHZZiSWggHZmTgHZZiSWgHZgHZZiSWmggHZZiSWmgHZZiSWWgmTLWLHZZiSWmTLLZSWmTLmgHZZiSWgmTLLLLHZZiSgHZZiSWmgHZZiSWgmTLLWmgHZZiSWgmTLLWmTLSWTLLZSWmTLZiSWmTLgHZZiSWmgHZZiSWgmTLLgHZgHZZiSWmggHZZiSWmgHZZiSWWgmTLWLHZZiSWmTLLZSWmTLLL']",
+            "output": "None"
+          },
+          {
+            "line": 2,
+            "input": "['gHZgHZZiSWgZHZgHZZiSWggHZmTgHZZiSWmggHZZiSWgmTLLLLHZZiSgHZZigHZZiSWmgHZgHZZiSWmgHZZiSWmTgHZZiSWmgHZZiSWgmTLiLLLgHZZiSWmgHZZiSWmZiSWmTLLSWmgHZZiSWgmTLLWmgHZZiSWgmTLLWmTLSWTLLZSWmTL']",
+            "output": "None"
+          },
+          {
+            "line": 3,
+            "input": "['gHZgHZLLZiSWmgHZZiSWTLLZSHWmTL']",
+            "output": "None"
+          }
+        ]
+      },
+      {
+        "task_id": "task_788",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[[34.07985408015267, -51.27715473966572, -10.355958900117983, -10.472754063243912, 34.07985408015267, 45.31554022015084], 'GJGO']",
+            "output": "(34.07985408015267, -51.27715473966572, -10.355958900117983, -10.472754063243912, 34.07985408015267, 45.31554022015084, 'GJGO')"
+          },
+          {
+            "line": 2,
+            "input": "[[-51.27715473966572, -10.355958900117983, -10.472754063243912, 34.07985408015267, 45.31554022015084, 34.07985408015267], 'LL']",
+            "output": "(-51.27715473966572, -10.355958900117983, -10.472754063243912, 34.07985408015267, 45.31554022015084, 34.07985408015267, 'LL')"
+          },
+          {
+            "line": 3,
+            "input": "[[-64.42482790803071, -6.80022506914743, -51.27715473966572, -10.355958900117983, -69.2423613608672, -11.24647564777949, -10.472754063243912, 45.31554022015084, 45.31554022015084], 'vJLhvOqhq']",
+            "output": "(-64.42482790803071, -6.80022506914743, -51.27715473966572, -10.355958900117983, -69.2423613608672, -11.24647564777949, -10.472754063243912, 45.31554022015084, 45.31554022015084, 'vJLhvOqhq')"
+          }
+        ]
+      },
+      {
+        "task_id": "task_797",
+        "reason": "no_difference",
+        "total_lines": 0,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[99998, 99998]",
+            "output": null
+          },
+          {
+            "line": 2,
+            "input": "[2, 5]",
+            "output": null
+          },
+          {
+            "line": 3,
+            "input": "[10000, 10001]",
+            "output": null
+          }
+        ]
+      },
+      {
+        "task_id": "task_799",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[10, 10]",
+            "output": "10240"
+          },
+          {
+            "line": 2,
+            "input": "[6, 4]",
+            "output": "96"
+          },
+          {
+            "line": 3,
+            "input": "[1, 6]",
+            "output": "64"
+          }
+        ]
+      },
+      {
+        "task_id": "task_84",
+        "reason": "no_difference",
+        "total_lines": 10,
+        "examples": [
+          {
+            "line": 1,
+            "input": "[109876]",
+            "output": "58094"
+          },
+          {
+            "line": 2,
+            "input": "[49287]",
+            "output": "26389"
+          },
+          {
+            "line": 3,
+            "input": "[999997]",
+            "output": "510402"
+          }
+        ]
+      },
+      {
+        "task_id": "task_88",
+        "reason": "no_difference",
+        "total_lines": 0,
+        "examples": []
+      }
+    ]
   }
 }

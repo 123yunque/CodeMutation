@@ -448,7 +448,7 @@ def print_report_summary(title, report):
         )
 
 
-def run_pipeline(
+def run_validation(
     limit=None,
     timeout=30,
     max_examples=3,

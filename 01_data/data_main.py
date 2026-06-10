@@ -1,3 +1,9 @@
+r"""
+Run examples:
+  python 01_data\data_main.py --sample_size 10 --seed 0 --overwrite
+  python 01_data\data_main.py --limit 5 --sample_size 10 --seed 0 --overwrite
+"""
+
 import argparse
 from pathlib import Path
 import sys

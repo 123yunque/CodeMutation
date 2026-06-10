@@ -1,3 +1,11 @@
+r"""
+Run examples:
+  python 03_splice\splice_main.py --mode all
+  python 03_splice\splice_main.py --mode original
+  python 03_splice\splice_main.py --mode equivalent
+  python 03_splice\splice_main.py --mode non_equivalent
+"""
+
 import argparse
 from pathlib import Path
 import sys

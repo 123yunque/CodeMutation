@@ -1,15 +1,32 @@
+r"""
+Run examples:
+  python 05_rq1\validate_main.py
+  python 05_rq1\validate_main.py --limit 5
+  python 05_rq1\validate_main.py --run_exec
+  python 05_rq1\validate_main.py --retry
+
+Meaning:
+  Default reads existing 04_local_exec result files and validates mutation quality.
+  --run_exec first regenerates local result files through 04_local_exec.
+  --retry calls the LLM to regenerate failed mutation files.
+"""
+
 import argparse
 from pathlib import Path
+import sys
 
 
 ROOT = Path(__file__).resolve().parent
+REPO_ROOT = ROOT.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-from pipeline_lib import run_pipeline
+from validate_utils import run_validation
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Validate existing RQ1 local outputs, with optional local execution and mutation retry."
+        description="Validate RQ1 mutation outputs produced by local execution, with optional retry."
     )
     parser.add_argument("--limit", type=int, help="Optional limit on tasks/failures")
     parser.add_argument("--timeout", type=int, default=30, help="Timeout per task in seconds")
@@ -25,7 +42,7 @@ def main():
     parser.add_argument("--stop_on_error", action="store_true", help="Stop pipeline on non-zero exit")
     args = parser.parse_args()
 
-    run_pipeline(
+    run_validation(
         limit=args.limit,
         timeout=args.timeout,
         max_examples=args.max_examples,

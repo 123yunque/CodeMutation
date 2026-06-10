@@ -139,6 +139,8 @@ def process_llm_task(folder, input_dir, output_path, api_key, base_url, model_na
         code_content = f.read()
 
     llm_output = call_llm(build_execution_prompt(code_content), folder, api_key, base_url, model_name)
+    if not llm_output:
+        return f"[failed] {folder}: empty LLM output"
     final_result = extract_result_block(llm_output)
 
     with open(save_file, "w", encoding="utf-8") as f:
@@ -147,9 +149,21 @@ def process_llm_task(folder, input_dir, output_path, api_key, base_url, model_na
     return f"[done] {folder}"
 
 
-def execute_task_with_threads(input_dir, output_path, api_key, base_url, model_name, input_file_name, max_workers=2, overwrite=False):
+def execute_task_with_threads(
+    input_dir,
+    output_path,
+    api_key,
+    base_url,
+    model_name,
+    input_file_name,
+    max_workers=2,
+    overwrite=False,
+    limit=None,
+):
     os.makedirs(output_path, exist_ok=True)
-    folders = [f for f in os.listdir(input_dir) if os.path.isdir(os.path.join(input_dir, f))]
+    folders = sorted(f for f in os.listdir(input_dir) if os.path.isdir(os.path.join(input_dir, f)))
+    if limit is not None:
+        folders = folders[:limit]
     print(f"Processing {len(folders)} tasks with max_workers={max_workers}")
 
     with ThreadPoolExecutor(max_workers=max_workers) as executor:

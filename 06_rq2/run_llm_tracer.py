@@ -1,79 +1,71 @@
-# batch_llm_tracer.py
-# [auto-patched by patch_imports.py]
-import sys as _sys
-from pathlib import Path as _Path
-_sys.path.insert(0, str(_Path(__file__).parent.parent))
-from paths import (
-    ROOT, CONFIG, CONFIG1, MBPP_DIR,
-    EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM,
-    LLM_ORIGINAL, LLM_EQUIV, LLM_NON_EQUIV,
-    LOCAL_ORIGINAL, LOCAL_EQUIV, LOCAL_NON_EQUIV,
-    LLM_TRACE_ORIGINAL, LLM_TRACE_EQUIV, LLM_TRACE_NON_EQUIV,
-)
-
+import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import json
 import os
-import threading
+from pathlib import Path
 import re
+import sys
+import threading
 import time
-from concurrent.futures import ThreadPoolExecutor, as_completed
-from openai import OpenAI, APITimeoutError
-from httpx import ReadTimeout, ConnectError, HTTPStatusError
 
-# ================= 配置区 =================
-INPUT_DIR = str(MBPP_DIR)
+from httpx import ConnectError, HTTPStatusError, ReadTimeout
+from openai import APITimeoutError, OpenAI
 
-"""
-让LLM给变量变化序列
-"""
-# 目标文件 -> (输出基目录, 输出子目录, api_key_fields中的key)
-FILE_CONFIG = {
-    "sample_original_correct.py":       (str(LLM_TRACE_ORIGINAL),       "correct", "original"),
-    "sample_original_error.py":         ("original_llm",       "error",   "original"),
-    "sample_equivalent_correct.py":     (str(LLM_TRACE_EQUIV),     "correct", "equivalent"),
-    "sample_equivalent_error.py":       ("equivalent_llm",     "error",   "equivalent"),
-    "sample_non_equivalent_correct.py": (str(LLM_TRACE_NON_EQUIV), "correct", "non_equivalent"),
-    "sample_non_equivalent_error.py":   ("non_equivalent_llm", "error",   "non_equivalent"),
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from paths import (
+    CONFIG1,
+    LLM_TRACE_EQUIV,
+    LLM_TRACE_NON_EQUIV,
+    LLM_TRACE_ORIGINAL,
+    MBPP_DIR,
+)
+from rq1_config import resolve_env_value
+
+
+ROUTES = {
+    ("original", "correct"): {
+        "target_file": "sample_original_correct.py",
+        "output_root": LLM_TRACE_ORIGINAL,
+        "api_key_field": "original",
+    },
+    ("original", "error"): {
+        "target_file": "sample_original_error.py",
+        "output_root": LLM_TRACE_ORIGINAL,
+        "api_key_field": "original",
+    },
+    ("equivalent", "correct"): {
+        "target_file": "sample_equivalent_correct.py",
+        "output_root": LLM_TRACE_EQUIV,
+        "api_key_field": "equivalent",
+    },
+    ("equivalent", "error"): {
+        "target_file": "sample_equivalent_error.py",
+        "output_root": LLM_TRACE_EQUIV,
+        "api_key_field": "equivalent",
+    },
+    ("non_equivalent", "correct"): {
+        "target_file": "sample_non_equivalent_correct.py",
+        "output_root": LLM_TRACE_NON_EQUIV,
+        "api_key_field": "non_equivalent",
+    },
+    ("non_equivalent", "error"): {
+        "target_file": "sample_non_equivalent_error.py",
+        "output_root": LLM_TRACE_NON_EQUIV,
+        "api_key_field": "non_equivalent",
+    },
 }
-# ==========================================
 
 thread_local = threading.local()
 
-def get_client(api_key, base_url="https://api3.wlai.vip/v1"):
-    if not hasattr(thread_local, "client"):
+
+def get_client(api_key, base_url):
+    key = (api_key, base_url)
+    if getattr(thread_local, "client_key", None) != key:
         thread_local.client = OpenAI(api_key=api_key, base_url=base_url)
+        thread_local.client_key = key
     return thread_local.client
 
-def call_llm(prompt, label, api_key, model_name, max_retries=5):
-    messages = [
-        {"role": "system", "content": "Return ONLY the final result. No explanation."},
-        {"role": "user", "content": prompt}
-    ]
-    for attempt in range(max_retries):
-        try:
-            client = get_client(api_key)
-            response = client.chat.completions.create(
-                model=model_name,
-                messages=messages,
-                timeout=240
-            )
-            content = response.choices[0].message.content
-            if content.strip():
-                return content
-            print(f"⚠️ {label} 空内容 attempt={attempt + 1}")
-        except (APITimeoutError, ReadTimeout):
-            print(f"⏳ Timeout {label}, attempt={attempt + 1}")
-        except (ConnectError, HTTPStatusError, Exception) as e:
-            print(f"⚠️ Error {label}: {e} attempt={attempt + 1}")
-        time.sleep(2 ** attempt)
-    print(f"❌ {label} 连续失败")
-    return None
-
-def extract_result_block(text):
-    if not text:
-        return "ERROR: empty"
-    match = re.search(r"<result>(.*?)</result>", text, re.DOTALL)
-    return match.group(1).strip() if match else text.strip()
 
 def build_prompt(code_content):
     return f"""
@@ -92,98 +84,165 @@ Output format (strict):
 </result>
 
 Rules:
-1. List every variable (except: inputs, inp, imported modules, functions, classes).
-2. Each entry shows ALL values the variable took during execution, in order.
-3. Do NOT include any explanations, debug info, or extra text.
+1. List every variable except inputs, inp, imported modules, functions, and classes.
+2. Each entry shows all values the variable took during execution, in order.
+3. Do not include explanations, debug info, markdown, or extra text.
 4. Only return the variable sequences inside <result> ... </result>.
-
-Example:
-<result>
-'a': [1, 3, 7, 15]
-'b': [2, 4, 8, 16]
-'i': [0, 1, 2]
-</result>
 
 Now execute the code and return variable sequences ONLY in:
 <result> ... </result>
 """
 
-def process_task(folder, target_file, output_dir, api_key, model_name):
+
+def call_llm(prompt, label, api_key, base_url, model_name, max_retries, timeout):
+    messages = [
+        {"role": "system", "content": "Return only the requested result. No explanation."},
+        {"role": "user", "content": prompt},
+    ]
+    for attempt in range(1, max_retries + 1):
+        try:
+            client = get_client(api_key, base_url)
+            response = client.chat.completions.create(
+                model=model_name,
+                messages=messages,
+                timeout=timeout,
+            )
+            content = response.choices[0].message.content
+            if content and content.strip():
+                return content
+            print(f"[empty] {label}, attempt={attempt}")
+        except (APITimeoutError, ReadTimeout):
+            print(f"[timeout] {label}, attempt={attempt}")
+        except (ConnectError, HTTPStatusError, Exception) as exc:
+            print(f"[error] {label}: {exc}, attempt={attempt}")
+        if attempt < max_retries:
+            time.sleep(2 ** (attempt - 1))
+    return None
+
+
+def extract_result_block(text):
+    if not text:
+        return "ERROR: empty"
+    match = re.search(r"<result>(.*?)</result>", text, re.DOTALL)
+    return match.group(1).strip() if match else text.strip()
+
+
+def iter_folders(task=None, limit=None):
+    if task:
+        folders = [task]
+    else:
+        folders = sorted(
+            path.name for path in Path(MBPP_DIR).glob("task_*")
+            if path.is_dir()
+        )
+    if limit is not None:
+        folders = folders[:limit]
+    return folders
+
+
+def process_task(folder, route, api_key, base_url, model_name, overwrite, max_retries, timeout):
+    target_file = route["target_file"]
+    src_path = Path(MBPP_DIR) / folder / target_file
+    output_dir = Path(route["output_root"]) / route["status"]
+    save_path = output_dir / f"{folder}.txt"
     label = f"{folder}/{target_file}"
-    save_file = os.path.join(output_dir, f"{folder}.txt")
 
-    if os.path.exists(save_file):
-        return f"⏭️ 已存在，跳过 {label}"
+    if not src_path.exists():
+        return ("missing", f"[missing] {label}")
+    if save_path.exists() and not overwrite:
+        return ("skipped", f"[skip] {label}: {save_path}")
 
-    src_path = os.path.join(INPUT_DIR, folder, target_file)
-    if not os.path.exists(src_path):
-        return f"⚠️ 文件不存在: {src_path}"
-
-    with open(src_path, "r", encoding="utf-8") as f:
-        code_content = f.read()
-
+    output_dir.mkdir(parents=True, exist_ok=True)
+    code_content = src_path.read_text(encoding="utf-8")
     prompt = build_prompt(code_content)
-    llm_output = call_llm(prompt, label, api_key, model_name)
+    llm_output = call_llm(prompt, label, api_key, base_url, model_name, max_retries, timeout)
     final_result = extract_result_block(llm_output)
+    save_path.write_text(final_result, encoding="utf-8")
 
-    with open(save_file, "w", encoding="utf-8") as f:
-        f.write(final_result)
-
-    return f"✅ 完成: {label}"
-
-
-def run_single_file_type(target_file, output_dir, api_key, model_name, folders):
-    """单个文件类型的串行处理，供线程池调用"""
-    success, fail = 0, 0
-    for folder in folders:
-        result = process_task(folder, target_file, output_dir, api_key, model_name)
-        print(result)
-        if result.startswith("✅"):
-            success += 1
-        else:
-            fail += 1
-    return f"[{target_file}] 完成: 成功 {success}，失败/跳过 {fail}"
+    if final_result.startswith("ERROR:"):
+        return ("failed", f"[failed] {label}: {final_result}")
+    return ("success", f"[done] {label}: {save_path}")
 
 
-def run(model_name, api_key_fields):
-    folders = sorted([
-        f for f in os.listdir(INPUT_DIR)
-        if os.path.isdir(os.path.join(INPUT_DIR, f)) and f.startswith("task_")
-    ])
-    print(f"🔍 找到 {len(folders)} 个 task 文件夹")
-
-    # 预创建输出目录，构建每路任务参数
+def selected_routes(mode, status):
+    modes = ("original", "equivalent", "non_equivalent") if mode == "all" else (mode,)
+    statuses = ("correct", "error") if status == "all" else (status,)
     routes = []
-    for target_file, (base, sub, api_key_field) in FILE_CONFIG.items():
-        out_dir = os.path.join(base, sub)
-        os.makedirs(out_dir, exist_ok=True)
-        api_key = api_key_fields[api_key_field]
-        routes.append((target_file, out_dir, api_key))
+    for route_mode in modes:
+        for route_status in statuses:
+            route = dict(ROUTES[(route_mode, route_status)])
+            route["mode"] = route_mode
+            route["status"] = route_status
+            routes.append(route)
+    return routes
 
-    print(f"🚀 启动 {len(routes)} 路并发，每路处理 {len(folders)} 个 task\n")
 
-    # 6路并发，每路负责一种文件类型，内部串行
-    with ThreadPoolExecutor(max_workers=len(routes)) as executor:
-        futures = {
-            executor.submit(run_single_file_type, target_file, out_dir, api_key, model_name, folders): target_file
-            for target_file, out_dir, api_key in routes
-        }
+def run(args, config):
+    api_key_fields = config["api_key_fields"]
+    base_url = args.base_url or config.get("yunwu_base_url") or config.get("api_base_url")
+    model_name = args.model_name or config.get("model_name")
+    if not model_name:
+        raise ValueError("Missing model name. Pass --model_name or set model_name in config1.json.")
+    if not base_url:
+        raise ValueError("Missing API base URL. Pass --base_url or set yunwu_base_url/api_base_url in config1.json.")
+
+    folders = iter_folders(task=args.task, limit=args.limit)
+    routes = selected_routes(args.mode, args.status)
+    jobs = []
+    for route in routes:
+        api_key = resolve_env_value(api_key_fields[route["api_key_field"]])
+        if not api_key:
+            raise ValueError(f"Missing API key for {route['api_key_field']}. Check config1.json/env vars.")
+        for folder in folders:
+            jobs.append((folder, route, api_key))
+
+    print(f"LLM trace run: model={model_name}, base_url={base_url}, jobs={len(jobs)}")
+    stats = {"success": 0, "failed": 0, "missing": 0, "skipped": 0}
+
+    with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
+        futures = [
+            executor.submit(
+                process_task,
+                folder,
+                route,
+                api_key,
+                base_url,
+                model_name,
+                args.overwrite,
+                args.max_retries,
+                args.timeout,
+            )
+            for folder, route, api_key in jobs
+        ]
         for future in as_completed(futures):
-            print(f"\n🏁 {future.result()}")
+            status, message = future.result()
+            stats[status] += 1
+            print(message)
 
-    print("\n🎉 全部处理完成！")
+    print(
+        f"Done. success={stats['success']}, failed={stats['failed']}, "
+        f"missing={stats['missing']}, skipped={stats['skipped']}"
+    )
+    return stats
 
 
 def main():
-    with open(str(CONFIG1), "r", encoding="utf-8") as f:
-        config = json.load(f)
-
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--model_name", required=True, help="LLM 模型名称")
+    parser = argparse.ArgumentParser(description="Generate LLM-predicted RQ2 variable traces.")
+    parser.add_argument("--model_name", help="Defaults to config1.json model_name")
+    parser.add_argument("--base_url", help="Defaults to config1.json yunwu_base_url/api_base_url")
+    parser.add_argument("--mode", choices=("all", "original", "equivalent", "non_equivalent"), default="all")
+    parser.add_argument("--status", choices=("all", "correct", "error"), default="all")
+    parser.add_argument("--task", help="Optional task folder name, for example task_142")
+    parser.add_argument("--limit", type=int)
+    parser.add_argument("--overwrite", action="store_true")
+    parser.add_argument("--max_workers", type=int, default=1)
+    parser.add_argument("--max_retries", type=int, default=2)
+    parser.add_argument("--timeout", type=int, default=240)
     args = parser.parse_args()
 
-    run(args.model_name, config["api_key_fields"])
+    config = json.loads(Path(CONFIG1).read_text(encoding="utf-8"))
+    run(args, config)
+
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,10 @@
+r"""
+Run examples:
+  python 04_local_exec\exec_main.py --mode all --timeout 30 --compare_non_equivalent
+  python 04_local_exec\exec_main.py --mode original --timeout 30
+  python 04_local_exec\exec_main.py --mode equivalent --limit 5 --timeout 30
+"""
+
 import argparse
 from pathlib import Path
 import sys

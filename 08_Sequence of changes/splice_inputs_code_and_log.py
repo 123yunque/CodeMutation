@@ -1,112 +1,130 @@
+import argparse
+import ast
 import os
-import re
+from pathlib import Path
 
-current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-base_dir = os.path.join(parent_dir, "output_mbppplus_new")
 
-# ==========================================
-# 在这里切换你要处理的类型
-# 可选值: "original", "equivalent", "non_equivalent"
-# ==========================================
-type_name = "original"
+ROOT = Path(__file__).resolve().parent.parent
+BASE_DIR = ROOT / "output_mbppplus_new"
 
-# 根据需求配置不同类型的提取规则
-type_configs = {
+MODE_CONFIGS = {
     "original": {
         "source_file": "sample_inputs.py",
-        "tail_start": -12,
-        "tail_end": -8
+        "input_prefix": "original",
     },
     "equivalent": {
         "source_file": "sample_inputs_equivalent.py",
-        "tail_start": -8,
-        "tail_end": -4
+        "input_prefix": "equivalent",
     },
     "non_equivalent": {
         "source_file": "sample_inputs_non_equivalent.py",
-        "tail_start": -13,
-        "tail_end": -9
-    }
+        "input_prefix": "non_equivalent",
+    },
 }
 
-# 获取当前类型的配置参数
-config = type_configs.get(type_name)
-if not config:
-    print(f"❌ 未知的 type_name: {type_name}")
-    exit(1)
 
-# 检查 base_dir 是否存在
-if not os.path.exists(base_dir):
-    print(f"❌ 基础目录不存在: {base_dir}")
-    exit(1)
+def find_inputs_assignment(source):
+    tree = ast.parse(source)
+    for node in tree.body:
+        if isinstance(node, ast.Assign):
+            for target in node.targets:
+                if isinstance(target, ast.Name) and target.id == "inputs":
+                    return node.lineno, node.end_lineno
+    raise ValueError("missing top-level inputs assignment")
 
-for folder in os.listdir(base_dir):
-    subdir = os.path.join(base_dir, folder)
 
-    if not os.path.isdir(subdir) or not folder.startswith("task_"):
-        continue
+def split_source_around_inputs(source):
+    lines = source.splitlines(keepends=True)
+    start_line, end_line = find_inputs_assignment(source)
+    code_content = "".join(lines[: start_line - 1]).rstrip() + "\n\n"
+    execution_tail = "".join(lines[end_line:]).lstrip()
+    return code_content, execution_tail
 
-    # 1. 确定源文件路径
-    source_file_path = os.path.join(subdir, config["source_file"])
-    if not os.path.exists(source_file_path):
-        print(f"⏭ 跳过 {folder}: 缺少源文件 '{config['source_file']}'")
-        print(f"   📂 期望路径: {source_file_path}")
-        print(f"   📋 目录 '{folder}' 中现有文件: {os.listdir(subdir) or '（空目录）'}")
-        continue
 
-    # 2. 读取源文件内容
-    with open(source_file_path, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-        content = "".join(lines)
+def read_input_literals(path):
+    if not path.exists():
+        return None
+    with path.open("r", encoding="utf-8") as f:
+        return [line.strip() for line in f if line.strip()]
 
-    # 3. 提取 code_content
-    match = re.search(r'^[ \t]*inputs\s*=', content, flags=re.MULTILINE)
-    if match:
-        code_content = content[:match.start()]
+
+def build_inputs_block(input_literals):
+    lines = ["inputs = [\n"]
+    for item in input_literals:
+        value = item.rstrip(",")
+        lines.append(f"    {value},\n")
+    lines.append("]\n\n")
+    return "".join(lines)
+
+
+def generate_mode(mode, limit=None, task=None):
+    config = MODE_CONFIGS[mode]
+    source_name = config["source_file"]
+    input_prefix = config["input_prefix"]
+    stats = {"written": 0, "missing_source": 0, "missing_inputs": 0, "failed": 0}
+
+    if task:
+        task_dirs = [BASE_DIR / task]
     else:
-        print(f"⚠️ 警告: {folder} 未找到 'inputs =' 变量定义，将使用源文件全部内容作为 code_content")
-        print(f"   📂 源文件路径: {source_file_path}")
-        code_content = content
+        task_dirs = sorted(path for path in BASE_DIR.glob("task_*") if path.is_dir())
+    if limit is not None:
+        task_dirs = task_dirs[:limit]
 
-    # 4. 提取文件末尾的执行逻辑
-    tail_start = config["tail_start"]
-    tail_end = config["tail_end"]
+    for task_dir in task_dirs:
+        if not task_dir.is_dir():
+            stats["missing_source"] += 1
+            print(f"[missing-task] {task_dir.name}")
+            continue
 
-    if len(lines) >= abs(tail_start):
-        loop_lines = lines[tail_start:tail_end]
-    else:
-        print(f"⚠️ 警告: {folder} 源文件行数不足（共 {len(lines)} 行），无法截取倒数 {abs(tail_start)} 行")
-        print(f"   📂 源文件路径: {source_file_path}")
-        loop_lines = []
+        source_path = task_dir / source_name
+        if not source_path.exists():
+            stats["missing_source"] += 1
+            print(f"[missing-source] {task_dir.name}: {source_name}")
+            continue
 
-    # 5. 定义复用的生成逻辑：读取 txt 写入新 py
-    def generate_script(status):
-        input_txt_path = os.path.join(subdir, f"{type_name}_{status}_inputs.txt")
-        output_py_path = os.path.join(subdir, f"sample_{type_name}_{status}.py")
+        try:
+            source = source_path.read_text(encoding="utf-8")
+            code_content, execution_tail = split_source_around_inputs(source)
+        except Exception as exc:
+            stats["failed"] += 1
+            print(f"[failed] {task_dir.name}: cannot split {source_name}: {exc}")
+            continue
 
-        inputs = []
-        if os.path.exists(input_txt_path):
-            with open(input_txt_path, "r", encoding="utf-8") as f:
-                inputs = [line.strip() for line in f if line.strip()]
-        else:
-            print(f"⏭ 跳过生成 '{os.path.basename(output_py_path)}': 缺少输入文件 '{type_name}_{status}_inputs.txt'")
-            print(f"   📂 期望路径: {input_txt_path}")
-            print(f"   📋 目录 '{folder}' 中现有文件: {os.listdir(subdir) or '（空目录）'}")
-            return
+        for status in ("correct", "error"):
+            input_path = task_dir / f"{input_prefix}_{status}_inputs.txt"
+            input_literals = read_input_literals(input_path)
+            if input_literals is None:
+                stats["missing_inputs"] += 1
+                print(f"[missing-inputs] {task_dir.name}: {input_path.name}")
+                continue
 
-        with open(output_py_path, "w", encoding="utf-8") as f:
-            f.write(code_content)
-            f.write("inputs = [\n")
-            for item in inputs:
-                f.write(f"    {item}\n")
-            f.write("]\n\n")
-            f.writelines(loop_lines)
+            output_path = task_dir / f"sample_{input_prefix}_{status}.py"
+            output_path.write_text(
+                code_content + build_inputs_block(input_literals) + execution_tail,
+                encoding="utf-8",
+            )
+            stats["written"] += 1
+            print(f"[written] {task_dir.name}: {output_path.name}")
 
-        print(f"✅ 已生成: {os.path.basename(output_py_path)}")
+    return stats
 
-    # 6. 分别为 correct 和 error 生成对应的执行脚本
-    generate_script("correct")
-    generate_script("error")
 
-print("\n🎉 全部处理完成！")
+def main():
+    parser = argparse.ArgumentParser(description="Build RQ2 correct/error scripts without truncating execution logic.")
+    parser.add_argument("--mode", choices=("all",) + tuple(MODE_CONFIGS), default="all")
+    parser.add_argument("--limit", type=int)
+    parser.add_argument("--task", help="Optional task folder name, for example task_100")
+    args = parser.parse_args()
+
+    modes = tuple(MODE_CONFIGS) if args.mode == "all" else (args.mode,)
+    for mode in modes:
+        stats = generate_mode(mode, limit=args.limit, task=args.task)
+        print(
+            f"Done {mode}. written={stats['written']}, "
+            f"missing_source={stats['missing_source']}, "
+            f"missing_inputs={stats['missing_inputs']}, failed={stats['failed']}"
+        )
+
+
+if __name__ == "__main__":
+    main()

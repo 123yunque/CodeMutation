@@ -1,3 +1,15 @@
+r"""
+Run examples:
+  & "F:\Pycharm2023\condaenvs\Npflower\python.exe" 05_rq1\rq1_main.py run --mode original --output_name gpt51_npflower --model_name gpt-5.1 --max_workers 1
+  & "F:\Pycharm2023\condaenvs\Npflower\python.exe" 05_rq1\rq1_main.py run --mode equivalent --output_name gpt51_npflower --model_name gpt-5.1 --max_workers 1
+  & "F:\Pycharm2023\condaenvs\Npflower\python.exe" 05_rq1\rq1_main.py run --mode non_equivalent --output_name gpt51_npflower --model_name gpt-5.1 --max_workers 1
+  & "F:\Pycharm2023\condaenvs\Npflower\python.exe" 05_rq1\rq1_main.py evaluate --mode all --output_name gpt51_npflower --report reports\rq1_gpt51_npflower.json
+
+Small smoke test:
+  & "F:\Pycharm2023\condaenvs\Npflower\python.exe" 05_rq1\rq1_main.py run --mode original --output_name gpt51_smoke_npflower --model_name gpt-5.1 --max_workers 1 --limit 3 --overwrite
+  & "F:\Pycharm2023\condaenvs\Npflower\python.exe" 05_rq1\rq1_main.py evaluate --mode original --output_name gpt51_smoke_npflower
+"""
+
 import argparse
 import json
 import os
@@ -33,6 +45,7 @@ def run_llm(args):
         mode_config["input_script"],
         max_workers=args.max_workers,
         overwrite=args.overwrite,
+        limit=args.limit,
     )
 
 
@@ -57,6 +70,7 @@ def main(default_command=None):
     run_parser.add_argument("--output_name", required=True, help="Name for the model output directory")
     run_parser.add_argument("--model_name", required=True, help="Model name for LLM API calls")
     run_parser.add_argument("--max_workers", type=int, default=2, help="Number of concurrent LLM requests")
+    run_parser.add_argument("--limit", type=int, help="Optional number of tasks to run")
     run_parser.add_argument("--overwrite", action="store_true", help="Regenerate outputs that already exist")
     run_parser.set_defaults(func=run_llm)
 

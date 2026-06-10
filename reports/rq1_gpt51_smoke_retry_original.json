@@ -1,0 +1,21 @@
+[
+  {
+    "mode": "original",
+    "output_name": "gpt51_smoke_retry",
+    "tasks": [],
+    "summary": {
+      "task_count": 0,
+      "valid_task_count": 0,
+      "same_cases": 0,
+      "total_cases": 0,
+      "accuracy": 0.0,
+      "full_same_tasks": 0,
+      "partial_same_tasks": 0,
+      "all_diff_tasks": 0,
+      "missing_file_tasks": 0,
+      "no_valid_case_tasks": 0,
+      "missing_output_lines": 0,
+      "extra_output_lines": 0
+    }
+  }
+]

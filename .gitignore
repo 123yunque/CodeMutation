@@ -18,3 +18,4 @@ backups/
 test.api.py
 config_loader.py
 
+AGENTS.md

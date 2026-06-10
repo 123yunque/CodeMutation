@@ -1,3 +1,13 @@
+r"""
+Run examples:
+  python 02_mutation\mutation_main.py --mode equivalent --max_workers 2
+  python 02_mutation\mutation_main.py --mode non_equivalent --max_workers 2
+  python 02_mutation\mutation_main.py --mode equivalent --limit 5 --max_workers 1
+
+Use the Npflower environment explicitly if the default python cannot call the API:
+  & "F:\Pycharm2023\condaenvs\Npflower\python.exe" 02_mutation\mutation_main.py --mode equivalent --limit 5 --max_workers 1
+"""
+
 import argparse
 from pathlib import Path
 import sys
