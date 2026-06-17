@@ -1,0 +1,169 @@
+[
+  {
+    "mode": "non_equivalent",
+    "output_name": "humaneval_10_mutation_rerun_20260618",
+    "tasks": [
+      {
+        "task_id": "task_HumanEval_0",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 8,
+        "diff_lines": [
+          1,
+          9
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_HumanEval_1",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_HumanEval_2",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 9,
+        "diff_lines": [
+          7,
+          8,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_HumanEval_3",
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 5,
+        "diff_lines": [
+          1
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_HumanEval_4",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_HumanEval_5",
+        "status": "full_same",
+        "same_count": 8,
+        "total_count": 8,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_HumanEval_6",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_HumanEval_7",
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_HumanEval_8",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 10,
+        "diff_lines": [
+          3,
+          6,
+          8,
+          9
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_HumanEval_9",
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      }
+    ],
+    "summary": {
+      "task_count": 10,
+      "valid_task_count": 10,
+      "same_cases": 40,
+      "total_cases": 89,
+      "accuracy": 0.449438202247191,
+      "full_same_tasks": 2,
+      "partial_same_tasks": 5,
+      "all_diff_tasks": 3,
+      "missing_file_tasks": 0,
+      "no_valid_case_tasks": 0,
+      "missing_output_lines": 0,
+      "extra_output_lines": 0
+    }
+  }
+]

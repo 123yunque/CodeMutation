@@ -24,6 +24,11 @@ MODE_OUTPUTS = {
 thread_local = threading.local()
 
 
+def task_sort_key(name):
+    match = re.search(r"(\d+)$", name)
+    return int(match.group(1)) if match else name
+
+
 class LegacyOpenAIClient:
     def __init__(self, openai_module, api_key, base_url):
         self.openai = openai_module
@@ -345,7 +350,10 @@ def process_folder(
 
 
 def iter_folders(input_dir, limit=None):
-    folders = sorted(f for f in os.listdir(input_dir) if os.path.isdir(os.path.join(input_dir, f)))
+    folders = sorted(
+        (f for f in os.listdir(input_dir) if os.path.isdir(os.path.join(input_dir, f))),
+        key=task_sort_key,
+    )
     if limit is not None:
         return folders[:limit]
     return folders

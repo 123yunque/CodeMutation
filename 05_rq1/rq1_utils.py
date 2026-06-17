@@ -12,6 +12,11 @@ from rq1_config import get_mode_config
 INVALID_LOCAL_RESULT = "变异前后结果相同，认为该测试用例无效"
 
 
+def task_sort_key(name):
+    match = re.search(r"(\d+)$", name)
+    return int(match.group(1)) if match else name
+
+
 def load_runtime_config():
     with open(str(CONFIG1), "r", encoding="utf-8") as f:
         return json.load(f)
@@ -161,7 +166,10 @@ def execute_task_with_threads(
     limit=None,
 ):
     os.makedirs(output_path, exist_ok=True)
-    folders = sorted(f for f in os.listdir(input_dir) if os.path.isdir(os.path.join(input_dir, f)))
+    folders = sorted(
+        (f for f in os.listdir(input_dir) if os.path.isdir(os.path.join(input_dir, f))),
+        key=task_sort_key,
+    )
     if limit is not None:
         folders = folders[:limit]
     print(f"Processing {len(folders)} tasks with max_workers={max_workers}")

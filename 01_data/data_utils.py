@@ -27,6 +27,10 @@ DATASET_SPLIT = "test"
 
 COMBINED_HEADER = """
 import os
+import sys
+
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 inputs_file = os.path.join(current_dir, 'code_inputs.txt')
@@ -70,9 +74,25 @@ def parse_inputs_literal(inputs_str):
 
 def extract_inputs(test_processed):
     match = re.search(r"inputs\s*=\s*(\[.*?\])\s*\n\s*results", test_processed, re.DOTALL)
-    if not match:
+    if match:
+        return parse_inputs_literal(match.group(1))
+
+    match = re.search(r"inputs\s*=\s*(\[.*?\])\s*(?=\n\s*(?:for|assertion|assert|$))", test_processed, re.DOTALL)
+    if match:
+        return parse_inputs_literal(match.group(1))
+
+    try:
+        tree = ast.parse(test_processed)
+    except SyntaxError:
         return []
-    return parse_inputs_literal(match.group(1))
+
+    for node in ast.walk(tree):
+        if not isinstance(node, ast.Assign):
+            continue
+        for target in node.targets:
+            if isinstance(target, ast.Name) and target.id == "inputs":
+                return parse_inputs_literal(ast.unparse(node.value))
+    return []
 
 
 def extract_assertion_output_expression(line, entry_point=None):
@@ -229,7 +249,16 @@ def save_item(item, output_dir, model_footer, sample_size, overwrite):
     task_id = item["safe_task_id"]
     folder_path = os.path.join(output_dir, f"task_{task_id}")
     if os.path.exists(folder_path) and not overwrite:
-        return "skipped"
+        required_files = (
+            f"task_{task_id}.json",
+            "meta.json",
+            "combined.py",
+            "code.py",
+            "code_inputs.txt",
+            "sample_code_inputs.txt",
+        )
+        if all(os.path.exists(os.path.join(folder_path, name)) for name in required_files):
+            return "skipped"
     os.makedirs(folder_path, exist_ok=True)
 
     json_path = os.path.join(folder_path, f"task_{task_id}.json")

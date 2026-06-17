@@ -1,4 +1,5 @@
 import os
+import re
 import subprocess
 
 from paths import MBPP_DIR, NON_EQUIV_TRANSFORM
@@ -8,9 +9,14 @@ from rq1_config import get_mode_config
 INVALID_LOCAL_RESULT = "变异前后结果相同，认为该测试用例无效"
 
 
+def task_sort_key(name):
+    match = re.search(r"(\d+)$", name)
+    return int(match.group(1)) if match else name
+
+
 def iter_task_dirs(base_dir):
     folders = [f for f in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, f))]
-    return sorted(folders)
+    return sorted(folders, key=task_sort_key)
 
 
 def run_task(task_dir, script_name, timeout):

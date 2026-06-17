@@ -7,6 +7,10 @@ from paths import EQUIV_TRANSFORM, MBPP_DIR, NON_EQUIV_TRANSFORM
 
 ORIGINAL_OUTPUT_TEMPLATE = """
 import os
+import sys
+
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 inputs_file = os.path.join(current_dir, 'sample_code_inputs.txt')
@@ -18,6 +22,10 @@ for inp in inputs:
 
 MUTATION_OUTPUT_TEMPLATE = """
 import os
+import sys
+
+if hasattr(sys, "set_int_max_str_digits"):
+    sys.set_int_max_str_digits(0)
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 results_file = os.path.join(current_dir, '{result_file}')
