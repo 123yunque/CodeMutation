@@ -1,46 +1,37 @@
 [
   {
-    "mode": "equivalent",
-    "output_name": "gpt51",
+    "mode": "non_equivalent",
+    "output_name": "gpt51_final",
     "tasks": [
       {
         "task_id": "task_100",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 8,
         "diff_lines": [
           1,
           2,
           3,
-          4,
-          5,
           6,
           7,
           8,
-          9,
           10
         ],
-        "missing_output_lines": 9,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_101",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 8,
         "diff_lines": [
-          1,
-          2,
           3,
-          4,
-          5,
           6,
           7,
-          8,
-          9,
           10
         ],
-        "missing_output_lines": 9,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
@@ -65,8 +56,142 @@
       },
       {
         "task_id": "task_103",
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 4,
+        "diff_lines": [
+          4,
+          5,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_104",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_105",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          2
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_106",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 8,
+        "diff_lines": [
+          1,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_108",
+        "status": "partial_same",
+        "same_count": 7,
+        "total_count": 10,
+        "diff_lines": [
+          2,
+          3,
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_109",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 8,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_11",
         "status": "all_diff",
         "same_count": 0,
+        "total_count": 2,
+        "diff_lines": [
+          2,
+          4
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_111",
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_113",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 1,
+        "diff_lines": [
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_116",
+        "status": "partial_same",
+        "same_count": 3,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          7,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_118",
+        "status": "full_same",
+        "same_count": 3,
+        "total_count": 3,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_119",
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -77,24 +202,20 @@
           6,
           7,
           8,
-          9,
           10
         ],
-        "missing_output_lines": 9,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_104",
+        "task_id": "task_12",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 7,
         "diff_lines": [
           1,
           2,
-          3,
-          4,
           5,
-          6,
           7,
           8,
           9,
@@ -104,243 +225,17 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_105",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_106",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_108",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_109",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_11",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_111",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_113",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_116",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 9,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_118",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_119",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_12",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
         "task_id": "task_120",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
-          3,
-          4,
-          5,
           6,
           7,
-          8,
-          9,
-          10
+          8
         ],
-        "missing_output_lines": 9,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
@@ -360,47 +255,33 @@
           9,
           10
         ],
-        "missing_output_lines": 10,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_124",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 3,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
           3,
           4,
           5,
           6,
           7,
-          8,
-          9,
-          10
+          8
         ],
-        "missing_output_lines": 10,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_125",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
@@ -420,44 +301,35 @@
           9,
           10
         ],
-        "missing_output_lines": 10,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_127",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 3,
+        "total_count": 9,
         "diff_lines": [
-          1,
-          2,
           3,
           4,
-          5,
           6,
-          7,
           8,
           9,
           10
         ],
-        "missing_output_lines": 10,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_128",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 7,
         "diff_lines": [
           1,
           2,
-          3,
-          4,
-          5,
           6,
           7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -466,23 +338,25 @@
       {
         "task_id": "task_129",
         "status": "full_same",
-        "same_count": 10,
-        "total_count": 10,
+        "same_count": 1,
+        "total_count": 1,
         "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_130",
-        "status": "partial_same",
-        "same_count": 2,
+        "status": "all_diff",
+        "same_count": 0,
         "total_count": 10,
         "diff_lines": [
+          1,
           2,
           3,
           4,
           5,
           6,
+          7,
           8,
           9,
           10
@@ -492,25 +366,6 @@
       },
       {
         "task_id": "task_131",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_132",
         "status": "all_diff",
         "same_count": 0,
         "total_count": 10,
@@ -521,6 +376,24 @@
           4,
           5,
           6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_132",
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 9,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
           7,
           8,
           9,
@@ -532,16 +405,10 @@
       {
         "task_id": "task_133",
         "status": "partial_same",
-        "same_count": 2,
+        "same_count": 8,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
-          3,
-          4,
-          5,
-          6,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -569,52 +436,34 @@
       },
       {
         "task_id": "task_137",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 5,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_138",
-        "status": "partial_same",
+        "status": "full_same",
         "same_count": 4,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          3,
-          4,
-          5,
-          8,
-          10
-        ],
+        "total_count": 4,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_139",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
           3,
           4,
           5,
-          6,
           7,
           8,
           9,
@@ -625,8 +474,8 @@
       },
       {
         "task_id": "task_14",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -634,10 +483,8 @@
           3,
           4,
           5,
-          6,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -645,105 +492,64 @@
       },
       {
         "task_id": "task_140",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_141",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_142",
         "status": "partial_same",
-        "same_count": 3,
-        "total_count": 10,
+        "same_count": 2,
+        "total_count": 4,
         "diff_lines": [
-          1,
-          2,
           3,
-          6,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_145",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_16",
         "status": "partial_same",
         "same_count": 7,
         "total_count": 10,
         "diff_lines": [
-          2,
-          6,
+          1,
+          3,
           7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_160",
-        "status": "partial_same",
-        "same_count": 5,
+        "task_id": "task_16",
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_160",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 2,
         "diff_lines": [
-          1,
-          2,
           7,
-          8,
-          9
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -751,30 +557,23 @@
       {
         "task_id": "task_161",
         "status": "partial_same",
-        "same_count": 2,
+        "same_count": 8,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
           4,
-          5,
-          6,
-          7,
-          8,
-          9
+          7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_162",
-        "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 7,
         "diff_lines": [
           2,
           3,
-          4,
           5,
           6,
           7,
@@ -786,22 +585,6 @@
       },
       {
         "task_id": "task_165",
-        "status": "partial_same",
-        "same_count": 4,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_166",
         "status": "all_diff",
         "same_count": 0,
         "total_count": 10,
@@ -816,6 +599,23 @@
           8,
           9,
           10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_166",
+        "status": "partial_same",
+        "same_count": 3,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -846,26 +646,22 @@
         "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          10
+          3
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_17",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 4,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
           4,
           5,
           6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -874,37 +670,23 @@
       {
         "task_id": "task_170",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 4,
+        "total_count": 8,
         "diff_lines": [
-          1,
-          2,
           3,
           4,
-          5,
           6,
-          7,
-          8,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_171",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -912,40 +694,28 @@
       },
       {
         "task_id": "task_172",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_18",
-        "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 7,
         "diff_lines": [
           1,
-          2,
+          3,
+          4,
           5,
           6,
           7,
-          8,
-          9,
           10
         ],
-        "missing_output_lines": 3,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
@@ -960,17 +730,14 @@
       {
         "task_id": "task_2",
         "status": "partial_same",
-        "same_count": 1,
+        "same_count": 4,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
-          4,
           5,
           6,
-          8,
-          9,
+          7,
           10
         ],
         "missing_output_lines": 0,
@@ -987,14 +754,24 @@
       },
       {
         "task_id": "task_222",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 1,
+        "diff_lines": [
+          9
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_223",
         "status": "partial_same",
-        "same_count": 3,
+        "same_count": 4,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
-          4,
-          5,
+          3,
+          6,
           8,
           9,
           10
@@ -1003,27 +780,17 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_223",
-        "status": "full_same",
-        "same_count": 10,
-        "total_count": 10,
-        "diff_lines": [],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
         "task_id": "task_224",
         "status": "partial_same",
-        "same_count": 2,
+        "same_count": 3,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
-          3,
           4,
           5,
-          6,
           7,
+          8,
+          9,
           10
         ],
         "missing_output_lines": 0,
@@ -1051,39 +818,21 @@
       },
       {
         "task_id": "task_227",
-        "status": "partial_same",
-        "same_count": 1,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_230",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 4,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -1091,17 +840,11 @@
       {
         "task_id": "task_232",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 6,
+        "total_count": 9,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
           5,
-          7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -1109,8 +852,8 @@
       },
       {
         "task_id": "task_233",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -1118,10 +861,8 @@
           3,
           4,
           5,
-          6,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -1149,15 +890,12 @@
       },
       {
         "task_id": "task_235",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 9,
         "diff_lines": [
           1,
-          2,
-          3,
           4,
-          5,
           6,
           7,
           8,
@@ -1169,19 +907,13 @@
       },
       {
         "task_id": "task_237",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
           3,
-          4,
           5,
           6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -1189,52 +921,39 @@
       },
       {
         "task_id": "task_238",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 7,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
           8,
           9,
           10
         ],
-        "missing_output_lines": 0,
+        "missing_output_lines": 1,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_239",
-        "status": "partial_same",
-        "same_count": 4,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 2,
         "diff_lines": [
-          2,
-          3,
-          4,
           6,
-          8,
-          9
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_240",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
           4,
           5,
-          6,
           7,
           8,
           9,
@@ -1246,15 +965,12 @@
       {
         "task_id": "task_242",
         "status": "partial_same",
-        "same_count": 1,
+        "same_count": 4,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
           3,
-          4,
-          5,
           6,
+          7,
           8,
           9,
           10
@@ -1265,13 +981,14 @@
       {
         "task_id": "task_244",
         "status": "partial_same",
-        "same_count": 5,
-        "total_count": 10,
+        "same_count": 1,
+        "total_count": 7,
         "diff_lines": [
-          2,
           3,
-          5,
-          8,
+          4,
+          6,
+          7,
+          9,
           10
         ],
         "missing_output_lines": 0,
@@ -1279,8 +996,8 @@
       },
       {
         "task_id": "task_245",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -1289,8 +1006,6 @@
           4,
           5,
           6,
-          7,
-          8,
           9,
           10
         ],
@@ -1299,17 +1014,15 @@
       },
       {
         "task_id": "task_247",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 9,
         "diff_lines": [
-          1,
           2,
           3,
           4,
           5,
           6,
-          7,
           8,
           9,
           10
@@ -1320,11 +1033,48 @@
       {
         "task_id": "task_250",
         "status": "partial_same",
-        "same_count": 6,
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
+          1,
+          2,
           3,
           4,
+          6,
+          7,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_251",
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 9,
+        "diff_lines": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_252",
+        "status": "partial_same",
+        "same_count": 5,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
           6,
           9
         ],
@@ -1332,7 +1082,7 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_251",
+        "task_id": "task_253",
         "status": "all_diff",
         "same_count": 0,
         "total_count": 10,
@@ -1352,7 +1102,7 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_252",
+        "task_id": "task_255",
         "status": "all_diff",
         "same_count": 0,
         "total_count": 10,
@@ -1369,31 +1119,6 @@
           10
         ],
         "missing_output_lines": 10,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_253",
-        "status": "partial_same",
-        "same_count": 4,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          5,
-          7,
-          8,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_255",
-        "status": "no_valid_cases",
-        "same_count": 0,
-        "total_count": 0,
-        "diff_lines": [],
-        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
@@ -1418,48 +1143,26 @@
       },
       {
         "task_id": "task_257",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_259",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 4,
+        "total_count": 4,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_260",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -1470,61 +1173,37 @@
           6,
           7,
           8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_261",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_262",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_264",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
           4,
           5,
           6,
@@ -1540,7 +1219,7 @@
         "task_id": "task_265",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
@@ -1549,7 +1228,6 @@
           5,
           6,
           7,
-          8,
           9,
           10
         ],
@@ -1558,19 +1236,17 @@
       },
       {
         "task_id": "task_266",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
           4,
           5,
           6,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -1580,16 +1256,14 @@
         "task_id": "task_267",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 8,
         "diff_lines": [
           1,
           2,
           3,
-          4,
           5,
           6,
           7,
-          8,
           9,
           10
         ],
@@ -1598,15 +1272,13 @@
       },
       {
         "task_id": "task_268",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
           4,
-          5,
           6,
           7,
           8,
@@ -1618,19 +1290,11 @@
       },
       {
         "task_id": "task_269",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 8,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
           4,
-          5,
-          6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -1638,20 +1302,15 @@
       },
       {
         "task_id": "task_270",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 5,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
           4,
-          5,
-          6,
           7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -1678,58 +1337,39 @@
       },
       {
         "task_id": "task_272",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 7,
+        "total_count": 9,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          5
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_273",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
-          3,
-          4,
           5,
           6,
-          7,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_274",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
-          4,
-          5,
-          6,
-          7,
-          8,
           9,
           10
         ],
@@ -1738,13 +1378,12 @@
       },
       {
         "task_id": "task_276",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
           4,
           5,
           6,
@@ -1759,22 +1398,35 @@
       {
         "task_id": "task_277",
         "status": "partial_same",
-        "same_count": 3,
-        "total_count": 10,
+        "same_count": 2,
+        "total_count": 3,
         "diff_lines": [
-          1,
-          2,
-          4,
-          6,
-          7,
-          8,
-          10
+          1
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_278",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 9,
+        "diff_lines": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_279",
         "status": "partial_same",
         "same_count": 1,
         "total_count": 10,
@@ -1783,26 +1435,6 @@
           2,
           3,
           4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_279",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
           6,
           7,
           8,
@@ -1815,32 +1447,7 @@
       {
         "task_id": "task_280",
         "status": "partial_same",
-        "same_count": 7,
-        "total_count": 10,
-        "diff_lines": [
-          2,
-          4,
-          6
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_281",
-        "status": "partial_same",
-        "same_count": 8,
-        "total_count": 10,
-        "diff_lines": [
-          3,
-          7
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_282",
-        "status": "all_diff",
-        "same_count": 0,
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -1850,53 +1457,55 @@
           5,
           6,
           7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_283",
+        "task_id": "task_281",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_282",
         "status": "partial_same",
-        "same_count": 6,
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          6,
-          8,
-          9
+          3
         ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_283",
+        "status": "full_same",
+        "same_count": 2,
+        "total_count": 2,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_284",
-        "status": "partial_same",
+        "status": "full_same",
         "same_count": 6,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          4,
-          7,
-          9
-        ],
+        "total_count": 6,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_285",
-        "status": "partial_same",
-        "same_count": 5,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          2,
-          3,
-          5,
-          6,
-          7
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -1942,39 +1551,27 @@
       },
       {
         "task_id": "task_290",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 7,
         "diff_lines": [
           1,
-          2,
           3,
+          4,
           5,
-          6,
           7,
           8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_292",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 7,
+        "total_count": 7,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -2001,26 +1598,21 @@
       {
         "task_id": "task_294",
         "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "same_count": 3,
+        "total_count": 6,
         "diff_lines": [
-          1,
-          3,
-          4,
-          5,
-          6,
           7,
           8,
-          10
+          9
         ],
         "missing_output_lines": 0,
-        "extra_output_lines": 0
+        "extra_output_lines": 3
       },
       {
         "task_id": "task_296",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
@@ -2029,7 +1621,6 @@
           5,
           6,
           7,
-          8,
           9,
           10
         ],
@@ -2038,20 +1629,14 @@
       },
       {
         "task_id": "task_297",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 5,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
-          3,
-          4,
-          5,
-          6,
           7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -2059,16 +1644,14 @@
       {
         "task_id": "task_299",
         "status": "partial_same",
-        "same_count": 1,
+        "same_count": 3,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
           4,
           5,
           6,
-          8,
           9,
           10
         ],
@@ -2077,50 +1660,40 @@
       },
       {
         "task_id": "task_3",
-        "status": "partial_same",
-        "same_count": 6,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 1,
         "diff_lines": [
-          1,
-          4,
-          8,
-          9
+          5
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_300",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 4,
         "diff_lines": [
-          1,
-          2,
           3,
-          4,
           5,
-          6,
-          7,
-          8,
-          9,
-          10
+          7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_301",
-        "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 8,
         "diff_lines": [
           1,
-          2,
           3,
           4,
           5,
           6,
+          7,
           8,
           9
         ],
@@ -2130,12 +1703,10 @@
       {
         "task_id": "task_305",
         "status": "partial_same",
-        "same_count": 4,
-        "total_count": 10,
+        "same_count": 1,
+        "total_count": 5,
         "diff_lines": [
-          2,
           3,
-          5,
           6,
           8,
           10
@@ -2145,94 +1716,60 @@
       },
       {
         "task_id": "task_306",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 5,
         "diff_lines": [
-          1,
           2,
           3,
-          4,
-          5,
-          6,
           7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_308",
-        "status": "partial_same",
-        "same_count": 4,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 1,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_309",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 2,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
           6,
-          7,
-          8,
-          9,
-          10
+          7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
+        "task_id": "task_309",
+        "status": "full_same",
+        "same_count": 8,
+        "total_count": 8,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
         "task_id": "task_310",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_311",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 4,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
           3,
           4,
           5,
-          6,
           7,
-          8,
           9,
           10
         ],
@@ -2261,31 +1798,19 @@
       },
       {
         "task_id": "task_388",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 1,
+        "total_count": 1,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_389",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 9,
         "diff_lines": [
-          1,
           2,
           3,
           4,
@@ -2293,8 +1818,7 @@
           6,
           7,
           8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -2303,17 +1827,15 @@
         "task_id": "task_390",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 8,
         "diff_lines": [
           1,
           2,
           3,
-          4,
           5,
           6,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -2323,17 +1845,10 @@
         "task_id": "task_391",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 3,
         "diff_lines": [
           1,
-          2,
           3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -2361,67 +1876,43 @@
       },
       {
         "task_id": "task_394",
-        "status": "partial_same",
-        "same_count": 9,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          9
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_395",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          5
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_397",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_398",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 3,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
           4,
           5,
-          6,
-          7,
           8,
           9,
           10
@@ -2431,46 +1922,6 @@
       },
       {
         "task_id": "task_4",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_404",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_405",
         "status": "partial_same",
         "same_count": 9,
         "total_count": 10,
@@ -2481,124 +1932,99 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_406",
+        "task_id": "task_404",
+        "status": "full_same",
+        "same_count": 8,
+        "total_count": 8,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_405",
         "status": "partial_same",
-        "same_count": 6,
+        "same_count": 7,
         "total_count": 10,
         "diff_lines": [
+          1,
           3,
-          5,
-          7,
-          9
+          7
         ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_406",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_409",
         "status": "partial_same",
-        "same_count": 1,
+        "same_count": 8,
         "total_count": 10,
         "diff_lines": [
-          2,
           3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_410",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_412",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 1,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_413",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 2,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_414",
-        "status": "partial_same",
-        "same_count": 7,
-        "total_count": 10,
-        "diff_lines": [
-          4,
-          7,
           9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_415",
-        "status": "all_diff",
-        "same_count": 0,
+        "task_id": "task_410",
+        "status": "full_same",
+        "same_count": 6,
+        "total_count": 6,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_412",
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_413",
+        "status": "partial_same",
+        "same_count": 7,
+        "total_count": 9,
         "diff_lines": [
           1,
+          2
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_414",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_415",
+        "status": "partial_same",
+        "same_count": 3,
+        "total_count": 10,
+        "diff_lines": [
           2,
-          3,
           4,
           5,
           6,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -2606,19 +2032,13 @@
       },
       {
         "task_id": "task_418",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 6,
         "diff_lines": [
-          1,
           2,
-          3,
           4,
-          5,
           6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -2626,14 +2046,13 @@
       },
       {
         "task_id": "task_419",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
           3,
-          4,
           5,
           6,
           7,
@@ -2646,19 +2065,17 @@
       },
       {
         "task_id": "task_420",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
-          3,
           4,
           5,
           6,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -2666,20 +2083,11 @@
       },
       {
         "task_id": "task_421",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -2726,34 +2134,20 @@
       },
       {
         "task_id": "task_425",
-        "status": "partial_same",
-        "same_count": 6,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          2,
-          7,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_426",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          5
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -2780,39 +2174,23 @@
       },
       {
         "task_id": "task_428",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          4
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_429",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 7,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -2820,15 +2198,12 @@
       },
       {
         "task_id": "task_430",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 9,
         "diff_lines": [
-          1,
           2,
           3,
-          4,
-          5,
           6,
           7,
           8,
@@ -2840,14 +2215,12 @@
       },
       {
         "task_id": "task_432",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
-          4,
           5,
           6,
           7,
@@ -2860,86 +2233,50 @@
       },
       {
         "task_id": "task_433",
-        "status": "partial_same",
-        "same_count": 7,
-        "total_count": 10,
-        "diff_lines": [
-          4,
-          6,
-          7
-        ],
+        "status": "full_same",
+        "same_count": 6,
+        "total_count": 6,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_435",
-        "status": "partial_same",
-        "same_count": 3,
-        "total_count": 10,
-        "diff_lines": [
-          2,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
+        "status": "full_same",
+        "same_count": 8,
+        "total_count": 8,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_436",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 7,
+        "total_count": 7,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_437",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_439",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 3,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
           4,
-          5,
           6,
-          7,
           8,
           9,
           10
@@ -2951,17 +2288,14 @@
         "task_id": "task_440",
         "status": "partial_same",
         "same_count": 1,
-        "total_count": 10,
+        "total_count": 7,
         "diff_lines": [
-          1,
           2,
           3,
-          4,
           6,
           7,
           8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -2984,24 +2318,15 @@
           10
         ],
         "missing_output_lines": 0,
-        "extra_output_lines": 0
+        "extra_output_lines": 1
       },
       {
         "task_id": "task_445",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 9,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          1
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -3009,17 +2334,14 @@
       {
         "task_id": "task_446",
         "status": "partial_same",
-        "same_count": 1,
+        "same_count": 4,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
-          4,
           5,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -3027,37 +2349,26 @@
       },
       {
         "task_id": "task_447",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
           3,
           4,
-          5,
           6,
-          7,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_448",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 4,
         "diff_lines": [
-          2,
-          3,
           4,
-          5,
-          6,
           7,
-          8,
           9,
           10
         ],
@@ -3067,52 +2378,35 @@
       {
         "task_id": "task_450",
         "status": "partial_same",
-        "same_count": 2,
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
-          1,
-          3,
+          2,
           4,
           6,
-          7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_451",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 3,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_453",
-        "status": "partial_same",
-        "same_count": 3,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 3,
         "diff_lines": [
-          2,
-          3,
           4,
-          5,
-          6,
           8,
           9
         ],
@@ -3121,85 +2415,52 @@
       },
       {
         "task_id": "task_454",
-        "status": "partial_same",
-        "same_count": 6,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          4,
-          8,
-          9
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_455",
-        "status": "partial_same",
-        "same_count": 7,
-        "total_count": 10,
-        "diff_lines": [
-          2,
-          3,
-          5
-        ],
+        "status": "full_same",
+        "same_count": 1,
+        "total_count": 1,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_456",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_457",
         "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "same_count": 8,
+        "total_count": 9,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          7,
-          9,
-          10
+          7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_458",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
-          4,
           5,
-          6,
-          7,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -3221,23 +2482,18 @@
           9,
           10
         ],
-        "missing_output_lines": 0,
+        "missing_output_lines": 1,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_460",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 9,
         "diff_lines": [
           1,
-          2,
           3,
-          4,
           5,
-          6,
-          7,
-          8,
           9,
           10
         ],
@@ -3268,87 +2524,7 @@
         "task_id": "task_463",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_465",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_468",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_470",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_471",
-        "status": "partial_same",
-        "same_count": 5,
-        "total_count": 10,
+        "total_count": 5,
         "diff_lines": [
           2,
           3,
@@ -3360,14 +2536,64 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_472",
-        "status": "partial_same",
-        "same_count": 8,
-        "total_count": 10,
+        "task_id": "task_465",
+        "status": "full_same",
+        "same_count": 1,
+        "total_count": 1,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_468",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 1,
         "diff_lines": [
+          3
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_470",
+        "status": "partial_same",
+        "same_count": 3,
+        "total_count": 9,
+        "diff_lines": [
+          3,
           4,
+          6,
+          7,
+          9,
           10
         ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_471",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 7,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_472",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -3375,95 +2601,51 @@
         "task_id": "task_473",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 5,
         "diff_lines": [
-          1,
           2,
           3,
           4,
-          5,
           6,
-          7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_474",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 2,
+        "total_count": 2,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_475",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_476",
-        "status": "partial_same",
-        "same_count": 2,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          4,
-          5,
-          6,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_477",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          4
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -3490,39 +2672,20 @@
       },
       {
         "task_id": "task_479",
-        "status": "partial_same",
-        "same_count": 1,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_554",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -3549,25 +2712,22 @@
       },
       {
         "task_id": "task_556",
-        "status": "partial_same",
-        "same_count": 3,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 4,
         "diff_lines": [
-          2,
-          3,
-          4,
+          1,
           5,
           6,
-          8,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_557",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -3578,7 +2738,6 @@
           6,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -3587,126 +2746,77 @@
       {
         "task_id": "task_558",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 3,
+        "total_count": 9,
         "diff_lines": [
           1,
-          2,
           3,
           4,
           5,
           6,
-          7,
-          8,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_559",
-        "status": "partial_same",
-        "same_count": 4,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          4,
-          5,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_56",
-        "status": "partial_same",
-        "same_count": 8,
-        "total_count": 10,
-        "diff_lines": [
-          4,
           8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_560",
-        "status": "all_diff",
-        "same_count": 0,
+        "task_id": "task_559",
+        "status": "full_same",
+        "same_count": 3,
+        "total_count": 3,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_56",
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          5
         ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_560",
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_562",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 5,
+        "total_count": 5,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_563",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 3,
+        "total_count": 5,
         "diff_lines": [
-          1,
           2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          5
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_564",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 7,
+        "total_count": 9,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          2
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -3714,17 +2824,12 @@
       {
         "task_id": "task_565",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 5,
+        "total_count": 9,
         "diff_lines": [
           1,
-          3,
-          4,
-          5,
           6,
           7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -3733,14 +2838,12 @@
       {
         "task_id": "task_566",
         "status": "partial_same",
-        "same_count": 1,
+        "same_count": 3,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
           4,
-          5,
           6,
           7,
           8,
@@ -3751,31 +2854,20 @@
       },
       {
         "task_id": "task_567",
-        "status": "partial_same",
-        "same_count": 8,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          6
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_568",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 8,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
           3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -3783,38 +2875,25 @@
       },
       {
         "task_id": "task_569",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
-          3,
-          4,
           5,
           6,
-          7,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_57",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 7,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
           3,
-          4,
-          5,
-          6,
-          7,
-          8,
           9,
           10
         ],
@@ -3823,13 +2902,11 @@
       },
       {
         "task_id": "task_572",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 2,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
-          3,
           4,
           5,
           6,
@@ -3843,18 +2920,15 @@
       },
       {
         "task_id": "task_573",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 3,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
           3,
           4,
-          5,
-          6,
           7,
-          8,
           9,
           10
         ],
@@ -3863,62 +2937,40 @@
       },
       {
         "task_id": "task_576",
-        "status": "partial_same",
-        "same_count": 8,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          2,
-          7
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_577",
-        "status": "partial_same",
-        "same_count": 7,
-        "total_count": 10,
-        "diff_lines": [
-          2,
-          4,
-          7
-        ],
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_578",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_579",
         "status": "partial_same",
-        "same_count": 1,
+        "same_count": 5,
         "total_count": 10,
         "diff_lines": [
-          2,
-          3,
+          1,
           4,
           5,
-          6,
-          7,
-          8,
           9,
           10
         ],
@@ -3927,47 +2979,36 @@
       },
       {
         "task_id": "task_58",
-        "status": "partial_same",
-        "same_count": 4,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 1,
         "diff_lines": [
-          3,
-          4,
-          6,
-          7,
-          8,
-          10
+          2
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_580",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 5,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
-          6,
           7,
           8,
           9,
           10
         ],
-        "missing_output_lines": 0,
+        "missing_output_lines": 1,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_581",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
           4,
@@ -3994,35 +3035,24 @@
           5,
           6,
           7,
-          8
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_585",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
+        "task_id": "task_585",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
         "task_id": "task_586",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -4032,7 +3062,6 @@
           5,
           6,
           7,
-          8,
           9,
           10
         ],
@@ -4041,40 +3070,38 @@
       },
       {
         "task_id": "task_587",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          2
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_588",
-        "status": "partial_same",
-        "same_count": 6,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          4,
-          6,
-          7
-        ],
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_589",
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 2,
+        "diff_lines": [
+          3,
+          9
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_59",
         "status": "partial_same",
         "same_count": 2,
         "total_count": 10,
@@ -4086,26 +3113,6 @@
           5,
           6,
           8,
-          9
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_59",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -4133,33 +3140,27 @@
       },
       {
         "task_id": "task_591",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          6
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_592",
-        "status": "missing_file",
-        "missing": [
-          "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_592\\sample_code_results_equivalent.txt"
-        ],
+        "status": "all_diff",
         "same_count": 0,
-        "total_count": 0,
-        "diff_lines": [],
+        "total_count": 5,
+        "diff_lines": [
+          2,
+          3,
+          7,
+          8,
+          9
+        ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -4185,32 +3186,26 @@
       },
       {
         "task_id": "task_594",
-        "status": "partial_same",
-        "same_count": 3,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_596",
-        "status": "partial_same",
-        "same_count": 2,
+        "status": "all_diff",
+        "same_count": 0,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
+          3,
           4,
           5,
           6,
+          7,
           8,
           9,
           10
@@ -4221,48 +3216,32 @@
       {
         "task_id": "task_597",
         "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "same_count": 5,
+        "total_count": 9,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
           6,
           7,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_598",
-        "status": "partial_same",
-        "same_count": 8,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          2,
-          6
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_599",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -4270,37 +3249,38 @@
       },
       {
         "task_id": "task_6",
-        "status": "missing_file",
-        "missing": [
-          "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_6\\sample_code_results_equivalent.txt"
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 2,
+        "diff_lines": [
+          3
         ],
-        "same_count": 0,
-        "total_count": 0,
-        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_600",
-        "status": "partial_same",
-        "same_count": 7,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          3,
-          5,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_602",
         "status": "partial_same",
-        "same_count": 7,
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
           10
         ],
         "missing_output_lines": 0,
@@ -4310,64 +3290,41 @@
         "task_id": "task_603",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 3,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
           6,
-          7,
-          8,
-          9,
-          10
+          7
         ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 9
+      },
+      {
+        "task_id": "task_604",
+        "status": "full_same",
+        "same_count": 7,
+        "total_count": 7,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_604",
+        "task_id": "task_605",
+        "status": "full_same",
+        "same_count": 1,
+        "total_count": 1,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_606",
         "status": "all_diff",
         "same_count": 0,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_605",
-        "status": "partial_same",
-        "same_count": 5,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          5,
-          6
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_606",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          1,
           3,
           4,
           5,
@@ -4383,23 +3340,20 @@
       {
         "task_id": "task_607",
         "status": "partial_same",
-        "same_count": 5,
-        "total_count": 10,
+        "same_count": 2,
+        "total_count": 4,
         "diff_lines": [
           1,
-          4,
-          5,
-          8,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_608",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
@@ -4436,38 +3390,21 @@
       },
       {
         "task_id": "task_610",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_611",
         "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "same_count": 7,
+        "total_count": 9,
         "diff_lines": [
-          2,
           3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -4494,8 +3431,8 @@
       },
       {
         "task_id": "task_614",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -4504,7 +3441,6 @@
           4,
           5,
           6,
-          7,
           8,
           9,
           10
@@ -4534,110 +3470,30 @@
       },
       {
         "task_id": "task_616",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_618",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_619",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_62",
         "status": "partial_same",
         "same_count": 5,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_620",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
           4,
-          5,
-          6,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_622",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
           7,
           8,
           9
@@ -4646,9 +3502,48 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_623",
+        "task_id": "task_62",
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_620",
         "status": "all_diff",
         "same_count": 0,
+        "total_count": 3,
+        "diff_lines": [
+          1,
+          3,
+          7
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_622",
+        "status": "partial_same",
+        "same_count": 3,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_623",
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
@@ -4657,7 +3552,6 @@
           4,
           5,
           6,
-          7,
           8,
           9,
           10
@@ -4667,19 +3561,10 @@
       },
       {
         "task_id": "task_624",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -4688,13 +3573,11 @@
       {
         "task_id": "task_626",
         "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "same_count": 1,
+        "total_count": 7,
         "diff_lines": [
-          1,
           2,
           3,
-          5,
           7,
           8,
           9,
@@ -4705,71 +3588,56 @@
       },
       {
         "task_id": "task_628",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 11,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 2
-      },
-      {
-        "task_id": "task_629",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 3,
+        "total_count": 6,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
           6,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_63",
-        "status": "all_diff",
-        "same_count": 0,
+        "task_id": "task_629",
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_63",
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 6,
         "diff_lines": [
-          1,
-          2,
-          3,
           4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_630",
-        "status": "no_valid_cases",
+        "status": "all_diff",
         "same_count": 0,
-        "total_count": 0,
-        "diff_lines": [],
-        "missing_output_lines": 0,
+        "total_count": 10,
+        "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "missing_output_lines": 10,
         "extra_output_lines": 0
       },
       {
@@ -4795,31 +3663,22 @@
       {
         "task_id": "task_632",
         "status": "partial_same",
-        "same_count": 1,
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          1
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_633",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
           4,
           5,
           6,
@@ -4833,29 +3692,19 @@
       },
       {
         "task_id": "task_635",
-        "status": "partial_same",
-        "same_count": 1,
+        "status": "full_same",
+        "same_count": 4,
         "total_count": 4,
-        "diff_lines": [
-          1,
-          2,
-          4
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_637",
-        "status": "partial_same",
-        "same_count": 5,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          3,
-          4,
-          6,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -4863,14 +3712,12 @@
         "task_id": "task_638",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 8,
         "diff_lines": [
           1,
-          2,
           3,
           4,
           5,
-          6,
           7,
           8,
           9,
@@ -4881,12 +3728,13 @@
       },
       {
         "task_id": "task_639",
-        "status": "partial_same",
-        "same_count": 1,
+        "status": "all_diff",
+        "same_count": 0,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
+          3,
           4,
           5,
           6,
@@ -4900,20 +3748,12 @@
       },
       {
         "task_id": "task_64",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 8,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          6
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -4940,29 +3780,22 @@
       },
       {
         "task_id": "task_643",
-        "status": "partial_same",
-        "same_count": 9,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          9
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_644",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 5,
+        "total_count": 9,
         "diff_lines": [
-          1,
-          2,
           4,
-          5,
           6,
-          7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -4972,7 +3805,7 @@
         "task_id": "task_65",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
@@ -4982,7 +3815,6 @@
           6,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -4991,18 +3823,12 @@
       {
         "task_id": "task_66",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 2,
+        "total_count": 5,
         "diff_lines": [
-          1,
           2,
           3,
-          4,
-          6,
-          7,
-          8,
-          9,
-          10
+          4
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -5029,27 +3855,19 @@
       },
       {
         "task_id": "task_68",
-        "status": "partial_same",
-        "same_count": 8,
-        "total_count": 10,
-        "diff_lines": [
-          5,
-          8
-        ],
+        "status": "full_same",
+        "same_count": 1,
+        "total_count": 1,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_69",
-        "status": "partial_same",
+        "status": "full_same",
         "same_count": 6,
-        "total_count": 10,
-        "diff_lines": [
-          3,
-          7,
-          8,
-          10
-        ],
+        "total_count": 6,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -5057,16 +3875,8 @@
         "task_id": "task_7",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 2,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
           9,
           10
         ],
@@ -5075,65 +3885,40 @@
       },
       {
         "task_id": "task_70",
-        "status": "partial_same",
-        "same_count": 9,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          9
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_71",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_72",
         "status": "partial_same",
-        "same_count": 7,
-        "total_count": 10,
+        "same_count": 2,
+        "total_count": 4,
         "diff_lines": [
-          3,
-          8,
-          9
+          7,
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_720",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -5141,18 +3926,10 @@
         "task_id": "task_721",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 2,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -5160,17 +3937,16 @@
       {
         "task_id": "task_722",
         "status": "partial_same",
-        "same_count": 2,
+        "same_count": 3,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
           3,
+          4,
           5,
-          6,
           7,
           8,
-          9
+          10
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -5178,58 +3954,35 @@
       {
         "task_id": "task_723",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 8,
+        "total_count": 9,
         "diff_lines": [
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_724",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 6,
         "diff_lines": [
-          1,
-          2,
           3,
-          4,
-          5,
           6,
           7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_725",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 2,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -5238,9 +3991,8 @@
         "task_id": "task_726",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 9,
         "diff_lines": [
-          1,
           2,
           3,
           4,
@@ -5256,52 +4008,29 @@
       },
       {
         "task_id": "task_728",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_730",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_731",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
           3,
           4,
           5,
@@ -5316,49 +4045,10 @@
       },
       {
         "task_id": "task_732",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_733",
         "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "same_count": 7,
+        "total_count": 9,
         "diff_lines": [
-          1,
-          2,
-          4,
-          5,
-          6,
-          7,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_734",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 4,
-        "diff_lines": [
-          1,
           3,
           4
         ],
@@ -5366,16 +4056,32 @@
         "extra_output_lines": 0
       },
       {
+        "task_id": "task_733",
+        "status": "full_same",
+        "same_count": 5,
+        "total_count": 5,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_734",
+        "status": "full_same",
+        "same_count": 4,
+        "total_count": 4,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
         "task_id": "task_735",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 8,
         "diff_lines": [
           1,
-          2,
           3,
           4,
-          5,
           6,
           7,
           8,
@@ -5387,30 +4093,20 @@
       },
       {
         "task_id": "task_736",
-        "status": "partial_same",
-        "same_count": 3,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          2,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_737",
-        "status": "partial_same",
-        "same_count": 6,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 2,
         "diff_lines": [
-          5,
           6,
-          8,
           9
         ],
         "missing_output_lines": 0,
@@ -5439,31 +4135,21 @@
       {
         "task_id": "task_74",
         "status": "partial_same",
-        "same_count": 8,
-        "total_count": 10,
+        "same_count": 7,
+        "total_count": 8,
         "diff_lines": [
-          5,
-          8
+          5
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_740",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 9,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          4
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -5472,56 +4158,32 @@
         "task_id": "task_741",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 1,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          5
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_742",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_743",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 8,
         "diff_lines": [
-          1,
           2,
           3,
           4,
           5,
-          6,
-          7,
-          8,
           9,
           10
         ],
@@ -5530,29 +4192,19 @@
       },
       {
         "task_id": "task_744",
-        "status": "partial_same",
+        "status": "full_same",
         "same_count": 4,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          6,
-          8,
-          10
-        ],
+        "total_count": 4,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_745",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 2,
+        "total_count": 8,
         "diff_lines": [
-          1,
-          2,
-          3,
           4,
           5,
           6,
@@ -5565,18 +4217,16 @@
       },
       {
         "task_id": "task_748",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 1,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
           3,
           4,
           5,
-          6,
           7,
-          8,
           9,
           10
         ],
@@ -5587,12 +4237,11 @@
         "task_id": "task_749",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
           3,
-          4,
           5,
           6,
           7,
@@ -5606,19 +4255,26 @@
       {
         "task_id": "task_75",
         "status": "partial_same",
-        "same_count": 6,
-        "total_count": 10,
+        "same_count": 7,
+        "total_count": 9,
         "diff_lines": [
-          3,
-          4,
-          5,
-          6
+          6,
+          7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_750",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_751",
         "status": "all_diff",
         "same_count": 0,
         "total_count": 10,
@@ -5634,18 +4290,6 @@
           9,
           10
         ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_751",
-        "status": "missing_file",
-        "missing": [
-          "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_751\\sample_code_results_equivalent.txt"
-        ],
-        "same_count": 0,
-        "total_count": 0,
-        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -5671,9 +4315,9 @@
       },
       {
         "task_id": "task_753",
-        "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 8,
         "diff_lines": [
           1,
           2,
@@ -5682,7 +4326,6 @@
           6,
           7,
           8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -5690,18 +4333,14 @@
       },
       {
         "task_id": "task_754",
-        "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 4,
         "diff_lines": [
           1,
           2,
-          4,
           5,
-          6,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -5709,17 +4348,13 @@
       {
         "task_id": "task_755",
         "status": "partial_same",
-        "same_count": 2,
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          3,
+          6
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -5728,50 +4363,31 @@
         "task_id": "task_757",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 4,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
           6,
-          7,
           8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_758",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 3,
+        "total_count": 3,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_759",
-        "status": "partial_same",
-        "same_count": 9,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          9
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -5786,31 +4402,15 @@
       },
       {
         "task_id": "task_762",
-        "status": "partial_same",
-        "same_count": 7,
-        "total_count": 10,
-        "diff_lines": [
-          2,
-          6,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 2,
+        "total_count": 2,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_763",
-        "status": "partial_same",
-        "same_count": 8,
-        "total_count": 10,
-        "diff_lines": [
-          4,
-          8
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_764",
         "status": "all_diff",
         "same_count": 0,
         "total_count": 10,
@@ -5824,6 +4424,20 @@
           7,
           8,
           9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_764",
+        "status": "partial_same",
+        "same_count": 6,
+        "total_count": 10,
+        "diff_lines": [
+          2,
+          4,
+          5,
           10
         ],
         "missing_output_lines": 0,
@@ -5851,9 +4465,18 @@
       },
       {
         "task_id": "task_766",
+        "status": "full_same",
+        "same_count": 10,
+        "total_count": 10,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_767",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
@@ -5861,7 +4484,6 @@
           4,
           5,
           6,
-          7,
           8,
           9,
           10
@@ -5870,32 +4492,12 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_767",
+        "task_id": "task_769",
         "status": "partial_same",
-        "same_count": 1,
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_769",
-        "status": "partial_same",
-        "same_count": 5,
-        "total_count": 10,
-        "diff_lines": [
-          4,
-          6,
           8,
           9,
           10
@@ -5906,12 +4508,10 @@
       {
         "task_id": "task_77",
         "status": "partial_same",
-        "same_count": 7,
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          6
+          1
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -5938,9 +4538,9 @@
       },
       {
         "task_id": "task_771",
-        "status": "partial_same",
-        "same_count": 9,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 1,
         "diff_lines": [
           5
         ],
@@ -5949,36 +4549,28 @@
       },
       {
         "task_id": "task_772",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 4,
+        "total_count": 8,
         "diff_lines": [
           1,
-          2,
-          3,
           4,
-          5,
-          6,
-          7,
           8,
-          9,
-          10
+          9
         ],
-        "missing_output_lines": 2,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_773",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 8,
         "diff_lines": [
           1,
           2,
           3,
           4,
-          5,
-          6,
           7,
           8,
           9,
@@ -5989,32 +4581,20 @@
       },
       {
         "task_id": "task_775",
-        "status": "partial_same",
-        "same_count": 8,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          6
-        ],
+        "status": "full_same",
+        "same_count": 1,
+        "total_count": 1,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_777",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 9,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          8
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -6023,11 +4603,10 @@
         "task_id": "task_778",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
-          3,
           4,
           5,
           6,
@@ -6041,17 +4620,13 @@
       },
       {
         "task_id": "task_780",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 4,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
           4,
           5,
           6,
-          7,
           8,
           9,
           10
@@ -6061,17 +4636,13 @@
       },
       {
         "task_id": "task_781",
-        "status": "partial_same",
-        "same_count": 2,
-        "total_count": 10,
+        "status": "all_diff",
+        "same_count": 0,
+        "total_count": 4,
         "diff_lines": [
-          1,
-          3,
-          4,
           5,
           6,
           7,
-          8,
           9
         ],
         "missing_output_lines": 0,
@@ -6079,13 +4650,12 @@
       },
       {
         "task_id": "task_782",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
-          3,
           4,
           5,
           6,
@@ -6100,15 +4670,10 @@
       {
         "task_id": "task_784",
         "status": "partial_same",
-        "same_count": 3,
-        "total_count": 10,
+        "same_count": 6,
+        "total_count": 8,
         "diff_lines": [
-          1,
-          3,
           4,
-          5,
-          7,
-          8,
           9
         ],
         "missing_output_lines": 0,
@@ -6116,21 +4681,10 @@
       },
       {
         "task_id": "task_785",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 1,
+        "total_count": 1,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -6138,16 +4692,25 @@
         "task_id": "task_786",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 4,
         "diff_lines": [
           1,
-          2,
           3,
+          7,
+          8
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_787",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 7,
+        "diff_lines": [
+          2,
           4,
           5,
-          6,
-          7,
-          8,
           9,
           10
         ],
@@ -6155,7 +4718,7 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_787",
+        "task_id": "task_788",
         "status": "full_same",
         "same_count": 10,
         "total_count": 10,
@@ -6164,35 +4727,14 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_788",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
         "task_id": "task_79",
         "status": "partial_same",
-        "same_count": 5,
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
           1,
-          2,
-          3,
-          9,
+          5,
+          8,
           10
         ],
         "missing_output_lines": 0,
@@ -6201,31 +4743,26 @@
       {
         "task_id": "task_790",
         "status": "partial_same",
-        "same_count": 6,
-        "total_count": 10,
+        "same_count": 1,
+        "total_count": 3,
         "diff_lines": [
-          6,
-          8,
-          9,
-          10
+          2,
+          5
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_791",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 3,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
           3,
           4,
           5,
-          6,
           7,
-          8,
           9,
           10
         ],
@@ -6235,62 +4772,47 @@
       {
         "task_id": "task_792",
         "status": "partial_same",
-        "same_count": 3,
+        "same_count": 9,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          6,
-          7,
           10
         ],
-        "missing_output_lines": 0,
+        "missing_output_lines": 1,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_793",
-        "status": "partial_same",
-        "same_count": 1,
+        "status": "all_diff",
+        "same_count": 0,
         "total_count": 3,
         "diff_lines": [
           1,
-          2
+          2,
+          3
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_794",
-        "status": "partial_same",
-        "same_count": 5,
-        "total_count": 10,
-        "diff_lines": [
-          2,
-          4,
-          6,
-          7,
-          9
-        ],
+        "status": "full_same",
+        "same_count": 4,
+        "total_count": 4,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_796",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 4,
         "total_count": 10,
         "diff_lines": [
-          1,
           2,
-          3,
           4,
           5,
           6,
           7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -6298,18 +4820,6 @@
       },
       {
         "task_id": "task_797",
-        "status": "missing_file",
-        "missing": [
-          "F:\\Pycharm2023\\CodeMutation\\code\\output_mbppplus_new\\task_797\\sample_code_results_equivalent.txt"
-        ],
-        "same_count": 0,
-        "total_count": 0,
-        "diff_lines": [],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_798",
         "status": "all_diff",
         "same_count": 0,
         "total_count": 10,
@@ -6324,47 +4834,37 @@
           8,
           9,
           10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_798",
+        "status": "partial_same",
+        "same_count": 8,
+        "total_count": 10,
+        "diff_lines": [
+          7,
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_799",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_8",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
@@ -6390,16 +4890,12 @@
       },
       {
         "task_id": "task_800",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 16,
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 13,
         "diff_lines": [
-          1,
-          2,
           3,
           4,
-          5,
-          6,
           7,
           8,
           9,
@@ -6408,10 +4904,9 @@
           12,
           13,
           14,
-          15,
-          16
+          15
         ],
-        "missing_output_lines": 6,
+        "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
@@ -6423,10 +4918,10 @@
           1,
           3,
           4,
-          6,
+          5,
           7,
           8,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -6434,44 +4929,30 @@
       {
         "task_id": "task_803",
         "status": "partial_same",
-        "same_count": 6,
-        "total_count": 10,
+        "same_count": 5,
+        "total_count": 6,
         "diff_lines": [
-          2,
-          3,
-          4,
-          5
+          4
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_804",
-        "status": "partial_same",
-        "same_count": 8,
-        "total_count": 10,
-        "diff_lines": [
-          7,
-          10
-        ],
+        "status": "full_same",
+        "same_count": 2,
+        "total_count": 2,
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_805",
         "status": "partial_same",
-        "same_count": 1,
-        "total_count": 10,
+        "same_count": 8,
+        "total_count": 9,
         "diff_lines": [
-          1,
-          2,
-          3,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -6479,13 +4960,11 @@
       {
         "task_id": "task_806",
         "status": "partial_same",
-        "same_count": 4,
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
-          1,
           3,
-          6,
-          8,
+          5,
           9,
           10
         ],
@@ -6494,41 +4973,27 @@
       },
       {
         "task_id": "task_807",
-        "status": "partial_same",
-        "same_count": 3,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          2,
-          3,
-          4,
-          5,
-          6,
-          8,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_808",
-        "status": "partial_same",
-        "same_count": 5,
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          2,
-          5,
-          6,
-          8,
-          9
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_809",
         "status": "full_same",
-        "same_count": 10,
-        "total_count": 10,
+        "same_count": 2,
+        "total_count": 2,
         "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -6595,95 +5060,6 @@
       },
       {
         "task_id": "task_86",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_87",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_88",
-        "status": "no_valid_cases",
-        "same_count": 0,
-        "total_count": 0,
-        "diff_lines": [],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_89",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_9",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
-        "diff_lines": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
-        ],
-        "missing_output_lines": 0,
-        "extra_output_lines": 0
-      },
-      {
-        "task_id": "task_90",
         "status": "partial_same",
         "same_count": 1,
         "total_count": 10,
@@ -6693,6 +5069,35 @@
           3,
           4,
           5,
+          6,
+          7,
+          9,
+          10
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_87",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 3,
+        "diff_lines": [
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_88",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 10,
+        "diff_lines": [
+          2,
+          3,
+          5,
+          6,
           7,
           8,
           9,
@@ -6702,39 +5107,62 @@
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_91",
-        "status": "partial_same",
-        "same_count": 7,
+        "task_id": "task_89",
+        "status": "full_same",
+        "same_count": 10,
         "total_count": 10,
-        "diff_lines": [
-          3,
-          9,
-          10
-        ],
+        "diff_lines": [],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_92",
+        "task_id": "task_9",
         "status": "partial_same",
-        "same_count": 9,
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
           9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
-        "task_id": "task_93",
+        "task_id": "task_90",
+        "status": "partial_same",
+        "same_count": 9,
+        "total_count": 10,
+        "diff_lines": [
+          5
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_91",
+        "status": "full_same",
+        "same_count": 1,
+        "total_count": 1,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
+        "task_id": "task_92",
         "status": "all_diff",
         "same_count": 0,
-        "total_count": 10,
+        "total_count": 9,
         "diff_lines": [
           1,
           2,
           3,
-          4,
           5,
           6,
           7,
@@ -6746,21 +5174,23 @@
         "extra_output_lines": 0
       },
       {
+        "task_id": "task_93",
+        "status": "full_same",
+        "same_count": 9,
+        "total_count": 9,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      },
+      {
         "task_id": "task_94",
-        "status": "all_diff",
-        "same_count": 0,
-        "total_count": 10,
+        "status": "partial_same",
+        "same_count": 5,
+        "total_count": 8,
         "diff_lines": [
           1,
-          2,
           3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -6768,15 +5198,13 @@
       {
         "task_id": "task_95",
         "status": "partial_same",
-        "same_count": 4,
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
-          3,
-          4,
+          6,
           7,
-          10
+          8,
+          9
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
@@ -6784,16 +5212,11 @@
       {
         "task_id": "task_96",
         "status": "partial_same",
-        "same_count": 2,
+        "same_count": 7,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
           3,
-          5,
           7,
-          8,
-          9,
           10
         ],
         "missing_output_lines": 0,
@@ -6801,15 +5224,14 @@
       },
       {
         "task_id": "task_97",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
           3,
           4,
-          5,
           6,
           7,
           8,
@@ -6822,31 +5244,27 @@
       {
         "task_id": "task_98",
         "status": "partial_same",
-        "same_count": 3,
+        "same_count": 6,
         "total_count": 10,
         "diff_lines": [
-          1,
-          2,
           4,
           5,
           6,
-          7,
-          8
+          7
         ],
         "missing_output_lines": 0,
         "extra_output_lines": 0
       },
       {
         "task_id": "task_99",
-        "status": "all_diff",
-        "same_count": 0,
+        "status": "partial_same",
+        "same_count": 1,
         "total_count": 10,
         "diff_lines": [
           1,
           2,
           3,
           4,
-          5,
           6,
           7,
           8,
@@ -6859,17 +5277,17 @@
     ],
     "summary": {
       "task_count": 378,
-      "valid_task_count": 371,
-      "same_cases": 623,
-      "total_cases": 3698,
-      "accuracy": 0.16846944294213087,
-      "full_same_tasks": 7,
-      "partial_same_tasks": 145,
-      "all_diff_tasks": 219,
-      "missing_file_tasks": 4,
-      "no_valid_case_tasks": 3,
-      "missing_output_lines": 220,
-      "extra_output_lines": 2
+      "valid_task_count": 378,
+      "same_cases": 1515,
+      "total_cases": 3103,
+      "accuracy": 0.4882371898163068,
+      "full_same_tasks": 97,
+      "partial_same_tasks": 180,
+      "all_diff_tasks": 101,
+      "missing_file_tasks": 0,
+      "no_valid_case_tasks": 0,
+      "missing_output_lines": 24,
+      "extra_output_lines": 13
     }
   }
 ]

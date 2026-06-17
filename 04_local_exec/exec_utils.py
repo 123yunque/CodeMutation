@@ -7,13 +7,26 @@ from rq1_config import get_mode_config
 
 INVALID_LOCAL_RESULT = "变异前后结果相同，认为该测试用例无效"
 
+MODE_RESULT_FILES = {
+    "original": ("sample_code_results.txt",),
+    "equivalent": ("sample_code_results_equivalent.txt",),
+    "non_equivalent": ("sample_code_results_non_equivalent.txt",),
+}
+
 
 def iter_task_dirs(base_dir):
     folders = [f for f in os.listdir(base_dir) if os.path.isdir(os.path.join(base_dir, f))]
     return sorted(folders)
 
 
-def run_task(task_dir, script_name, timeout):
+def remove_stale_files(task_dir, file_names):
+    for file_name in file_names:
+        path = os.path.join(task_dir, file_name)
+        if os.path.exists(path):
+            os.remove(path)
+
+
+def run_task(task_dir, script_name, timeout, output_files=()):
     script_path = os.path.join(task_dir, script_name)
     if not os.path.exists(script_path):
         return {
@@ -22,6 +35,7 @@ def run_task(task_dir, script_name, timeout):
             "stderr": f"Missing script: {script_path}",
         }
 
+    remove_stale_files(task_dir, output_files)
     env = os.environ.copy()
     env.setdefault("PYTHONHASHSEED", "0")
     result = subprocess.run(
@@ -47,6 +61,7 @@ def run_mode(mode, timeout=30, limit=None, base_dir=MBPP_DIR):
 
     mode_config = get_mode_config(mode)
     script_name = mode_config["input_script"]
+    output_files = MODE_RESULT_FILES.get(mode, ())
     folders = iter_task_dirs(base_dir)
     if limit is not None:
         folders = folders[:limit]
@@ -57,7 +72,7 @@ def run_mode(mode, timeout=30, limit=None, base_dir=MBPP_DIR):
     for folder in folders:
         task_dir = os.path.join(base_dir, folder)
         try:
-            result = run_task(task_dir, script_name, timeout)
+            result = run_task(task_dir, script_name, timeout, output_files)
         except subprocess.TimeoutExpired:
             summary["timeout"] += 1
             print(f"[timeout] {folder}")
@@ -128,6 +143,8 @@ def compare_non_equivalent_results(task_root=MBPP_DIR, transform_root=NON_EQUIV_
         original_lines = read_lines(original_path)
         mutated_lines = read_lines(mutated_path)
         if original_lines is None or mutated_lines is None:
+            if os.path.exists(compare_path):
+                os.remove(compare_path)
             missing = []
             if original_lines is None:
                 missing.append(original_path)

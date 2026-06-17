@@ -1,5 +1,7 @@
 import ast
+import json
 import os
+import re
 
 from paths import EQUIV_TRANSFORM, MBPP_DIR, NON_EQUIV_TRANSFORM
 
@@ -69,16 +71,80 @@ def parse_input_lines(path):
     return parsed_inputs
 
 
-def get_first_function_name(code_content, default=None):
+def get_function_defs(code_content):
     try:
         tree = ast.parse(code_content)
     except SyntaxError:
+        return []
+    return [node for node in tree.body if isinstance(node, ast.FunctionDef)]
+
+
+def get_first_function_name(code_content, default=None):
+    function_defs = get_function_defs(code_content)
+    return function_defs[0].name if function_defs else default
+
+
+def get_test_entry_name(task_dir):
+    task_id = os.path.basename(os.path.normpath(task_dir))
+    json_path = os.path.join(task_dir, f"{task_id}.json")
+    if not os.path.exists(json_path):
+        return None
+
+    try:
+        with open(json_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return None
+
+    test = data.get("test", "")
+    names = re.findall(r"\bassertion\(\s*([A-Za-z_]\w*)\s*\(", test)
+    if names:
+        return names[-1]
+
+    test_list = data.get("test_list") or []
+    for item in reversed(test_list):
+        match = re.search(r"\b([A-Za-z_]\w*)\s*\(", item)
+        if match:
+            return match.group(1)
+    return None
+
+
+def input_arity(item):
+    if isinstance(item, (list, tuple)):
+        return len(item)
+    return 1
+
+
+def function_accepts_arity(function_def, arity):
+    args = function_def.args
+    positional = list(args.posonlyargs) + list(args.args)
+    required = len(positional) - len(args.defaults)
+    if args.vararg:
+        return arity >= required
+    return required <= arity <= len(positional)
+
+
+def choose_callable_function(code_content, parsed_inputs=None, preferred_name=None, default=None):
+    function_defs = get_function_defs(code_content)
+    if not function_defs:
         return default
 
-    for node in tree.body:
-        if isinstance(node, ast.FunctionDef):
-            return node.name
-    return default
+    if preferred_name:
+        for function_def in function_defs:
+            if function_def.name == preferred_name:
+                return function_def.name
+
+    arities = [input_arity(item) for item in parsed_inputs or []]
+    if arities:
+        matching = [
+            function_def
+            for function_def in function_defs
+            if all(function_accepts_arity(function_def, arity) for arity in arities)
+        ]
+        if matching:
+            return matching[-1].name
+
+    return function_defs[-1].name
 
 
 def build_inputs_block(items, use_repr=False):
@@ -90,8 +156,8 @@ def build_inputs_block(items, use_repr=False):
     return "".join(lines)
 
 
-def build_original_script(code_content, input_literals, model_footer):
-    func_name = get_first_function_name(code_content)
+def build_original_script(code_content, input_literals, model_footer, parsed_inputs=None, preferred_name=None):
+    func_name = choose_callable_function(code_content, parsed_inputs, preferred_name)
     if not func_name:
         raise ValueError("No function definition found in code.py")
 
@@ -112,7 +178,13 @@ def write_original_task(task_dir, model_footer):
     with open(code_path, "r", encoding="utf-8") as f:
         code_content = f.read()
 
-    script_content = build_original_script(code_content, read_input_literals(input_path), model_footer)
+    script_content = build_original_script(
+        code_content,
+        read_input_literals(input_path),
+        model_footer,
+        parsed_inputs=parse_input_lines(input_path),
+        preferred_name=get_test_entry_name(task_dir),
+    )
     for output_name in ("sample_inputs.py", "sample_original.py"):
         with open(os.path.join(task_dir, output_name), "w", encoding="utf-8") as f:
             f.write(script_content)
@@ -127,8 +199,8 @@ def write_mutation_task(task_dir, transform_path, output_name, result_file):
     with open(transform_path, "r", encoding="utf-8") as f:
         code_content = f.read()
 
-    func_name = get_first_function_name(code_content, default="fun1")
     inputs = parse_input_lines(input_path)
+    func_name = choose_callable_function(code_content, inputs, default="fun1")
     script_content = (
         code_content
         + build_inputs_block(inputs, use_repr=True)

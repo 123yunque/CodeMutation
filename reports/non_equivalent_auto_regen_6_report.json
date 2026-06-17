@@ -1,0 +1,369 @@
+{
+  "started_at": "2026-06-12 19:16:14",
+  "model_name": "gpt-5.1",
+  "selected_task_count": 6,
+  "discovered": {
+    "failed_or_timeout": [],
+    "empty_compare": [],
+    "fully_same": []
+  },
+  "results": [
+    {
+      "task_id": "task_20",
+      "status": "fixed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 2,
+          "ok": true,
+          "reason": "",
+          "diff_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "diff_count": 10,
+      "diff_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "old_hash": "6b614e28c0e840214ec9f838d3826bf2510c717068f3e2ecac110495fb44539e",
+      "new_hash": "0966d2a054b462ef2cf9d3981fa8f0d090b664e39968fc2815ae3008954e12b9",
+      "deleted_llm_output": "F:\\Pycharm2023\\CodeMutation\\code\\sample_output_LLMs_non_equivalent_code\\gpt51_final\\task_20.txt"
+    },
+    {
+      "task_id": "task_128",
+      "status": "fixed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 2,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 3,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 4,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 5,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 6,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 7,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 8,
+          "ok": true,
+          "reason": "",
+          "diff_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            9
+          ]
+        }
+      ],
+      "diff_count": 7,
+      "diff_indices": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        9
+      ],
+      "old_hash": "55fa22057e9b6e3e0c82895a5d62b2f5caaa94d2f1589b493578b5505380babf",
+      "new_hash": "cb95f53f1a72d162352f18af522aa5a07c77b9b6b9f1aefdcca53e9e8c2e3db6",
+      "deleted_llm_output": "F:\\Pycharm2023\\CodeMutation\\code\\sample_output_LLMs_non_equivalent_code\\gpt51_final\\task_128.txt"
+    },
+    {
+      "task_id": "task_129",
+      "status": "unfixed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 2,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 3,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 4,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 5,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 6,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 7,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 8,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 9,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 10,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 11,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 12,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        }
+      ],
+      "old_hash": "41c521cd0b95c4d105c9324ec3fcf9644034a15e44c5e7a479b74020152918e4"
+    },
+    {
+      "task_id": "task_131",
+      "status": "fixed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "reason": "",
+          "diff_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "diff_count": 10,
+      "diff_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "old_hash": "0b5528a995eab8a808bf9532c586a1fd46d961e70ce8b2e245970e86096ee54f",
+      "new_hash": "735b9f5e463206f1e7113efb13177fef29efd0a70ac73665ecb075e56707fe72",
+      "deleted_llm_output": "F:\\Pycharm2023\\CodeMutation\\code\\sample_output_LLMs_non_equivalent_code\\gpt51_final\\task_131.txt"
+    },
+    {
+      "task_id": "task_603",
+      "status": "fixed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 2,
+          "ok": false,
+          "reason": "runtime: IndexError: list index out of range",
+          "diff_indices": []
+        },
+        {
+          "attempt": 3,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 4,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 5,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 6,
+          "ok": true,
+          "reason": "",
+          "diff_indices": [
+            0,
+            5,
+            6
+          ]
+        }
+      ],
+      "diff_count": 3,
+      "diff_indices": [
+        0,
+        5,
+        6
+      ],
+      "old_hash": "f1ba72f8202d1639365c44b1907a3ef7dae291a5ddf0b7936fb2d3cde873cd32",
+      "new_hash": "8730f06adc235291d41408d258dde30015f536135477a2b5215636c575252ccd",
+      "deleted_llm_output": "F:\\Pycharm2023\\CodeMutation\\code\\sample_output_LLMs_non_equivalent_code\\gpt51_final\\task_603.txt"
+    },
+    {
+      "task_id": "task_787",
+      "status": "fixed",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 2,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 3,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 4,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 5,
+          "ok": false,
+          "reason": "no differing sample output",
+          "diff_indices": []
+        },
+        {
+          "attempt": 6,
+          "ok": true,
+          "reason": "",
+          "diff_indices": [
+            0,
+            1,
+            3,
+            4,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "diff_count": 7,
+      "diff_indices": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        8,
+        9
+      ],
+      "old_hash": "72e0a9c8ec4eb405e24c7ac98450e042c6131a5fb1450f8069efd46ff3799e68",
+      "new_hash": "957ebcfd73595866ba03cbab758cd3ef0e40a6379c8ec571b00ca67c0cea1960",
+      "deleted_llm_output": "F:\\Pycharm2023\\CodeMutation\\code\\sample_output_LLMs_non_equivalent_code\\gpt51_final\\task_787.txt"
+    }
+  ],
+  "finished_at": "2026-06-12 19:18:13"
+}

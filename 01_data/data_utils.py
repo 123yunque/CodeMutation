@@ -55,9 +55,53 @@ def parse_inputs_literal(inputs_str):
 
 def extract_inputs(test_processed):
     match = re.search(r"inputs\s*=\s*(\[.*?\])\s*\nresults", test_processed, re.DOTALL)
-    if not match:
+    if match:
+        return parse_inputs_literal(match.group(1))
+
+    inputs_literal = extract_inputs_assignment_literal(test_processed)
+    if not inputs_literal:
         return []
-    return parse_inputs_literal(match.group(1))
+    return parse_inputs_literal(inputs_literal)
+
+
+def extract_inputs_assignment_literal(test_processed):
+    match = re.search(r"\binputs\s*=", test_processed)
+    if not match:
+        return None
+
+    start = test_processed.find("[", match.end())
+    if start == -1:
+        return None
+
+    stack = []
+    quote = None
+    escape = False
+    for index in range(start, len(test_processed)):
+        char = test_processed[index]
+
+        if quote:
+            if escape:
+                escape = False
+            elif char == "\\":
+                escape = True
+            elif char == quote:
+                quote = None
+            continue
+
+        if char in {"'", '"'}:
+            quote = char
+        elif char in "[({":
+            stack.append(char)
+        elif char in "])}":
+            if not stack:
+                return None
+            opening = stack.pop()
+            if (opening, char) not in {("[", "]"), ("(", ")"), ("{", "}")}:
+                return None
+            if not stack:
+                return test_processed[start : index + 1]
+
+    return None
 
 
 def build_combined_lines(test_processed, model_footer):
