@@ -19,11 +19,11 @@ CONFIG  = ROOT / "config.json"
 CONFIG1 = ROOT / "config1.json"
 
 # ── 原始数据集 ──────────────────────────────────────────────
-MBPP_DIR            = ROOT / "output_mbppplus_new"
+MBPP_DIR            = ROOT / "output_humanevalplus"
 
 # ── 变异代码 ────────────────────────────────────────────────
-EQUIV_TRANSFORM     = ROOT / "equivalent_transform_new"
-NON_EQUIV_TRANSFORM = ROOT / "non_equivalent_transform_new"
+EQUIV_TRANSFORM     = ROOT / "equivalent_transform_humanevalplus"
+NON_EQUIV_TRANSFORM = ROOT / "non_equivalent_transform_humanevalplus"
 
 # ── RQ1：LLM 输出预测结果 ────────────────────────────────────
 LLM_ORIGINAL    = ROOT / "sample_output_LLMs_original_code"

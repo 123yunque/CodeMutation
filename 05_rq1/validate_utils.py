@@ -188,14 +188,15 @@ def validate_non_equivalent(task_ids, max_examples):
         if original_lines is None or mutated_lines is None:
             results["missing"] += 1
             results["failed"] += 1
-            results["failures"].append(
-                {
-                    "task_id": task_id,
-                    "reason": "missing_result",
-                    "original_path": original_path if original_lines is None else "",
-                    "mutated_path": mutated_path if mutated_lines is None else "",
-                }
-            )
+            failure = {
+                "task_id": task_id,
+                "reason": "missing_result",
+                "original_path": original_path if original_lines is None else "",
+                "mutated_path": mutated_path if mutated_lines is None else "",
+            }
+            if original_lines is not None:
+                failure["examples"] = build_match_examples(original_lines, input_lines, max_examples)
+            results["failures"].append(failure)
             continue
 
         if original_lines != mutated_lines:
@@ -299,6 +300,11 @@ Task: introduce a single, subtle logical change so that at least one of the abov
 Requirements:
 - Change exactly one operator or literal.
 - Keep the rest of the code as close to the original as possible.
+- Preserve the original function name, function signature, imports, return type shape, and input/output format.
+- The mutated code MUST run without exceptions for every input listed above.
+- At least one listed input MUST produce a different output from the original output shown above.
+- Do not mutate loop bounds, slice bounds, or indexing in a way that can create empty max/min calls or out-of-range access.
+- Prefer changing a comparison threshold, relational operator, boolean connector, arithmetic operator, or a numeric/string literal that directly affects the returned value.
 - Return only valid Python code.
 
 Output ONLY the transformed code, wrapped exactly as:

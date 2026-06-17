@@ -1,0 +1,91 @@
+[
+  {
+    "mode": "original",
+    "output_name": "humaneval_smoke",
+    "tasks": [
+      {
+        "task_id": "task_HumanEval_0",
+        "status": "full_same",
+        "same_count": 3,
+        "total_count": 3,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      }
+    ],
+    "summary": {
+      "task_count": 1,
+      "valid_task_count": 1,
+      "same_cases": 3,
+      "total_cases": 3,
+      "accuracy": 1.0,
+      "full_same_tasks": 1,
+      "partial_same_tasks": 0,
+      "all_diff_tasks": 0,
+      "missing_file_tasks": 0,
+      "no_valid_case_tasks": 0,
+      "missing_output_lines": 0,
+      "extra_output_lines": 0
+    }
+  },
+  {
+    "mode": "equivalent",
+    "output_name": "humaneval_smoke",
+    "tasks": [
+      {
+        "task_id": "task_HumanEval_0",
+        "status": "partial_same",
+        "same_count": 2,
+        "total_count": 3,
+        "diff_lines": [
+          1
+        ],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      }
+    ],
+    "summary": {
+      "task_count": 1,
+      "valid_task_count": 1,
+      "same_cases": 2,
+      "total_cases": 3,
+      "accuracy": 0.6666666666666666,
+      "full_same_tasks": 0,
+      "partial_same_tasks": 1,
+      "all_diff_tasks": 0,
+      "missing_file_tasks": 0,
+      "no_valid_case_tasks": 0,
+      "missing_output_lines": 0,
+      "extra_output_lines": 0
+    }
+  },
+  {
+    "mode": "non_equivalent",
+    "output_name": "humaneval_smoke",
+    "tasks": [
+      {
+        "task_id": "task_HumanEval_0",
+        "status": "no_valid_cases",
+        "same_count": 0,
+        "total_count": 0,
+        "diff_lines": [],
+        "missing_output_lines": 0,
+        "extra_output_lines": 0
+      }
+    ],
+    "summary": {
+      "task_count": 1,
+      "valid_task_count": 0,
+      "same_cases": 0,
+      "total_cases": 0,
+      "accuracy": 0.0,
+      "full_same_tasks": 0,
+      "partial_same_tasks": 0,
+      "all_diff_tasks": 0,
+      "missing_file_tasks": 0,
+      "no_valid_case_tasks": 1,
+      "missing_output_lines": 0,
+      "extra_output_lines": 0
+    }
+  }
+]

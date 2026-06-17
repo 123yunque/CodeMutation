@@ -8,6 +8,7 @@ from config_loader import load_config
 from paths import EQUIV_TRANSFORM, MBPP_DIR, NON_EQUIV_TRANSFORM
 
 import ast
+import copy
 import os
 import re
 import threading
@@ -104,12 +105,177 @@ def validate_python_code(code_text):
     return True, ""
 
 
+def get_first_function_name(code_text):
+    tree = ast.parse(code_text)
+    for node in tree.body:
+        if isinstance(node, ast.FunctionDef):
+            return node.name
+    return None
+
+
 def read_code(task_dir):
     code_path = os.path.join(task_dir, "code.py")
     if not os.path.exists(code_path):
         return None
     with open(code_path, "r", encoding="utf-8") as f:
         return f.read()
+
+
+def read_lines(path):
+    if not os.path.exists(path):
+        return []
+    with open(path, "r", encoding="utf-8") as f:
+        return [line.rstrip("\n") for line in f]
+
+
+def read_sample_context(task_dir):
+    input_lines = read_lines(os.path.join(task_dir, "sample_code_inputs.txt"))
+    result_lines = read_lines(os.path.join(task_dir, "sample_code_results.txt"))
+    examples = []
+    for index, input_line in enumerate(input_lines):
+        examples.append(
+            {
+                "input": input_line,
+                "output": result_lines[index] if index < len(result_lines) else None,
+            }
+        )
+    return {"examples": examples}
+
+
+def validate_sample_behavior(code_text, sample_context, mode):
+    examples = sample_context.get("examples", [])
+    if not examples or any(example.get("output") is None for example in examples):
+        return True, ""
+
+    try:
+        func_name = get_first_function_name(code_text)
+        if not func_name:
+            return False, "missing function definition"
+
+        namespace = {}
+        exec(code_text, namespace)
+        func = namespace.get(func_name)
+        if not callable(func):
+            return False, f"missing callable: {func_name}"
+
+        outputs = []
+        for example in examples:
+            args = ast.literal_eval(example["input"])
+            result = func(*copy.deepcopy(args))
+            outputs.append(str(result))
+    except Exception as exc:
+        return False, f"sample execution failed: {type(exc).__name__}: {exc}"
+
+    expected = [example.get("output") for example in examples]
+    if mode == "equivalent" and outputs != expected:
+        return False, "equivalent outputs differ on sampled inputs"
+    if mode == "non_equivalent" and outputs == expected:
+        return False, "non-equivalent outputs did not differ on sampled inputs"
+    return True, ""
+
+
+def replacement_nodes(node):
+    if isinstance(node, ast.Compare) and len(node.ops) == 1:
+        op_type = type(node.ops[0])
+        choices = [ast.Lt, ast.LtE, ast.Gt, ast.GtE, ast.Eq, ast.NotEq]
+        return [choice() for choice in choices if choice is not op_type]
+    if isinstance(node, ast.BoolOp):
+        if isinstance(node.op, ast.And):
+            return [ast.Or()]
+        if isinstance(node.op, ast.Or):
+            return [ast.And()]
+    if isinstance(node, ast.BinOp):
+        op_type = type(node.op)
+        choices = [ast.Add, ast.Sub, ast.Mult]
+        return [choice() for choice in choices if choice is not op_type]
+    if isinstance(node, ast.Constant):
+        value = node.value
+        if isinstance(value, bool):
+            return [ast.Constant(not value)]
+        if isinstance(value, int):
+            return [ast.Constant(value + 1), ast.Constant(value - 1)]
+        if isinstance(value, float):
+            return [ast.Constant(value + 1.0), ast.Constant(value - 1.0)]
+        if isinstance(value, str) and value:
+            return [ast.Constant(value[:-1])]
+    return []
+
+
+class SingleMutationTransformer(ast.NodeTransformer):
+    def __init__(self, target_index, replacement_index):
+        self.target_index = target_index
+        self.replacement_index = replacement_index
+        self.current_index = -1
+
+    def generic_visit(self, node):
+        options = replacement_nodes(node)
+        if options:
+            self.current_index += 1
+            if self.current_index == self.target_index:
+                if isinstance(node, ast.Compare):
+                    node = copy.deepcopy(node)
+                    node.ops[0] = options[self.replacement_index]
+                    return node
+                if isinstance(node, ast.BoolOp):
+                    node = copy.deepcopy(node)
+                    node.op = options[self.replacement_index]
+                    return node
+                if isinstance(node, ast.BinOp):
+                    node = copy.deepcopy(node)
+                    node.op = options[self.replacement_index]
+                    return node
+                return options[self.replacement_index]
+        return super().generic_visit(node)
+
+
+class MutationOptionCollector(ast.NodeVisitor):
+    def __init__(self):
+        self.option_counts = []
+
+    def generic_visit(self, node):
+        options = replacement_nodes(node)
+        if options:
+            self.option_counts.append(len(options))
+        super().generic_visit(node)
+
+
+def deterministic_non_equivalent_candidate(code_content, sample_context, max_candidates=200):
+    try:
+        tree = ast.parse(code_content)
+    except SyntaxError:
+        return None, "original code does not parse"
+
+    mutation_count = 0
+    collector = MutationOptionCollector()
+    collector.visit(tree)
+    option_counts = collector.option_counts
+
+    checked = 0
+    last_error = "no mutation points found"
+    for target_index, option_count in enumerate(option_counts):
+        for replacement_index in range(option_count):
+            if checked >= max_candidates:
+                return None, last_error
+            checked += 1
+            candidate_tree = copy.deepcopy(tree)
+            transformer = SingleMutationTransformer(target_index, replacement_index)
+            candidate_tree = transformer.visit(candidate_tree)
+            ast.fix_missing_locations(candidate_tree)
+            candidate_code = ast.unparse(candidate_tree)
+            ok, error = validate_sample_behavior(candidate_code, sample_context, "non_equivalent")
+            if ok:
+                return candidate_code, ""
+            last_error = error
+            mutation_count += 1
+
+    return None, last_error if mutation_count else "no mutation points found"
+
+
+def build_prompt(prompt_builder, code_content, sample_context):
+    try:
+        return prompt_builder(code_content, sample_context)
+    except TypeError:
+        return prompt_builder(code_content)
 
 
 def process_folder(
@@ -126,6 +292,8 @@ def process_folder(
     save_file = os.path.join(output_dir, f"{folder}.py")
     if os.path.exists(save_file) and not overwrite:
         return f"[skip] output exists: {folder}"
+    if os.path.exists(save_file) and overwrite:
+        os.remove(save_file)
 
     task_dir = os.path.join(input_dir, folder)
     if not os.path.isdir(task_dir):
@@ -135,23 +303,45 @@ def process_folder(
     if code_content is None:
         return f"[missing] {folder}/code.py"
 
-    llm_output = call_llm(
-        prompt_builder(code_content),
-        folder,
-        api_key,
-        base_url,
-        model_name,
-    )
-    final_result = extract_result_block(llm_output)
+    sample_context = read_sample_context(task_dir)
+    mode = "non_equivalent" if "non_equiv" in str(output_dir) else "equivalent"
+    last_error = ""
+    for candidate_attempt in range(3):
+        llm_output = call_llm(
+            build_prompt(prompt_builder, code_content, sample_context),
+            folder,
+            api_key,
+            base_url,
+            model_name,
+        )
+        final_result = extract_result_block(llm_output)
 
-    if validate:
-        is_valid, error = validate_python_code(final_result)
-        if not is_valid:
-            return f"[invalid] {folder}: {error}"
+        if validate:
+            is_valid, error = validate_python_code(final_result)
+            if not is_valid:
+                last_error = error
+                print(f"[invalid] {folder} candidate={candidate_attempt + 1}: {error}")
+                continue
 
-    with open(save_file, "w", encoding="utf-8") as f:
-        f.write(final_result)
-    return f"[done] {folder}"
+            behavior_ok, behavior_error = validate_sample_behavior(final_result, sample_context, mode)
+            if not behavior_ok:
+                last_error = behavior_error
+                print(f"[invalid] {folder} candidate={candidate_attempt + 1}: {behavior_error}")
+                continue
+
+        with open(save_file, "w", encoding="utf-8") as f:
+            f.write(final_result)
+        return f"[done] {folder}"
+
+    if mode == "non_equivalent":
+        fallback_code, fallback_error = deterministic_non_equivalent_candidate(code_content, sample_context)
+        if fallback_code:
+            with open(save_file, "w", encoding="utf-8") as f:
+                f.write(fallback_code)
+            return f"[done] {folder} deterministic_fallback"
+        last_error = fallback_error
+
+    return f"[invalid] {folder}: {last_error}"
 
 
 def iter_folders(input_dir, limit=None):
@@ -207,4 +397,7 @@ def run_mutation(
             for folder in folders
         ]
         for future in as_completed(futures):
-            print(future.result())
+            try:
+                print(future.result())
+            except Exception as exc:
+                print(f"[error] worker failed: {exc}")

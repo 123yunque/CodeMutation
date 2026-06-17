@@ -1,4 +1,5 @@
 import ast
+import json
 import os
 
 from paths import EQUIV_TRANSFORM, MBPP_DIR, NON_EQUIV_TRANSFORM
@@ -81,6 +82,19 @@ def get_first_function_name(code_content, default=None):
     return default
 
 
+def get_entry_point(task_dir, code_content, default=None):
+    meta_path = os.path.join(task_dir, "meta.json")
+    if os.path.exists(meta_path):
+        try:
+            with open(meta_path, "r", encoding="utf-8") as f:
+                meta = json.load(f)
+            if meta.get("entry_point"):
+                return meta["entry_point"]
+        except (OSError, json.JSONDecodeError):
+            pass
+    return get_first_function_name(code_content, default=default)
+
+
 def build_inputs_block(items, use_repr=False):
     lines = ["\n\ninputs = [\n"]
     for item in items:
@@ -90,8 +104,8 @@ def build_inputs_block(items, use_repr=False):
     return "".join(lines)
 
 
-def build_original_script(code_content, input_literals, model_footer):
-    func_name = get_first_function_name(code_content)
+def build_original_script(code_content, input_literals, model_footer, task_dir=None):
+    func_name = get_entry_point(task_dir, code_content) if task_dir else get_first_function_name(code_content)
     if not func_name:
         raise ValueError("No function definition found in code.py")
 
@@ -112,7 +126,7 @@ def write_original_task(task_dir, model_footer):
     with open(code_path, "r", encoding="utf-8") as f:
         code_content = f.read()
 
-    script_content = build_original_script(code_content, read_input_literals(input_path), model_footer)
+    script_content = build_original_script(code_content, read_input_literals(input_path), model_footer, task_dir)
     for output_name in ("sample_inputs.py", "sample_original.py"):
         with open(os.path.join(task_dir, output_name), "w", encoding="utf-8") as f:
             f.write(script_content)

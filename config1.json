@@ -6,9 +6,9 @@
     
   },
   "input_paths": {
-    "original": "output_mbppplus_new",
-    "non_equivalent": "output_mbppplus_new",
-    "equivalent": "output_mbppplus_new"
+    "original": "output_humanevalplus",
+    "non_equivalent": "output_humanevalplus",
+    "equivalent": "output_humanevalplus"
   },
   "output_paths": {
     "original": "sample_output_LLMs_original_code/minimax",

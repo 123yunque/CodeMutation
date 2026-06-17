@@ -11,11 +11,17 @@ import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from paths import MBPP_DIR
-from data_utils import generate_dataset, read_model_footer
+from data_utils import DATASET_CONFIGS, DEFAULT_DATASET_KEY, generate_dataset, read_model_footer
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Load MBPP++ tasks into the project task directory.")
+    parser = argparse.ArgumentParser(description="Load benchmark tasks into the project task directory.")
+    parser.add_argument(
+        "--dataset",
+        default=DEFAULT_DATASET_KEY,
+        choices=tuple(DATASET_CONFIGS.keys()),
+        help="Dataset adapter to use",
+    )
     parser.add_argument("--output_dir", default=str(MBPP_DIR), help="Output task directory")
     parser.add_argument("--sample_size", type=int, default=10, help="Number of sampled inputs per task")
     parser.add_argument("--seed", type=int, default=0, help="Random seed for sampled inputs")
@@ -31,6 +37,7 @@ def main():
         seed=args.seed,
         overwrite=args.overwrite,
         limit=args.limit,
+        dataset_key=args.dataset,
     )
     print(f"Done. written={stats['written']}, skipped={stats['skipped']}, failed={stats['failed']}")
 

@@ -11,7 +11,20 @@ from mutation_runner import (
 )
 
 
-def build_equivalent_prompt(code_content):
+def format_sample_examples(sample_context, include_outputs=False):
+    examples = (sample_context or {}).get("examples", [])[:5]
+    if not examples:
+        return "- (no sampled inputs available)"
+    lines = []
+    for example in examples:
+        if include_outputs and example.get("output") is not None:
+            lines.append(f"- input: {example.get('input')}\n  original_output: {example.get('output')}")
+        else:
+            lines.append(f"- input: {example.get('input')}")
+    return "\n".join(lines)
+
+
+def build_equivalent_prompt(code_content, sample_context=None):
     return f"""
 Below is the Python code:
 {code_content}
@@ -37,10 +50,13 @@ Output ONLY the transformed code, wrapped exactly as:
 """
 
 
-def build_non_equivalent_prompt(code_content):
+def build_non_equivalent_prompt(code_content, sample_context=None):
     return f"""
 Below is the Python code:
 {code_content}
+
+Sampled inputs from this task:
+{format_sample_examples(sample_context, include_outputs=True)}
 
 You are a Mutation Testing Engineer. Introduce a single, subtle logical change that alters the correct answer of the problem.
 
@@ -53,7 +69,11 @@ Mutation Rules (pick exactly ONE):
 Requirements:
 - Change exactly one token, operator, or literal.
 - Keep the rest of the code as close to the original as possible.
-- Ensure the original correct solution becomes incorrect for at least one input.
+- Preserve the original function name, function signature, imports, return type shape, and input/output format.
+- The mutated code MUST run without exceptions for every sampled input listed above.
+- Ensure at least one sampled input listed above produces a different output from the original.
+- Do not mutate loop bounds, slice bounds, or indexing in a way that can create empty max/min calls or out-of-range access.
+- Prefer changing a comparison threshold, relational operator, boolean connector, arithmetic operator, or a numeric/string literal that directly affects the returned value.
 - Return only valid Python code.
 
 Output ONLY the transformed code, wrapped exactly as:
