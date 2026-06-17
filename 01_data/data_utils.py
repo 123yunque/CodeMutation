@@ -297,7 +297,7 @@ def load_hf_dataset(dataset_key):
 
 
 def load_humanevalplus_from_evalplus():
-    from evalplus.data import get_human_eval_plus
+    from evalplus.data import get_human_eval_plus  # type: ignore[import-untyped]
 
     dataset = get_human_eval_plus()
     if isinstance(dataset, dict):

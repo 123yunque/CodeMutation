@@ -20,20 +20,18 @@ if str(ROOT) not in _sys.path:
 MUTATION_DIR = ROOT / "02_mutation"
 if str(MUTATION_DIR) not in _sys.path:
     _sys.path.insert(0, str(MUTATION_DIR))
+LOCAL_EXEC_DIR = ROOT / "04_local_exec"
+if str(LOCAL_EXEC_DIR) not in _sys.path:
+    _sys.path.insert(0, str(LOCAL_EXEC_DIR))
 
 from config_loader import load_config
-from mutation_runner import call_llm, extract_result_block, validate_python_code
+from mutation_runner import call_llm, extract_result_block, validate_python_code  # type: ignore[import-untyped]
 from paths import MBPP_DIR, EQUIV_TRANSFORM, NON_EQUIV_TRANSFORM
 
 import json
 import os
 
-
-LOCAL_EXEC_DIR = ROOT / "04_local_exec"
-if str(LOCAL_EXEC_DIR) not in _sys.path:
-    _sys.path.insert(0, str(LOCAL_EXEC_DIR))
-
-from exec_utils import print_exec_summary, run_mode
+from exec_utils import print_exec_summary, run_mode  # type: ignore[import-untyped]
 
 
 def read_lines(path):
