@@ -15,6 +15,7 @@ equivalent_llm/
 non_equivalent_llm/
 .vscode/
 backups/
+_tmp_trace_preserving_*/
 test.api.py
 config_loader.py
 
