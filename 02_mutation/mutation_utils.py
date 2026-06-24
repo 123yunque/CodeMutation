@@ -42,7 +42,7 @@ def build_non_equivalent_prompt(code_content):
 Below is the Python code:
 {code_content}
 
-You are a Mutation Testing Engineer. Introduce a single, subtle logical change that alters the correct answer of the problem.
+You are a Mutation Testing Engineer. Introduce a single, subtle logical change that alters the correct answer of the problem while preserving the original execution-line trace.
 
 Mutation Rules (pick exactly ONE):
 1. Relational Operator Replacement (ROR): Flip a comparison, such as > to < or == to !=.
@@ -53,6 +53,11 @@ Mutation Rules (pick exactly ONE):
 Requirements:
 - Change exactly one token, operator, or literal.
 - Keep the rest of the code as close to the original as possible.
+- Preserve the same number of lines as the original code.
+- Do not add, delete, reorder, or reindent any line.
+- Do not change function names, function signatures, imports, return locations, loop structures, or branch structures.
+- Do not add comments, docstrings, print statements, helper functions, exception handling, or new API calls.
+- The generated code must execute the same source line sequence as the original code for the same inputs.
 - Ensure the original correct solution becomes incorrect for at least one input.
 - Return only valid Python code.
 

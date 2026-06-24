@@ -1,0 +1,4294 @@
+{
+  "summary": {
+    "generated_at": "2026-06-17T21:49:01",
+    "scope": "Original answer correct; non-equivalent mutated answer wrong; wrong answer is not equal to pre-mutation expected answer.",
+    "paths": {
+      "task_root": "output_mbppplus_new",
+      "original_llm_output": "sample_output_LLMs_original_code\\gpt51_final",
+      "non_equivalent_llm_output": "sample_output_LLMs_non_equivalent_code\\gpt51_final"
+    },
+    "base_stats": {
+      "tasks_scanned": 378,
+      "valid_changed_cases": 3103,
+      "original_correct_cases": 1770,
+      "orig_correct_mutated_wrong_cases": 524,
+      "wrong_is_pre_mutation_answer_cases": 161,
+      "original_wrong_cases": 1333,
+      "invalid_same_mutation_cases": 665,
+      "orig_correct_mutated_correct_cases": 1246
+    },
+    "derived_counts": {
+      "records": 363,
+      "tasks_with_original_correct_case": 304,
+      "tasks_with_orig_correct_mutated_wrong_case": 187,
+      "tasks_with_wrong_answer_equal_pre_mutation_answer": 66,
+      "tasks_with_wrong_answer_not_pre_mutation_answer": 152
+    },
+    "rates": {
+      "orig_correct_mutated_wrong_rate": 0.296045197740113,
+      "wrong_answer_equal_pre_mutation_answer_rate_among_wrong": 0.30725190839694655,
+      "wrong_answer_not_pre_mutation_answer_rate_among_wrong": 0.6927480916030534,
+      "wrong_answer_not_pre_mutation_answer_rate_among_original_correct": 0.20508474576271185
+    },
+    "answer_type_counts": {
+      "int": 162,
+      "text": 25,
+      "list": 97,
+      "tuple": 30,
+      "float": 30,
+      "empty": 1,
+      "other": 7,
+      "dict": 6,
+      "None": 2,
+      "set": 2,
+      "bool": 1
+    },
+    "error_category_counts": {
+      "numeric_miscalculation": 183,
+      "string_transformation_error": 25,
+      "container_structure_or_order": 135,
+      "float_precision": 9,
+      "boundary_or_special_value": 4,
+      "other": 7
+    },
+    "top_wrong_answers": [
+      {
+        "answer": "2",
+        "count": 11
+      },
+      {
+        "answer": "99999999999999999999",
+        "count": 10
+      },
+      {
+        "answer": "1",
+        "count": 9
+      },
+      {
+        "answer": "0",
+        "count": 9
+      },
+      {
+        "answer": "8",
+        "count": 5
+      },
+      {
+        "answer": "7",
+        "count": 5
+      },
+      {
+        "answer": "4",
+        "count": 5
+      },
+      {
+        "answer": "9",
+        "count": 5
+      },
+      {
+        "answer": "5",
+        "count": 4
+      },
+      {
+        "answer": "16",
+        "count": 4
+      },
+      {
+        "answer": "3",
+        "count": 3
+      },
+      {
+        "answer": "14",
+        "count": 3
+      },
+      {
+        "answer": "36",
+        "count": 2
+      },
+      {
+        "answer": "28",
+        "count": 2
+      },
+      {
+        "answer": "12",
+        "count": 2
+      },
+      {
+        "answer": "[False, False, None, None, True, True, 'KFgDNCb', 'KFgDNCb', True, True, None, None, -3.196651036104, -3.196651036104, -94.19039842971628, -94.19039842971628]",
+        "count": 2
+      },
+      {
+        "answer": "None",
+        "count": 2
+      },
+      {
+        "answer": "1.3499999999999996",
+        "count": 2
+      },
+      {
+        "answer": "11",
+        "count": 2
+      },
+      {
+        "answer": "[1]",
+        "count": 2
+      },
+      {
+        "answer": "10",
+        "count": 2
+      },
+      {
+        "answer": "6",
+        "count": 2
+      },
+      {
+        "answer": "<re.Match object; span=(10, 20), match='gHZZiSWmgg'>",
+        "count": 2
+      },
+      {
+        "answer": "((4, 6), (10, 2), (8, (14, 10)))",
+        "count": 2
+      },
+      {
+        "answer": "Bob",
+        "count": 2
+      },
+      {
+        "answer": "20",
+        "count": 1
+      },
+      {
+        "answer": "Programming_Language",
+        "count": 1
+      },
+      {
+        "answer": "354",
+        "count": 1
+      },
+      {
+        "answer": "508",
+        "count": 1
+      },
+      {
+        "answer": "[['green', 'apple'], ['green', 'apple'], ['green', 'apple'], ['white', 'white', 'black', 'black'], ['orange', 'orange', 'white', 'green'], ['orange', 'orange', 'white', 'green']]",
+        "count": 1
+      }
+    ],
+    "top_tasks": [
+      {
+        "task_id": "task_612",
+        "count": 10
+      },
+      {
+        "task_id": "task_763",
+        "count": 10
+      },
+      {
+        "task_id": "task_606",
+        "count": 9
+      },
+      {
+        "task_id": "task_778",
+        "count": 9
+      },
+      {
+        "task_id": "task_583",
+        "count": 8
+      },
+      {
+        "task_id": "task_586",
+        "count": 8
+      },
+      {
+        "task_id": "task_167",
+        "count": 7
+      },
+      {
+        "task_id": "task_390",
+        "count": 7
+      },
+      {
+        "task_id": "task_432",
+        "count": 7
+      },
+      {
+        "task_id": "task_615",
+        "count": 7
+      },
+      {
+        "task_id": "task_797",
+        "count": 7
+      },
+      {
+        "task_id": "task_244",
+        "count": 6
+      },
+      {
+        "task_id": "task_389",
+        "count": 6
+      },
+      {
+        "task_id": "task_791",
+        "count": 6
+      },
+      {
+        "task_id": "task_162",
+        "count": 5
+      },
+      {
+        "task_id": "task_116",
+        "count": 4
+      },
+      {
+        "task_id": "task_119",
+        "count": 4
+      },
+      {
+        "task_id": "task_120",
+        "count": 4
+      },
+      {
+        "task_id": "task_139",
+        "count": 4
+      },
+      {
+        "task_id": "task_224",
+        "count": 4
+      },
+      {
+        "task_id": "task_274",
+        "count": 4
+      },
+      {
+        "task_id": "task_299",
+        "count": 4
+      },
+      {
+        "task_id": "task_415",
+        "count": 4
+      },
+      {
+        "task_id": "task_558",
+        "count": 4
+      },
+      {
+        "task_id": "task_569",
+        "count": 4
+      },
+      {
+        "task_id": "task_644",
+        "count": 4
+      },
+      {
+        "task_id": "task_755",
+        "count": 4
+      },
+      {
+        "task_id": "task_95",
+        "count": 4
+      },
+      {
+        "task_id": "task_128",
+        "count": 3
+      },
+      {
+        "task_id": "task_132",
+        "count": 3
+      }
+    ]
+  },
+  "records": [
+    {
+      "task_id": "task_101",
+      "case_index": 3,
+      "input": "[[7, 100, 100, 98, 20, 97, 96, 100, 100], 6]",
+      "pre_mutation_expected": "97",
+      "post_mutation_expected": "98",
+      "original_llm_answer": "97",
+      "post_mutation_llm_answer": "20",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_102",
+      "case_index": 5,
+      "input": "['programming_language']",
+      "pre_mutation_expected": "ProgrammingLanguage",
+      "post_mutation_expected": "Programming_language",
+      "original_llm_answer": "ProgrammingLanguage",
+      "post_mutation_llm_answer": "Programming_Language",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_103",
+      "case_index": 4,
+      "input": "[5, 1]",
+      "pre_mutation_expected": "26",
+      "post_mutation_expected": "52",
+      "original_llm_answer": "26",
+      "post_mutation_llm_answer": "354",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_103",
+      "case_index": 10,
+      "input": "[5, 2]",
+      "pre_mutation_expected": "66",
+      "post_mutation_expected": "132",
+      "original_llm_answer": "66",
+      "post_mutation_llm_answer": "508",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_104",
+      "case_index": 10,
+      "input": "[[['apple', 'green'], ['apple', 'green'], ['apple', 'green'], ['black', 'white', 'black', 'white'], ['white', 'orange', 'orange', 'green'], ['white', 'orange', 'orange', 'green']]]",
+      "pre_mutation_expected": "[['apple', 'green'], ['apple', 'green'], ['apple', 'green'], ['black', 'black', 'white', 'white'], ['green', 'orange', 'orange', 'white'], ['green', 'orange', 'orange', 'white']]",
+      "post_mutation_expected": "[['green', 'apple'], ['green', 'apple'], ['green', 'apple'], ['white', 'white', 'black', 'black'], ['white', 'orange', 'orange', 'green'], ['white', 'orange', 'orange', 'green']]",
+      "original_llm_answer": "[['apple', 'green'], ['apple', 'green'], ['apple', 'green'], ['black', 'black', 'white', 'white'], ['green', 'orange', 'orange', 'white'], ['green', 'orange', 'orange', 'white']]",
+      "post_mutation_llm_answer": "[['green', 'apple'], ['green', 'apple'], ['green', 'apple'], ['white', 'white', 'black', 'black'], ['orange', 'orange', 'white', 'green'], ['orange', 'orange', 'white', 'green']]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_106",
+      "case_index": 1,
+      "input": "[[[[1, 2], [3, 4]], [[5, 6], [7, 8]], [[5, 6], [7, 8]]], ([[9, 10], [11, 12]], [[13, 14], [15, 16]])]",
+      "pre_mutation_expected": "([[9, 10], [11, 12]], [[13, 14], [15, 16]], [[1, 2], [3, 4]], [[5, 6], [7, 8]], [[5, 6], [7, 8]])",
+      "post_mutation_expected": "([[1, 2], [3, 4]], [[5, 6], [7, 8]], [[5, 6], [7, 8]], [[9, 10], [11, 12]], [[13, 14], [15, 16]])",
+      "original_llm_answer": "([[9, 10], [11, 12]], [[13, 14], [15, 16]], [[1, 2], [3, 4]], [[5, 6], [7, 8]], [[5, 6], [7, 8]])",
+      "post_mutation_llm_answer": "([[[1, 2], [3, 4]], [[5, 6], [7, 8]], [[5, 6], [7, 8]]], ([[9, 10], [11, 12]], [[13, 14], [15, 16]]))",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_116",
+      "case_index": 1,
+      "input": "[(123456789123456789, 9999999999999999999, 123456789123456789)]",
+      "pre_mutation_expected": "1234567891234567899999999999999999999123456789123456789",
+      "post_mutation_expected": "1234567891234567899999999999999999999123456789123456790",
+      "original_llm_answer": "1234567891234567899999999999999999999123456789123456789",
+      "post_mutation_llm_answer": "12345678912345678910000000000000000000",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_116",
+      "case_index": 4,
+      "input": "[(9876543210987654321, 987, 321, 321)]",
+      "pre_mutation_expected": "9876543210987654321987321321",
+      "post_mutation_expected": "9876543210987654321987321322",
+      "original_llm_answer": "9876543210987654321987321321",
+      "post_mutation_llm_answer": "98765432109876543210987321321",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_116",
+      "case_index": 6,
+      "input": "[(123456789123456789, 987654321987654321, 123456789123456789, 9999999999999999999)]",
+      "pre_mutation_expected": "1234567891234567899876543219876543211234567891234567899999999999999999999",
+      "post_mutation_expected": "1234567891234567899876543219876543211234567891234567900000000000000000000",
+      "original_llm_answer": "1234567891234567899876543219876543211234567891234567899999999999999999999",
+      "post_mutation_llm_answer": "12345678912345678998765432198765432112345678912345678999999999999999999910",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_116",
+      "case_index": 10,
+      "input": "[(123, 456, 789)]",
+      "pre_mutation_expected": "123456789",
+      "post_mutation_expected": "123456790",
+      "original_llm_answer": "123456789",
+      "post_mutation_llm_answer": "1234567891",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_119",
+      "case_index": 1,
+      "input": "[[1, 3, 4, 7]]",
+      "pre_mutation_expected": "1",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "1",
+      "post_mutation_llm_answer": "5",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_119",
+      "case_index": 4,
+      "input": "[[0, 2, 2, 2]]",
+      "pre_mutation_expected": "2",
+      "post_mutation_expected": "3",
+      "original_llm_answer": "2",
+      "post_mutation_llm_answer": "1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_119",
+      "case_index": 8,
+      "input": "[[0, 1, 4, 4, 5, 6]]",
+      "pre_mutation_expected": "2",
+      "post_mutation_expected": "3",
+      "original_llm_answer": "2",
+      "post_mutation_llm_answer": "5",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_119",
+      "case_index": 10,
+      "input": "[[4, 4, 6]]",
+      "pre_mutation_expected": "6",
+      "post_mutation_expected": "7",
+      "original_llm_answer": "6",
+      "post_mutation_llm_answer": "3",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_120",
+      "case_index": 2,
+      "input": "[[(-10, 0), (0, 5)]]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "10",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "5",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_120",
+      "case_index": 6,
+      "input": "[[(0.1, 0.1), (0.5, -0.5), (0.2, 0.2)]]",
+      "pre_mutation_expected": "0.25",
+      "post_mutation_expected": "0.4",
+      "original_llm_answer": "0.25",
+      "post_mutation_llm_answer": "0.30000000000000004",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_120",
+      "case_index": 7,
+      "input": "[[(0, 10), (-100, 100), (0, 10), (0, 10)]]",
+      "pre_mutation_expected": "10000",
+      "post_mutation_expected": "10",
+      "original_llm_answer": "10000",
+      "post_mutation_llm_answer": "200",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_120",
+      "case_index": 8,
+      "input": "[[(-10, 20), (100000, -2), (-10, 20)]]",
+      "pre_mutation_expected": "200000",
+      "post_mutation_expected": "99998",
+      "original_llm_answer": "200000",
+      "post_mutation_llm_answer": "99992",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_124",
+      "case_index": 4,
+      "input": "(1e-100, 1e-100j)",
+      "pre_mutation_expected": "0.7853981633974483",
+      "post_mutation_expected": "-0.7853981633974483",
+      "original_llm_answer": "0.7853981633974483",
+      "post_mutation_llm_answer": "-2.356194490192345",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_127",
+      "case_index": 3,
+      "input": "[-999999999999999999, 999999999999999998]",
+      "pre_mutation_expected": "-999999999999999997000000000000000002",
+      "post_mutation_expected": "-999999999999999998000000000000000001",
+      "original_llm_answer": "-999999999999999997000000000000000002",
+      "post_mutation_llm_answer": "-999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_127",
+      "case_index": 6,
+      "input": "[-999999999999999998, -999999999999999998]",
+      "pre_mutation_expected": "999999999999999996000000000000000004",
+      "post_mutation_expected": "999999999999999995000000000000000006",
+      "original_llm_answer": "999999999999999996000000000000000004",
+      "post_mutation_llm_answer": "0",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_128",
+      "case_index": 1,
+      "input": "[3, 'python is a programming language']",
+      "pre_mutation_expected": "['python', 'programming', 'language']",
+      "post_mutation_expected": "['python', 'programming']",
+      "original_llm_answer": "['python', 'programming', 'language']",
+      "post_mutation_llm_answer": "['python']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_128",
+      "case_index": 6,
+      "input": "[0, 'thisisaverylongword testing wordlengths']",
+      "pre_mutation_expected": "['thisisaverylongword', 'testing', 'wordlengths']",
+      "post_mutation_expected": "[]",
+      "original_llm_answer": "['thisisaverylongword', 'testing', 'wordlengths']",
+      "post_mutation_llm_answer": "['thisisaverylongword']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_128",
+      "case_index": 7,
+      "input": "[0, 'thisisaverylongwordnopqrsw teseting wordlengths']",
+      "pre_mutation_expected": "['thisisaverylongwordnopqrsw', 'teseting', 'wordlengths']",
+      "post_mutation_expected": "[]",
+      "original_llm_answer": "['thisisaverylongwordnopqrsw', 'teseting', 'wordlengths']",
+      "post_mutation_llm_answer": "['thisisaverylongwordnopqrsw']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_130",
+      "case_index": 4,
+      "input": "[[1, 2, 3, 4, 6, 7, 8, 8, 9, 10, 11, 11, 13, 3, 15]]",
+      "pre_mutation_expected": "3",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "3",
+      "post_mutation_llm_answer": "8",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_132",
+      "case_index": 2,
+      "input": "[('SkpnaC', 'Z', 'a', 'qHPQEqCm', 'PyvCTG', 'aFELUEp', 'aZZ', 'IWSYg', 'Z')]",
+      "pre_mutation_expected": "SkpnaCZaqHPQEqCmPyvCTGaFELUEpaZZIWSYgZ",
+      "post_mutation_expected": "ZIWSYgaZZaFELUEpPyvCTGqHPQEqCmaZSkpnaC",
+      "original_llm_answer": "SkpnaCZaqHPQEqCmPyvCTGaFELUEpaZZIWSYgZ",
+      "post_mutation_llm_answer": "ZZIWSYgaZZFELUEFaGTCvyPmqEQPHqaZCnapkS",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_132",
+      "case_index": 8,
+      "input": "[('aa', 'VekfW', 'a')]",
+      "pre_mutation_expected": "aaVekfWa",
+      "post_mutation_expected": "aVekfWaa",
+      "original_llm_answer": "aaVekfWa",
+      "post_mutation_llm_answer": "aWfkevVaa",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_132",
+      "case_index": 9,
+      "input": "[('Z', 'aaZ', 'IWSYga', 'a', 'ZvCAMhN', 'PBEOJoMiYa', 'a', 'a', 'a')]",
+      "pre_mutation_expected": "ZaaZIWSYgaaZvCAMhNPBEOJoMiYaaaa",
+      "post_mutation_expected": "aaaPBEOJoMiYaZvCAMhNaIWSYgaaaZZ",
+      "original_llm_answer": "ZaaZIWSYgaaZvCAMhNPBEOJoMiYaaaa",
+      "post_mutation_llm_answer": "aaaaqMiYoJEOBPNhMACvZaaygSWSIaZaaZ",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_133",
+      "case_index": 10,
+      "input": "[[3, 2, 1, -7, 2.5, 4, -6, 1, 1]]",
+      "pre_mutation_expected": "-13",
+      "post_mutation_expected": "-14",
+      "original_llm_answer": "-13",
+      "post_mutation_llm_answer": "-15",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_135",
+      "case_index": 6,
+      "input": "[100]",
+      "pre_mutation_expected": "19900",
+      "post_mutation_expected": "299",
+      "original_llm_answer": "19900",
+      "post_mutation_llm_answer": "199",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_139",
+      "case_index": 3,
+      "input": "[85]",
+      "pre_mutation_expected": "534.0707511102648",
+      "post_mutation_expected": "0.07391982714328925",
+      "original_llm_answer": "534.0707511102648",
+      "post_mutation_llm_answer": "0.07382304768722034",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_139",
+      "case_index": 4,
+      "input": "[98]",
+      "pre_mutation_expected": "615.7521601035994",
+      "post_mutation_expected": "0.0641141357875468",
+      "original_llm_answer": "615.7521601035994",
+      "post_mutation_llm_answer": "0.06407968412375855",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_139",
+      "case_index": 8,
+      "input": "[55]",
+      "pre_mutation_expected": "345.57519189487726",
+      "post_mutation_expected": "0.11423973285781065",
+      "original_llm_answer": "345.57519189487726",
+      "post_mutation_llm_answer": "0.11423973285751097",
+      "answer_type": "float",
+      "error_category": "float_precision"
+    },
+    {
+      "task_id": "task_139",
+      "case_index": 10,
+      "input": "[88]",
+      "pre_mutation_expected": "552.9203070318035",
+      "post_mutation_expected": "0.07139983303613166",
+      "original_llm_answer": "552.9203070318035",
+      "post_mutation_llm_answer": "0.07139983303613184",
+      "answer_type": "float",
+      "error_category": "float_precision"
+    },
+    {
+      "task_id": "task_145",
+      "case_index": 1,
+      "input": "[[-5, 4, 0, -6, -3, -1, -1]]",
+      "pre_mutation_expected": "10",
+      "post_mutation_expected": "-2",
+      "original_llm_answer": "10",
+      "post_mutation_llm_answer": "-1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_145",
+      "case_index": 3,
+      "input": "[[8, -4, 2, -5, 4, 1, 11, 8, -7, 1]]",
+      "pre_mutation_expected": "18",
+      "post_mutation_expected": "4",
+      "original_llm_answer": "18",
+      "post_mutation_llm_answer": "7",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_161",
+      "case_index": 4,
+      "input": "[[2, 4, 6, 8, 'abc', 6], ['abc', 'axyz', 4.5, 'applegrape']]",
+      "pre_mutation_expected": "[2, 4, 6, 8, 6]",
+      "post_mutation_expected": "['abc']",
+      "original_llm_answer": "[2, 4, 6, 8, 6]",
+      "post_mutation_llm_answer": "[]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_161",
+      "case_index": 7,
+      "input": "[[[4, 10, 4], [3, 4], [7, 8], [4, 10, 4]], [[4, 10, 4], [3, 4], [7, 8], [4, 10, 4]]]",
+      "pre_mutation_expected": "[]",
+      "post_mutation_expected": "[[4, 10, 4], [3, 4], [7, 8], [4, 10, 4]]",
+      "original_llm_answer": "[]",
+      "post_mutation_llm_answer": "[[[4, 10, 4], [3, 4], [7, 8], [4, 10, 4]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_162",
+      "case_index": 3,
+      "input": "[18]",
+      "pre_mutation_expected": "90",
+      "post_mutation_expected": "88",
+      "original_llm_answer": "90",
+      "post_mutation_llm_answer": "16",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_162",
+      "case_index": 5,
+      "input": "[20]",
+      "pre_mutation_expected": "110",
+      "post_mutation_expected": "108",
+      "original_llm_answer": "110",
+      "post_mutation_llm_answer": "36",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_162",
+      "case_index": 6,
+      "input": "[19]",
+      "pre_mutation_expected": "100",
+      "post_mutation_expected": "96",
+      "original_llm_answer": "100",
+      "post_mutation_llm_answer": "28",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_162",
+      "case_index": 7,
+      "input": "[4]",
+      "pre_mutation_expected": "6",
+      "post_mutation_expected": "4",
+      "original_llm_answer": "6",
+      "post_mutation_llm_answer": "0",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_162",
+      "case_index": 8,
+      "input": "[6]",
+      "pre_mutation_expected": "12",
+      "post_mutation_expected": "10",
+      "original_llm_answer": "12",
+      "post_mutation_llm_answer": "4",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_166",
+      "case_index": 1,
+      "input": "[[-3, -2, 80, -200, 3]]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "6",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_167",
+      "case_index": 1,
+      "input": "[38]",
+      "pre_mutation_expected": "64",
+      "post_mutation_expected": "4096",
+      "original_llm_answer": "64",
+      "post_mutation_llm_answer": "128",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_167",
+      "case_index": 2,
+      "input": "[987654321098]",
+      "pre_mutation_expected": "1099511627776",
+      "post_mutation_expected": "1208925819614629174706176",
+      "original_llm_answer": "1099511627776",
+      "post_mutation_llm_answer": "2199023255552",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_167",
+      "case_index": 3,
+      "input": "[1234567890122]",
+      "pre_mutation_expected": "2199023255552",
+      "post_mutation_expected": "4835703278458516698824704",
+      "original_llm_answer": "2199023255552",
+      "post_mutation_llm_answer": "8796093022208",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_167",
+      "case_index": 4,
+      "input": "[17]",
+      "pre_mutation_expected": "32",
+      "post_mutation_expected": "1024",
+      "original_llm_answer": "32",
+      "post_mutation_llm_answer": "64",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_167",
+      "case_index": 6,
+      "input": "[6]",
+      "pre_mutation_expected": "8",
+      "post_mutation_expected": "64",
+      "original_llm_answer": "8",
+      "post_mutation_llm_answer": "16",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_167",
+      "case_index": 7,
+      "input": "[1000000]",
+      "pre_mutation_expected": "1048576",
+      "post_mutation_expected": "1099511627776",
+      "original_llm_answer": "1048576",
+      "post_mutation_llm_answer": "4194304",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_167",
+      "case_index": 10,
+      "input": "[42]",
+      "pre_mutation_expected": "64",
+      "post_mutation_expected": "4096",
+      "original_llm_answer": "64",
+      "post_mutation_llm_answer": "256",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_168",
+      "case_index": 3,
+      "input": "[[5], 2]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_17",
+      "case_index": 4,
+      "input": "[3.3172795455753574]",
+      "pre_mutation_expected": "13.26911818230143",
+      "post_mutation_expected": "9.951838636726073",
+      "original_llm_answer": "13.26911818230143",
+      "post_mutation_llm_answer": "9.951838636726072",
+      "answer_type": "float",
+      "error_category": "float_precision"
+    },
+    {
+      "task_id": "task_17",
+      "case_index": 5,
+      "input": "[5.568439992700058]",
+      "pre_mutation_expected": "22.27375997080023",
+      "post_mutation_expected": "16.705319978100174",
+      "original_llm_answer": "22.27375997080023",
+      "post_mutation_llm_answer": "16.705319978100176",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_17",
+      "case_index": 6,
+      "input": "[6.388475480286746]",
+      "pre_mutation_expected": "25.553901921146984",
+      "post_mutation_expected": "19.165426440860237",
+      "original_llm_answer": "25.553901921146984",
+      "post_mutation_llm_answer": "19.165426440860238",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_170",
+      "case_index": 3,
+      "input": "[[-3, 20, -1, 4, 6, 9, 12, 15, 18, 20], 2, 5]",
+      "pre_mutation_expected": "18",
+      "post_mutation_expected": "3",
+      "original_llm_answer": "18",
+      "post_mutation_llm_answer": "9",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_170",
+      "case_index": 4,
+      "input": "[[2, 1, 5, 6, 8, 3, 4, 9, 10, 11, 8, 12], 0, 11]",
+      "pre_mutation_expected": "79",
+      "post_mutation_expected": "59",
+      "original_llm_answer": "79",
+      "post_mutation_llm_answer": "45",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_171",
+      "case_index": 10,
+      "input": "[1.1423795213926284]",
+      "pre_mutation_expected": "5.711897606963142",
+      "post_mutation_expected": "6.142379521392629",
+      "original_llm_answer": "5.711897606963142",
+      "post_mutation_llm_answer": "6.142379521392628",
+      "answer_type": "float",
+      "error_category": "float_precision"
+    },
+    {
+      "task_id": "task_18",
+      "case_index": 4,
+      "input": "['1234567890', '1234567890']",
+      "pre_mutation_expected": "",
+      "post_mutation_expected": "          ",
+      "original_llm_answer": "",
+      "post_mutation_llm_answer": " ",
+      "answer_type": "empty",
+      "error_category": "boundary_or_special_value"
+    },
+    {
+      "task_id": "task_2",
+      "case_index": 5,
+      "input": "[('DRwvS', 'ITntCqEvPi', 'SmJpP', 'DRwvS'), ('DRwvS', 'ITntCqEvPi', 'SmJpP', 'tUqF', 'ITntCqEvPi')]",
+      "pre_mutation_expected": "('DRwvS', 'SmJpP', 'ITntCqEvPi')",
+      "post_mutation_expected": "('DRwvS', 'tUqF', 'SmJpP', 'ITntCqEvPi')",
+      "original_llm_answer": "('DRwvS', 'SmJpP', 'ITntCqEvPi')",
+      "post_mutation_llm_answer": "('DRwvS', 'SmJpP', 'tUqF', 'ITntCqEvPi')",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_2",
+      "case_index": 7,
+      "input": "[(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10), (11, 12, 13, 14, 15, 16, 17, 19, 20, 15)]",
+      "pre_mutation_expected": "()",
+      "post_mutation_expected": "(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20)",
+      "original_llm_answer": "()",
+      "post_mutation_llm_answer": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_2",
+      "case_index": 10,
+      "input": "[(1, 2, 3, 4, 4, 5, 5), (4, 5, 6)]",
+      "pre_mutation_expected": "(4, 5)",
+      "post_mutation_expected": "(1, 2, 3, 4, 5, 6)",
+      "original_llm_answer": "(4, 5)",
+      "post_mutation_llm_answer": "(4, 5, 6, 1, 2, 3)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_224",
+      "case_index": 1,
+      "input": "[85]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "3",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_224",
+      "case_index": 4,
+      "input": "[78]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "3",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_224",
+      "case_index": 7,
+      "input": "[101]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "3",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_224",
+      "case_index": 8,
+      "input": "[41]",
+      "pre_mutation_expected": "3",
+      "post_mutation_expected": "2",
+      "original_llm_answer": "3",
+      "post_mutation_llm_answer": "1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_230",
+      "case_index": 1,
+      "input": "['   ', '!']",
+      "pre_mutation_expected": "!!!",
+      "post_mutation_expected": "",
+      "original_llm_answer": "!!!",
+      "post_mutation_llm_answer": "!",
+      "answer_type": "other",
+      "error_category": "other"
+    },
+    {
+      "task_id": "task_230",
+      "case_index": 8,
+      "input": "['pythonprogTst *  h  a_A_b  ', ' ']",
+      "pre_mutation_expected": "pythonprogTst *  h  a_A_b  ",
+      "post_mutation_expected": "pythonprogTst*ha_A_b",
+      "original_llm_answer": "pythonprogTst *  h  a_A_b  ",
+      "post_mutation_llm_answer": "pythonprogTst*h_a_A_b",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_232",
+      "case_index": 5,
+      "input": "[[1, 6, 3, 7, 8, 7, 2, 6, 4, 9], 7]",
+      "pre_mutation_expected": "[9, 8, 7, 7, 6, 6, 4]",
+      "post_mutation_expected": "[9, 8, 7, 7, 6, 6]",
+      "original_llm_answer": "[9, 8, 7, 7, 6, 6, 4]",
+      "post_mutation_llm_answer": "[9, 8, 7, 7, 6, 4]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_232",
+      "case_index": 8,
+      "input": "[[1, 5, 3, 8, 7, 4, 6, 4], 4]",
+      "pre_mutation_expected": "[8, 7, 6, 5]",
+      "post_mutation_expected": "[8, 7, 6]",
+      "original_llm_answer": "[8, 7, 6, 5]",
+      "post_mutation_llm_answer": "[8, 6, 5]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_232",
+      "case_index": 10,
+      "input": "[[4, 5, 3, 8, 5, 2, 6, 4], 8]",
+      "pre_mutation_expected": "[8, 6, 5, 5, 4, 4, 3, 2]",
+      "post_mutation_expected": "[8, 6, 5, 5, 4, 4, 3]",
+      "original_llm_answer": "[8, 6, 5, 5, 4, 4, 3, 2]",
+      "post_mutation_llm_answer": "[8, 6, 5, 4, 4, 3, 2]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_235",
+      "case_index": 4,
+      "input": "[10]",
+      "pre_mutation_expected": "10",
+      "post_mutation_expected": "11",
+      "original_llm_answer": "10",
+      "post_mutation_llm_answer": "15",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_237",
+      "case_index": 3,
+      "input": "[[(1, 2), (2,), (0, 2)]]",
+      "pre_mutation_expected": "{(1, 2): 1, (2,): 1, (0, 2): 1}",
+      "post_mutation_expected": "{(2, 1): 1, (2,): 1, (2, 0): 1}",
+      "original_llm_answer": "{(1, 2): 1, (2,): 1, (0, 2): 1}",
+      "post_mutation_llm_answer": "{(2, 1): 1, (2,): 2}",
+      "answer_type": "dict",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_237",
+      "case_index": 10,
+      "input": "[[(1,), (2,), (0, 2), (0, 2, 2), (2, 1), (8, 1, 2)]]",
+      "pre_mutation_expected": "{(1,): 1, (2,): 1, (0, 2): 1, (0, 2, 2): 1, (1, 2): 1, (1, 2, 8): 1}",
+      "post_mutation_expected": "{(1,): 1, (2,): 1, (2, 0): 1, (2, 2, 0): 1, (2, 1): 1, (8, 2, 1): 1}",
+      "original_llm_answer": "{(1,): 1, (2,): 1, (0, 2): 1, (0, 2, 2): 1, (1, 2): 1, (1, 2, 8): 1}",
+      "post_mutation_llm_answer": "{(1,): 1, (2,): 1, (2, 0): 2, (2, 2, 0): 1, (2, 1): 1, (8, 2, 1): 1}",
+      "answer_type": "dict",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_238",
+      "case_index": 8,
+      "input": "['aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa']",
+      "pre_mutation_expected": "1540",
+      "post_mutation_expected": "1485",
+      "original_llm_answer": "1540",
+      "post_mutation_llm_answer": "1596",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_240",
+      "case_index": 2,
+      "input": "[[{'1': 'one'}, [2, 'two'], {'three': 3}], [[4, 'four']]]",
+      "pre_mutation_expected": "[{'1': 'one'}, [2, 'two'], [4, 'four']]",
+      "post_mutation_expected": "[{'1': 'one'}, [2, 'two']]",
+      "original_llm_answer": "[{'1': 'one'}, [2, 'two'], [4, 'four']]",
+      "post_mutation_llm_answer": "[{'1': 'one'}, [2, 'two'], [[4, 'four']]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_242",
+      "case_index": 10,
+      "input": "['waccMPNwvV']",
+      "pre_mutation_expected": "10",
+      "post_mutation_expected": "11",
+      "original_llm_answer": "10",
+      "post_mutation_llm_answer": "12",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_244",
+      "case_index": 3,
+      "input": "[2.953394448977245]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_244",
+      "case_index": 4,
+      "input": "[2.709277112928487]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_244",
+      "case_index": 6,
+      "input": "[1.8504217376600358]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_244",
+      "case_index": 7,
+      "input": "[2.4314765544566113]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_244",
+      "case_index": 9,
+      "input": "[1.5329222521720727]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_244",
+      "case_index": 10,
+      "input": "[35]",
+      "pre_mutation_expected": "36",
+      "post_mutation_expected": "16",
+      "original_llm_answer": "36",
+      "post_mutation_llm_answer": "25",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_250",
+      "case_index": 2,
+      "input": "[(1, 2, 7), [1, 2, 2]]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_250",
+      "case_index": 3,
+      "input": "[(False, True, True), []]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_250",
+      "case_index": 7,
+      "input": "[(1, True, 5.5, [1, 2, 3], [4, 6], {'a': 1, 'b': 2}, True, 'hello', 'hello', False, 25), [1, True, 5.5, [1, 0, 16, 3], [4, 6], {'a': 1, 'b': 2}, True, 'hello', False]]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "4",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_251",
+      "case_index": 5,
+      "input": "[[False, None, True, 'KFgDNCb', True, None, -3.196651036104, -94.19039842971628], 'KK']",
+      "pre_mutation_expected": "['KK', False, 'KK', None, 'KK', True, 'KK', 'KFgDNCb', 'KK', True, 'KK', None, 'KK', -3.196651036104, 'KK', -94.19039842971628]",
+      "post_mutation_expected": "['KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK', 'KK']",
+      "original_llm_answer": "['KK', False, 'KK', None, 'KK', True, 'KK', 'KFgDNCb', 'KK', True, 'KK', None, 'KK', -3.196651036104, 'KK', -94.19039842971628]",
+      "post_mutation_llm_answer": "[False, False, None, None, True, True, 'KFgDNCb', 'KFgDNCb', True, True, None, None, -3.196651036104, -3.196651036104, -94.19039842971628, -94.19039842971628]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_251",
+      "case_index": 6,
+      "input": "[[False, None, True, 'KFgDNCb', True, None, -3.196651036104, -94.19039842971628], 'WDPtUNwkN']",
+      "pre_mutation_expected": "['WDPtUNwkN', False, 'WDPtUNwkN', None, 'WDPtUNwkN', True, 'WDPtUNwkN', 'KFgDNCb', 'WDPtUNwkN', True, 'WDPtUNwkN', None, 'WDPtUNwkN', -3.196651036104, 'WDPtUNwkN', -94.19039842971628]",
+      "post_mutation_expected": "['WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN', 'WDPtUNwkN']",
+      "original_llm_answer": "['WDPtUNwkN', False, 'WDPtUNwkN', None, 'WDPtUNwkN', True, 'WDPtUNwkN', 'KFgDNCb', 'WDPtUNwkN', True, 'WDPtUNwkN', None, 'WDPtUNwkN', -3.196651036104, 'WDPtUNwkN', -94.19039842971628]",
+      "post_mutation_llm_answer": "[False, False, None, None, True, True, 'KFgDNCb', 'KFgDNCb', True, True, None, None, -3.196651036104, -3.196651036104, -94.19039842971628, -94.19039842971628]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_253",
+      "case_index": 6,
+      "input": "[[[['e', 'f'], ['g', '', 'h'], ['e', 'f']], [['a', 'bb'], ['cc', 'd'], ['a', 'bb'], ['cc', 'd']], [['a', 'bb'], ['cc', 'd'], ['a', 'bb'], ['cc', 'd']], [['e', 'f'], ['g', '', 'h'], ['e', 'f']], [['e', 'f'], ['g', '', 'h'], ['e', 'f']], [['e', 'f'], ['g', '', 'h'], ['e', 'f']], [['e', 'f'], ['g', '', 'h'], ['e', 'f']]]]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "7",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "29",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_253",
+      "case_index": 7,
+      "input": "[[1, [2, [3, [4, [5]]]], [2, [3, [4, [5]]]]]]",
+      "pre_mutation_expected": "1",
+      "post_mutation_expected": "2",
+      "original_llm_answer": "1",
+      "post_mutation_llm_answer": "4",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_253",
+      "case_index": 10,
+      "input": "[[[['a', 'b'], ['c', 'd'], ['a', 'b']], [['e', 'f'], ['g', 'h']]]]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "2",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "14",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_256",
+      "case_index": 1,
+      "input": "[88]",
+      "pre_mutation_expected": "23",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "23",
+      "post_mutation_llm_answer": "24",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_256",
+      "case_index": 3,
+      "input": "[991]",
+      "pre_mutation_expected": "166",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "166",
+      "post_mutation_llm_answer": "168",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_256",
+      "case_index": 10,
+      "input": "[59]",
+      "pre_mutation_expected": "16",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "16",
+      "post_mutation_llm_answer": "17",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_264",
+      "case_index": 8,
+      "input": "[66]",
+      "pre_mutation_expected": "277",
+      "post_mutation_expected": "278",
+      "original_llm_answer": "277",
+      "post_mutation_llm_answer": "262",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_264",
+      "case_index": 10,
+      "input": "[51]",
+      "pre_mutation_expected": "217",
+      "post_mutation_expected": "218",
+      "original_llm_answer": "217",
+      "post_mutation_llm_answer": "214",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_265",
+      "case_index": 6,
+      "input": "[[[1, 2, 3], [4, 5], [6, 7, 8, 9, 10]], 2]",
+      "pre_mutation_expected": "[[[1, 2, 3], [6, 7, 8, 9, 10]], [[4, 5]]]",
+      "post_mutation_expected": "[[[1, 2, 3]], [[4, 5]]]",
+      "original_llm_answer": "[[[1, 2, 3], [6, 7, 8, 9, 10]], [[4, 5]]]",
+      "post_mutation_llm_answer": "[[[1, 2, 3]], [[1, 2, 3], [4, 5]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_269",
+      "case_index": 4,
+      "input": "['→']",
+      "pre_mutation_expected": "8594",
+      "post_mutation_expected": "8595",
+      "original_llm_answer": "8594",
+      "post_mutation_llm_answer": "8680",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_270",
+      "case_index": 4,
+      "input": "[[128, 1, 8, 6, 4, 90, 7, 5, 128]]",
+      "pre_mutation_expected": "268",
+      "post_mutation_expected": "7",
+      "original_llm_answer": "268",
+      "post_mutation_llm_answer": "13",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_270",
+      "case_index": 7,
+      "input": "[[1, 3, 7, 8, 0, 1, 1]]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "9",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_273",
+      "case_index": 1,
+      "input": "[(555555555555, 999999999999999999), (999999999999999999, 999999999999999999)]",
+      "pre_mutation_expected": "(-999999444444444444, 0)",
+      "post_mutation_expected": "(1000000555555555554, 1999999999999999998)",
+      "original_llm_answer": "(-999999444444444444, 0)",
+      "post_mutation_llm_answer": "(1000555555554, 1999999999999999998)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_273",
+      "case_index": 5,
+      "input": "[(987654321098, 2000000000000), (899999999999, 3000000000000)]",
+      "pre_mutation_expected": "(87654321099, -1000000000000)",
+      "post_mutation_expected": "(1887654321097, 5000000000000)",
+      "original_llm_answer": "(87654321099, -1000000000000)",
+      "post_mutation_llm_answer": "(1887654322097, 5000000000000)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_273",
+      "case_index": 9,
+      "input": "[(123456789012, 987654321097, 123456789012), (123456789012, 987654321098, 123456789012)]",
+      "pre_mutation_expected": "(0, -1, 0)",
+      "post_mutation_expected": "(246913578024, 1975308642195, 246913578024)",
+      "original_llm_answer": "(0, -1, 0)",
+      "post_mutation_llm_answer": "(246913578024, 1975308643195, 246913578024)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_274",
+      "case_index": 2,
+      "input": "[74]",
+      "pre_mutation_expected": "9444732965739290427392",
+      "post_mutation_expected": "37778931862957161709568",
+      "original_llm_answer": "9444732965739290427392",
+      "post_mutation_llm_answer": "18889465931478580854784",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_274",
+      "case_index": 3,
+      "input": "[103]",
+      "pre_mutation_expected": "5070602400912917605986812821504",
+      "post_mutation_expected": "20282409603651670423947251286016",
+      "original_llm_answer": "5070602400912917605986812821504",
+      "post_mutation_llm_answer": "158456325028528675187087900672",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_274",
+      "case_index": 9,
+      "input": "[11]",
+      "pre_mutation_expected": "1024",
+      "post_mutation_expected": "4096",
+      "original_llm_answer": "1024",
+      "post_mutation_llm_answer": "8192",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_274",
+      "case_index": 10,
+      "input": "[16]",
+      "pre_mutation_expected": "32768",
+      "post_mutation_expected": "131072",
+      "original_llm_answer": "32768",
+      "post_mutation_llm_answer": "67108864",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_278",
+      "case_index": 7,
+      "input": "[(1, 5, 7, (4, 6), 10)]",
+      "pre_mutation_expected": "3",
+      "post_mutation_expected": "4",
+      "original_llm_answer": "3",
+      "post_mutation_llm_answer": "5",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_282",
+      "case_index": 3,
+      "input": "[[4.5, 2.5, 4.228187684597152, 3.277085080344455, 3.277085080344455], [4.5, 2.5, 4.228187684597152, 3.277085080344455, 3.277085080344455]]",
+      "pre_mutation_expected": "[0.0, 0.0, 0.0, 0.0, 0.0]",
+      "post_mutation_expected": "[9.0, 5.0, 8.456375369194305, 6.55417016068891, 6.55417016068891]",
+      "original_llm_answer": "[0.0, 0.0, 0.0, 0.0, 0.0]",
+      "post_mutation_llm_answer": "[9.0, 5.0, 8.456375369194304, 6.55417016068891, 6.55417016068891]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_286",
+      "case_index": 5,
+      "input": "[[1, 2, 3, -4, -5, 6, 7, -8, 9, 10, 7], 11, 1]",
+      "pre_mutation_expected": "31",
+      "post_mutation_expected": "15",
+      "original_llm_answer": "31",
+      "post_mutation_llm_answer": "37",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_294",
+      "case_index": 7,
+      "input": "[[12, [3, 4, [5, 6, [7, 8, [9, 10]]]], 12, 1]]",
+      "pre_mutation_expected": "12",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "12",
+      "post_mutation_llm_answer": "  File \"script.py\", line 23, in <module>",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_294",
+      "case_index": 8,
+      "input": "[[8, 13, 7, 8, 9]]",
+      "pre_mutation_expected": "13",
+      "post_mutation_expected": "7",
+      "original_llm_answer": "13",
+      "post_mutation_llm_answer": "    result.append(max_val(*inp))",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_294",
+      "case_index": 9,
+      "input": "[[1, 3, 30, 3]]",
+      "pre_mutation_expected": "30",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "30",
+      "post_mutation_llm_answer": "                  ^^^^^^^^^^^^^",
+      "answer_type": "other",
+      "error_category": "other"
+    },
+    {
+      "task_id": "task_297",
+      "case_index": 2,
+      "input": "[[[[[1, 2], [3, 4]], [[5, 6]]]]]",
+      "pre_mutation_expected": "[1, 2, 3, 4, 5, 6]",
+      "post_mutation_expected": "[[[1, 2], [3, 4]], [[5, 6]]]",
+      "original_llm_answer": "[1, 2, 3, 4, 5, 6]",
+      "post_mutation_llm_answer": "[1, 2, 3, 4, [5, 6]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_297",
+      "case_index": 8,
+      "input": "[[[[1, 2, 3]], [[4, 5, 6]], [[7, 8, 9]], [[4, 5, 6]], [[7, 8, 9]]]]",
+      "pre_mutation_expected": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 5, 6, 7, 8, 9]",
+      "post_mutation_expected": "[[1, 2, 3], [4, 5, 6], [7, 8, 9], [4, 5, 6], [7, 8, 9]]",
+      "original_llm_answer": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 4, 5, 6, 7, 8, 9]",
+      "post_mutation_llm_answer": "[1, 2, 3]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_299",
+      "case_index": 2,
+      "input": "[[('Alice', 80), ('Bob', -90), ('Charlie', 70), ('Bob', 50), ('Charlie', 70)]]",
+      "pre_mutation_expected": "('Charlie', 140)",
+      "post_mutation_expected": "('Bob', 40)",
+      "original_llm_answer": "('Charlie', 140)",
+      "post_mutation_llm_answer": "('Bob', 90)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_299",
+      "case_index": 3,
+      "input": "[[('AlDavidice', -50), ('Alice', -50), ('Alice', -50)]]",
+      "pre_mutation_expected": "('AlDavidice', -50)",
+      "post_mutation_expected": "('Alice', 100)",
+      "original_llm_answer": "('AlDavidice', -50)",
+      "post_mutation_llm_answer": "('AlDavidice', 50)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_299",
+      "case_index": 4,
+      "input": "[[('Alice', 80), ('Bob', -90), ('Bobb', 50), ('Charlie', 70), ('Alice', -60), ('Bobb', 50), ('Charlie', 40), ('Bobb', 50)]]",
+      "pre_mutation_expected": "('Bobb', 150)",
+      "post_mutation_expected": "('Bob', 90)",
+      "original_llm_answer": "('Bobb', 150)",
+      "post_mutation_llm_answer": "('Charlie', 110)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_299",
+      "case_index": 5,
+      "input": "[[('Alice', 80), ('Bob', -90), ('Charlie', 70), ('Alice', -60), ('Bob', 50), ('BoDavid', 50), ('Charlie', 70)]]",
+      "pre_mutation_expected": "('Charlie', 140)",
+      "post_mutation_expected": "('Bob', 40)",
+      "original_llm_answer": "('Charlie', 140)",
+      "post_mutation_llm_answer": "('BoDavid', 50)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_301",
+      "case_index": 3,
+      "input": "[{'a': {'b': {}}, 'i': {'b': {}}}]",
+      "pre_mutation_expected": "3",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "3",
+      "post_mutation_llm_answer": "-2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_305",
+      "case_index": 3,
+      "input": "[['Java Programming', 'Perl Programming', 'PHnP Programming', 'Ruby Programming', 'PHP Programming', 'PHP Programming']]",
+      "pre_mutation_expected": "('Perl', 'Programming')",
+      "post_mutation_expected": "('Programming', 'Perl')",
+      "original_llm_answer": "('Perl', 'Programming')",
+      "post_mutation_llm_answer": "None",
+      "answer_type": "None",
+      "error_category": "boundary_or_special_value"
+    },
+    {
+      "task_id": "task_305",
+      "case_index": 6,
+      "input": "[['Apple', 'Banana', 'Perl Python', 'Dog', 'Elephant']]",
+      "pre_mutation_expected": "('Perl', 'Python')",
+      "post_mutation_expected": "('Python', 'Perl')",
+      "original_llm_answer": "('Perl', 'Python')",
+      "post_mutation_llm_answer": "None",
+      "answer_type": "None",
+      "error_category": "boundary_or_special_value"
+    },
+    {
+      "task_id": "task_310",
+      "case_index": 9,
+      "input": "['abcd   Hello World!      efghijklmnopqrstuvwxyz']",
+      "pre_mutation_expected": "('a', 'b', 'c', 'd', 'H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd', '!', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')",
+      "post_mutation_expected": "(' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ')",
+      "original_llm_answer": "('a', 'b', 'c', 'd', 'H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd', '!', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z')",
+      "post_mutation_llm_answer": "(' ', ' ', ' ', ' ', ' ', ' ')",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_389",
+      "case_index": 2,
+      "input": "[23]",
+      "pre_mutation_expected": "64079",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "64079",
+      "post_mutation_llm_answer": "987",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_389",
+      "case_index": 5,
+      "input": "[10]",
+      "pre_mutation_expected": "123",
+      "post_mutation_expected": "-1",
+      "original_llm_answer": "123",
+      "post_mutation_llm_answer": "-123",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_389",
+      "case_index": 6,
+      "input": "[17]",
+      "pre_mutation_expected": "3571",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "3571",
+      "post_mutation_llm_answer": "-4181",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_389",
+      "case_index": 7,
+      "input": "[15]",
+      "pre_mutation_expected": "1364",
+      "post_mutation_expected": "-2",
+      "original_llm_answer": "1364",
+      "post_mutation_llm_answer": "-108",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_389",
+      "case_index": 8,
+      "input": "[12]",
+      "pre_mutation_expected": "322",
+      "post_mutation_expected": "2",
+      "original_llm_answer": "322",
+      "post_mutation_llm_answer": "-199",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_389",
+      "case_index": 9,
+      "input": "[7]",
+      "pre_mutation_expected": "29",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "29",
+      "post_mutation_llm_answer": "7",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_390",
+      "case_index": 2,
+      "input": "[['apple', 2, [3, 'orange', [4, 'banana'], 5], 'mango'], 'fruit_{0}']",
+      "pre_mutation_expected": "['fruit_apple', 'fruit_2', \"fruit_[3, 'orange', [4, 'banana'], 5]\", 'fruit_mango']",
+      "post_mutation_expected": "['fruit_mango', \"fruit_[3, 'orange', [4, 'banana'], 5]\", 'fruit_2', 'fruit_apple']",
+      "original_llm_answer": "['fruit_apple', 'fruit_2', \"fruit_[3, 'orange', [4, 'banana'], 5]\", 'fruit_mango']",
+      "post_mutation_llm_answer": "['elformat9ement9']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_390",
+      "case_index": 3,
+      "input": "[[2, 'fruitorange_{0}', [3, 'orange', [4, 'banana'], 5], 9, 'mango', 'fruitorange_{0}', 9], 'orangelformat{0}ement{0}ge']",
+      "pre_mutation_expected": "['orangelformat2ement2ge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', \"orangelformat[3, 'orange', [4, 'banana'], 5]ement[3, 'orange', [4, 'banana'], 5]ge\", 'orangelformat9ement9ge', 'orangelformatmangoementmangoge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', 'orangelformat9ement9ge']",
+      "post_mutation_expected": "['orangelformat9ement9ge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', 'orangelformatmangoementmangoge', 'orangelformat9ement9ge', \"orangelformat[3, 'orange', [4, 'banana'], 5]ement[3, 'orange', [4, 'banana'], 5]ge\", 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', 'orangelformat2ement2ge']",
+      "original_llm_answer": "['orangelformat2ement2ge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', \"orangelformat[3, 'orange', [4, 'banana'], 5]ement[3, 'orange', [4, 'banana'], 5]ge\", 'orangelformat9ement9ge', 'orangelformatmangoementmangoge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', 'orangelformat9ement9ge']",
+      "post_mutation_llm_answer": "['python3', 'python2', 'python1', 'pythona']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_390",
+      "case_index": 5,
+      "input": "[[[3, 'orange', [4, 'banana'], 5], 'mango'], 'fruittorange_{0}']",
+      "pre_mutation_expected": "[\"fruittorange_[3, 'orange', [4, 'banana'], 5]\", 'fruittorange_mango']",
+      "post_mutation_expected": "['fruittorange_mango', \"fruittorange_[3, 'orange', [4, 'banana'], 5]\"]",
+      "original_llm_answer": "[\"fruittorange_[3, 'orange', [4, 'banana'], 5]\", 'fruittorange_mango']",
+      "post_mutation_llm_answer": "['orangelformatmangoelementmangooge', 'orangelformat[3, \\'orange\\', [4, \\'banana\\'], 5]ement[3, \\'orange\\', [4, \\'banana\\'], 5]ge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', 'orangelformat2ement2ge']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_390",
+      "case_index": 6,
+      "input": "[[2, 'fruitorange_{0}', [3, 'orange', [4, 'banana'], 5], 'mango'], 'orangelformat{0}ement{0}ge']",
+      "pre_mutation_expected": "['orangelformat2ement2ge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', \"orangelformat[3, 'orange', [4, 'banana'], 5]ement[3, 'orange', [4, 'banana'], 5]ge\", 'orangelformatmangoementmangoge']",
+      "post_mutation_expected": "['orangelformatmangoementmangoge', \"orangelformat[3, 'orange', [4, 'banana'], 5]ement[3, 'orange', [4, 'banana'], 5]ge\", 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', 'orangelformat2ement2ge']",
+      "original_llm_answer": "['orangelformat2ement2ge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', \"orangelformat[3, 'orange', [4, 'banana'], 5]ement[3, 'orange', [4, 'banana'], 5]ge\", 'orangelformatmangoementmangoge']",
+      "post_mutation_llm_answer": "['fruittorange_[3, \\'orange\\', [4, \\'banana\\'], 5]', 'fruittorange_mango']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_390",
+      "case_index": 7,
+      "input": "[[1, 'two', 3, 'four'], 'item_{0}']",
+      "pre_mutation_expected": "['item_1', 'item_two', 'item_3', 'item_four']",
+      "post_mutation_expected": "['item_four', 'item_3', 'item_two', 'item_1']",
+      "original_llm_answer": "['item_1', 'item_two', 'item_3', 'item_four']",
+      "post_mutation_llm_answer": "['fruit_3', 'fruit_1', 'fruit_3']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_390",
+      "case_index": 8,
+      "input": "[['a', 'b', 'c', 'd'], 'python{0}']",
+      "pre_mutation_expected": "['pythona', 'pythonb', 'pythonc', 'pythond']",
+      "post_mutation_expected": "['pythond', 'pythonc', 'pythonb', 'pythona']",
+      "original_llm_answer": "['pythona', 'pythonb', 'pythonc', 'pythond']",
+      "post_mutation_llm_answer": "['orangelformat9ement9ge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', 'orangelformatmangoelementmangoge', 'orangelformat[3, \\'orange\\', [4, \\'banana\\'], 5]ement[3, \\'orange\\', [4, \\'banana\\'], 5]ge', 'orangelformat2ement2ge', 'orangelformatfruitorange_{0}ementfruitorange_{0}ge', 'orangelformat2ement2ge']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_390",
+      "case_index": 10,
+      "input": "[['formamagngot{0}', 2, 'manfruitorange_{0}o', [3, 'orange', [4, 'banana'], 5], 'mango', [3, 'orange', [4, 'banana'], 5]], 'fruiut_{0}']",
+      "pre_mutation_expected": "['fruiut_formamagngot{0}', 'fruiut_2', 'fruiut_manfruitorange_{0}o', \"fruiut_[3, 'orange', [4, 'banana'], 5]\", 'fruiut_mango', \"fruiut_[3, 'orange', [4, 'banana'], 5]\"]",
+      "post_mutation_expected": "[\"fruiut_[3, 'orange', [4, 'banana'], 5]\", 'fruiut_mango', \"fruiut_[3, 'orange', [4, 'banana'], 5]\", 'fruiut_manfruitorange_{0}o', 'fruiut_2', 'fruiut_formamagngot{0}']",
+      "original_llm_answer": "['fruiut_formamagngot{0}', 'fruiut_2', 'fruiut_manfruitorange_{0}o', \"fruiut_[3, 'orange', [4, 'banana'], 5]\", 'fruiut_mango', \"fruiut_[3, 'orange', [4, 'banana'], 5]\"]",
+      "post_mutation_llm_answer": "['fruitorangmanfruitorange_[3, \\'orange\\', [4, \\'banana\\'], 5]oe_[3, \\'orange\\', [4, \\'banana\\'], 5]', 'fruitorangmanfruitorange_mangoe_mango', 'fruitorangmanfruitorange_mangoe_mango']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_398",
+      "case_index": 2,
+      "input": "[['TTzXjVXDQt', 'gTxGtFZLn', 'abc', 'ITwgTxGtLnVYEcw', 'abc', 'gTxGtFZLn', 'abc', 'ucH', 'gTxGtFZLn']]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "4",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_398",
+      "case_index": 10,
+      "input": "[[0, -6, 0]]",
+      "pre_mutation_expected": "6",
+      "post_mutation_expected": "7",
+      "original_llm_answer": "6",
+      "post_mutation_llm_answer": "8",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_4",
+      "case_index": 10,
+      "input": "[[900, 700, 600, 500, 500, 400, 300, 200, 100, 800, 400], 10]",
+      "pre_mutation_expected": "[900, 800, 700, 600, 500, 500, 400, 400, 300, 200]",
+      "post_mutation_expected": "[100, 200, 300, 400, 400, 500, 500, 600, 700, 800]",
+      "original_llm_answer": "[900, 800, 700, 600, 500, 500, 400, 400, 300, 200]",
+      "post_mutation_llm_answer": "[100, 200, 300, 400, 400]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_409",
+      "case_index": 3,
+      "input": "[[(101, 200), (300, 400), (500, 600), (700, 800), (900, 1000), (1100, 1200), (1300, 1400), (1500, 1600), (1700, 1800), (1100, 1200)]]",
+      "pre_mutation_expected": "20200",
+      "post_mutation_expected": "3060000",
+      "original_llm_answer": "20200",
+      "post_mutation_llm_answer": "1920000",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_415",
+      "case_index": 4,
+      "input": "[[0, -1, -2, -4, 5, 0, -6]]",
+      "pre_mutation_expected": "(-4, -6)",
+      "post_mutation_expected": "(-6, -6)",
+      "original_llm_answer": "(-4, -6)",
+      "post_mutation_llm_answer": "(0, 0)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_415",
+      "case_index": 6,
+      "input": "[[1, 2, 3]]",
+      "pre_mutation_expected": "(2, 3)",
+      "post_mutation_expected": "(3, 3)",
+      "original_llm_answer": "(2, 3)",
+      "post_mutation_llm_answer": "(1, 1)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_415",
+      "case_index": 7,
+      "input": "[[20000, -30000, 1000001, 666666666, 40000, 888888888, -50000, 60000, 80000, -90000, 100000]]",
+      "pre_mutation_expected": "(666666666, 888888888)",
+      "post_mutation_expected": "(888888888, 888888888)",
+      "original_llm_answer": "(666666666, 888888888)",
+      "post_mutation_llm_answer": "(1000001, 1000001)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_415",
+      "case_index": 10,
+      "input": "[[100, 200, 300, 401, 500, 600, 700, 800, 1000]]",
+      "pre_mutation_expected": "(800, 1000)",
+      "post_mutation_expected": "(1000, 1000)",
+      "original_llm_answer": "(800, 1000)",
+      "post_mutation_llm_answer": "(800, 800)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_418",
+      "case_index": 4,
+      "input": "[[[[1, 2], [3, 4, 5]], [[6, 7], [8], [9, 10, 11, 12], [8], [8]], [[6, 7], [8], [9, 10, 11, 12], [8], [8]], [[13, 14, 15], [16, 17, 18]]]]",
+      "pre_mutation_expected": "[[6, 7], [8], [9, 10, 11, 12], [8], [8]]",
+      "post_mutation_expected": "[[1, 2], [3, 4, 5]]",
+      "original_llm_answer": "[[6, 7], [8], [9, 10, 11, 12], [8], [8]]",
+      "post_mutation_llm_answer": "[1, 2]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_419",
+      "case_index": 1,
+      "input": "[[5, 1, 2, 3, 4, 5, 5]]",
+      "pre_mutation_expected": "175",
+      "post_mutation_expected": "3.5714285714285716",
+      "original_llm_answer": "175",
+      "post_mutation_llm_answer": "3.7142857142857144",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_421",
+      "case_index": 7,
+      "input": "[('hello-world', 'hello', '-', 'world', 'world')]",
+      "pre_mutation_expected": "hello-world-hello---world-world",
+      "post_mutation_expected": "hello-world-hello---world-world-",
+      "original_llm_answer": "hello-world-hello---world-world",
+      "post_mutation_llm_answer": "hello-world-hello--world-world-",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_422",
+      "case_index": 3,
+      "input": "[2]",
+      "pre_mutation_expected": "4.5",
+      "post_mutation_expected": "18",
+      "original_llm_answer": "4.5",
+      "post_mutation_llm_answer": "36",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_422",
+      "case_index": 8,
+      "input": "[1000]",
+      "pre_mutation_expected": "250500250.0",
+      "post_mutation_expected": "250500250000000",
+      "original_llm_answer": "250500250.0",
+      "post_mutation_llm_answer": "250250250000000",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_426",
+      "case_index": 5,
+      "input": "[[10, 20, 45, 67, 84, 93]]",
+      "pre_mutation_expected": "[45, 67, 93]",
+      "post_mutation_expected": "[10, 20, 84]",
+      "original_llm_answer": "[45, 67, 93]",
+      "post_mutation_llm_answer": "10, 20, 84]",
+      "answer_type": "other",
+      "error_category": "other"
+    },
+    {
+      "task_id": "task_428",
+      "case_index": 4,
+      "input": "[[False, 1, True, 2, 3, 4, 4, 6, 9, 10, 100]]",
+      "pre_mutation_expected": "[False, 1, True, 2, 3, 4, 4, 6, 9, 10, 100]",
+      "post_mutation_expected": "[100, 10, 9, 6, 4, 4, 3, 2, 1, True, False]",
+      "original_llm_answer": "[False, 1, True, 2, 3, 4, 4, 6, 9, 10, 100]",
+      "post_mutation_llm_answer": "[100, 10, 9, 6, 4, 4, 3, 2, True, 1, False]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_432",
+      "case_index": 2,
+      "input": "[4.850138598783948, 5.8060581662192785, 2.76692487581672]",
+      "pre_mutation_expected": "5.328098382501613",
+      "post_mutation_expected": "-0.47795978371766523",
+      "original_llm_answer": "5.328098382501613",
+      "post_mutation_llm_answer": "-0.47795978371766533",
+      "answer_type": "float",
+      "error_category": "float_precision"
+    },
+    {
+      "task_id": "task_432",
+      "case_index": 3,
+      "input": "[6.2, 3.5, 7.1]",
+      "pre_mutation_expected": "4.85",
+      "post_mutation_expected": "1.35",
+      "original_llm_answer": "4.85",
+      "post_mutation_llm_answer": "1.3499999999999996",
+      "answer_type": "float",
+      "error_category": "float_precision"
+    },
+    {
+      "task_id": "task_432",
+      "case_index": 5,
+      "input": "[9999999, 10000000, 999998]",
+      "pre_mutation_expected": "9999999.5",
+      "post_mutation_expected": "-0.5",
+      "original_llm_answer": "9999999.5",
+      "post_mutation_llm_answer": "-5.00000000069889e-07",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_432",
+      "case_index": 6,
+      "input": "[2.76692487581672, 8.9, 5.705802537957529]",
+      "pre_mutation_expected": "5.83346243790836",
+      "post_mutation_expected": "-3.06653756209164",
+      "original_llm_answer": "5.83346243790836",
+      "post_mutation_llm_answer": "-3.06653706209164",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_432",
+      "case_index": 8,
+      "input": "[5.6, 6.2, 12.228674915981982]",
+      "pre_mutation_expected": "5.9",
+      "post_mutation_expected": "-0.30000000000000027",
+      "original_llm_answer": "5.9",
+      "post_mutation_llm_answer": "-0.2999999999999998",
+      "answer_type": "float",
+      "error_category": "float_precision"
+    },
+    {
+      "task_id": "task_432",
+      "case_index": 9,
+      "input": "[9.8, 7.1, 5.6]",
+      "pre_mutation_expected": "8.45",
+      "post_mutation_expected": "1.3500000000000005",
+      "original_llm_answer": "8.45",
+      "post_mutation_llm_answer": "1.3499999999999996",
+      "answer_type": "float",
+      "error_category": "float_precision"
+    },
+    {
+      "task_id": "task_432",
+      "case_index": 10,
+      "input": "[4.7, 5.4977102681459025, 9.893908979364358]",
+      "pre_mutation_expected": "5.098855134072951",
+      "post_mutation_expected": "-0.39885513407295115",
+      "original_llm_answer": "5.098855134072951",
+      "post_mutation_llm_answer": "-0.39885513407295126",
+      "answer_type": "float",
+      "error_category": "float_precision"
+    },
+    {
+      "task_id": "task_439",
+      "case_index": 6,
+      "input": "[[999999999999999999999, 99999, 987654321987654321987654321]]",
+      "pre_mutation_expected": "99999999999999999999999999987654321987654321987654321",
+      "post_mutation_expected": "99999999999999999999999999987654321987654321987654322",
+      "original_llm_answer": "99999999999999999999999999987654321987654321987654321",
+      "post_mutation_llm_answer": "999999999999999999999999999899999987654321987654321987654322",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_441",
+      "case_index": 1,
+      "input": "[0.5]",
+      "pre_mutation_expected": "1.5",
+      "post_mutation_expected": "3.5",
+      "original_llm_answer": "1.5",
+      "post_mutation_llm_answer": "<result>",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_441",
+      "case_index": 2,
+      "input": "[1000000000]",
+      "pre_mutation_expected": "6000000000000000000",
+      "post_mutation_expected": "7000000000",
+      "original_llm_answer": "6000000000000000000",
+      "post_mutation_llm_answer": "3.5",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_445",
+      "case_index": 1,
+      "input": "[((1.5, -1.25), (-0.5, 0.75)), ((1.5, -1.25), (-0.5, 0.75), (1.5, -1.25))]",
+      "pre_mutation_expected": "((2.25, 1.5625), (0.25, 0.5625))",
+      "post_mutation_expected": "((3.0, -2.5), (-1.0, 1.5))",
+      "original_llm_answer": "((2.25, 1.5625), (0.25, 0.5625))",
+      "post_mutation_llm_answer": "((3.0, -2.5), (1.0, 1.5))",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_446",
+      "case_index": 2,
+      "input": "[('', -48.873894802445946), [False, True, True, True, False, False, True, True, False, True, True, True]]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "11",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_446",
+      "case_index": 7,
+      "input": "[('OOXX', -48.873894802445946), [False, True, True, True, False, False, True, False, True, True, True]]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "11",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_447",
+      "case_index": 3,
+      "input": "[[1, 2.5, -4.7, 4, 7, 7, -8.9]]",
+      "pre_mutation_expected": "[1, 15.625, -103.82300000000001, 64, 343, 343, -704.969]",
+      "post_mutation_expected": "[1, 6.25, 22.090000000000003, 16, 49, 49, 79.21000000000001]",
+      "original_llm_answer": "[1, 15.625, -103.82300000000001, 64, 343, 343, -704.969]",
+      "post_mutation_llm_answer": "[1, 6.25, 22.090000000000003, 16, 49, 49, 79.20999999999998]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_450",
+      "case_index": 2,
+      "input": "[['xyz', 'pqr', 'lmnop', 'abcde', 'abcde'], 4]",
+      "pre_mutation_expected": "[]",
+      "post_mutation_expected": "['xyz', 'pqr', 'lmnop', 'abcde', 'abcde']",
+      "original_llm_answer": "[]",
+      "post_mutation_llm_answer": "['pqr', 'lmnop']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_450",
+      "case_index": 4,
+      "input": "[['hijkl', 'abc', 'mnopqr', 'hijkl', 'abbc', 'defg', 'aabbc', 'abc', 'babc', 'abc', 'abc'], 3]",
+      "pre_mutation_expected": "['abc', 'abc', 'abc', 'abc']",
+      "post_mutation_expected": "['hijkl', 'mnopqr', 'hijkl', 'abbc', 'defg', 'aabbc', 'babc']",
+      "original_llm_answer": "['abc', 'abc', 'abc', 'abc']",
+      "post_mutation_llm_answer": "['hijkl', 'abc', 'mnopqr', 'hijkl', 'abbc', 'defg', 'aabbc', 'abc', 'babc', 'abc', 'abc']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_451",
+      "case_index": 9,
+      "input": "['   12384567890  \\u180e\\u200b ']",
+      "pre_mutation_expected": "12384567890᠎​",
+      "post_mutation_expected": "___12384567890__᠎​_",
+      "original_llm_answer": "12384567890᠎​",
+      "post_mutation_llm_answer": "___12384567890__᠎​",
+      "answer_type": "other",
+      "error_category": "other"
+    },
+    {
+      "task_id": "task_457",
+      "case_index": 7,
+      "input": "[[['x'], [], [], ['z', 'a'], ['b', 'c', '', 'd'], ['e', 'f', 'g', 'jh']]]",
+      "pre_mutation_expected": "[]",
+      "post_mutation_expected": "['b', 'c', '', 'd']",
+      "original_llm_answer": "[]",
+      "post_mutation_llm_answer": "['e', 'f', 'g', 'jh']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_458",
+      "case_index": 1,
+      "input": "[2.5, 4.577650682955883]",
+      "pre_mutation_expected": "11.444126707389708",
+      "post_mutation_expected": "0.5461316673437604",
+      "original_llm_answer": "11.444126707389708",
+      "post_mutation_llm_answer": "0.5462173212832013",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_463",
+      "case_index": 2,
+      "input": "[[10, -2, 6, -8, 4, -4]]",
+      "pre_mutation_expected": "3840",
+      "post_mutation_expected": "1792",
+      "original_llm_answer": "3840",
+      "post_mutation_llm_answer": "14",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_470",
+      "case_index": 4,
+      "input": "[(2, 2, -1, -0.5, -0.5, -0.5, -0.4924192336004098)]",
+      "pre_mutation_expected": "(4, 1, -1.5, -1.0, -1.0, -0.9924192336004098)",
+      "post_mutation_expected": "(0, 3, -0.5, 0.0, 0.0, -0.007580766399590211)",
+      "original_llm_answer": "(4, 1, -1.5, -1.0, -1.0, -0.9924192336004098)",
+      "post_mutation_llm_answer": "(0, 3, 0.5, 0.0, 0.0, -0.00758076639959024)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_471",
+      "case_index": 1,
+      "input": "[[2999999, 10000, 2000000, 3000000], 2000000]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "9999",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "1999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_471",
+      "case_index": 5,
+      "input": "[[1000000, 3000001, 2000000, 3000000, 1000000, 10002], 2000000]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "10003",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "3",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_471",
+      "case_index": 10,
+      "input": "[[2000000, 10002, 3000000], 3000000]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "2010002",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_473",
+      "case_index": 4,
+      "input": "[[(1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (6, 7)], [(1, 3), (3,), (5, 7), (6, 7, 9)]]",
+      "pre_mutation_expected": "set()",
+      "post_mutation_expected": "{(6, 7, 9), (1, 3), (1, 2), (3, 4), (5, 7), (2, 3), (6, 7), (4, 5), (5, 6), (3,)}",
+      "original_llm_answer": "set()",
+      "post_mutation_llm_answer": "{(2, 1), (3, 2), (4, 3), (4, 1), (3,), (7, 5), (6, 5), (7, 6), (9, 7, 6)}",
+      "answer_type": "set",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_473",
+      "case_index": 6,
+      "input": "[[(1, 2, 3), (7, 8, 8), (4, 5, 6), (7, 8, 9), (10, 11, 12)], [(12, 10, 9), (8, 7, 6), (6, 5, 4), (3, 2, 1)]]",
+      "pre_mutation_expected": "{(1, 2, 3), (4, 5, 6)}",
+      "post_mutation_expected": "{(7, 8, 8), (1, 2, 3), (9, 10, 12), (10, 11, 12), (6, 7, 8), (4, 5, 6), (7, 8, 9)}",
+      "original_llm_answer": "{(1, 2, 3), (4, 5, 6)}",
+      "post_mutation_llm_answer": "{(3, 2, 1), (8, 7, 8), (6, 4, 5), (9, 7, 8), (12, 11, 10), (9, 10, 12), (6, 8, 7)}",
+      "answer_type": "set",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_477",
+      "case_index": 4,
+      "input": "['TUPPERCASErue']",
+      "pre_mutation_expected": "tuppercaserue",
+      "post_mutation_expected": "TUPPERCASERUE",
+      "original_llm_answer": "tuppercaserue",
+      "post_mutation_llm_answer": "TUPPERCASErue",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_557",
+      "case_index": 7,
+      "input": "['uBSBBB']",
+      "pre_mutation_expected": "Ubsbbb",
+      "post_mutation_expected": "Ubsbbbx",
+      "original_llm_answer": "Ubsbbb",
+      "post_mutation_llm_answer": "Ubssbbbx",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_558",
+      "case_index": 3,
+      "input": "[1111, 2222]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "12",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "8",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_558",
+      "case_index": 4,
+      "input": "[8889, 8888]",
+      "pre_mutation_expected": "1",
+      "post_mutation_expected": "65",
+      "original_llm_answer": "1",
+      "post_mutation_llm_answer": "16",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_558",
+      "case_index": 5,
+      "input": "[456788, 456789]",
+      "pre_mutation_expected": "1",
+      "post_mutation_expected": "77",
+      "original_llm_answer": "1",
+      "post_mutation_llm_answer": "52",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_558",
+      "case_index": 6,
+      "input": "[23456788, 23456789]",
+      "pre_mutation_expected": "1",
+      "post_mutation_expected": "87",
+      "original_llm_answer": "1",
+      "post_mutation_llm_answer": "88",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_565",
+      "case_index": 1,
+      "input": "['Sspaces\\t']",
+      "pre_mutation_expected": "['S', 's', 'p', 'a', 'c', 'e', 's', '\\t']",
+      "post_mutation_expected": "['\\t', 's', 'e', 'c', 'a', 'p', 's', 'S']",
+      "original_llm_answer": "['S', 's', 'p', 'a', 'c', 'e', 's', '\\t']",
+      "post_mutation_llm_answer": "['\\t', 's', 'e', 'c', 'a', 'p', 'S']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_565",
+      "case_index": 7,
+      "input": "['spacesithString withh ssp aces']",
+      "pre_mutation_expected": "['s', 'p', 'a', 'c', 'e', 's', 'i', 't', 'h', 'S', 't', 'r', 'i', 'n', 'g', ' ', 'w', 'i', 't', 'h', 'h', ' ', 's', 's', 'p', ' ', 'a', 'c', 'e', 's']",
+      "post_mutation_expected": "['s', 'e', 'c', 'a', ' ', 'p', 's', 's', ' ', 'h', 'h', 't', 'i', 'w', ' ', 'g', 'n', 'i', 'r', 't', 'S', 'h', 't', 'i', 's', 'e', 'c', 'a', 'p', 's']",
+      "original_llm_answer": "['s', 'p', 'a', 'c', 'e', 's', 'i', 't', 'h', 'S', 't', 'r', 'i', 'n', 'g', ' ', 'w', 'i', 't', 'h', 'h', ' ', 's', 's', 'p', ' ', 'a', 'c', 'e', 's']",
+      "post_mutation_llm_answer": "['s', 'e', 'c', 'a', 'p', ' ', 's', 's', ' ', 'h', 't', 'i', 'w', ' ', 'g', 'n', 'i', 'r', 't', 'S', 'h', 't', 'i', 's', 'e', 'c', 'a', 'p', 's']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_565",
+      "case_index": 10,
+      "input": "['String with sp aces']",
+      "pre_mutation_expected": "['S', 't', 'r', 'i', 'n', 'g', ' ', 'w', 'i', 't', 'h', ' ', 's', 'p', ' ', 'a', 'c', 'e', 's']",
+      "post_mutation_expected": "['s', 'e', 'c', 'a', ' ', 'p', 's', ' ', 'h', 't', 'i', 'w', ' ', 'g', 'n', 'i', 'r', 't', 'S']",
+      "original_llm_answer": "['S', 't', 'r', 'i', 'n', 'g', ' ', 'w', 'i', 't', 'h', ' ', 's', 'p', ' ', 'a', 'c', 'e', 's']",
+      "post_mutation_llm_answer": "['s', 'e', 'c', 'a', 'p', ' ', 's', 'p', ' ', 'h', 't', 'i', 'w', ' ', 'g', 'n', 'i', 'r', 't', 'S']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_569",
+      "case_index": 2,
+      "input": "[[['apple'], ['kiwi', 'banana', 'grape'], ['orange', 'mango'], ['watermelon'], [], ['cherry', 'pineapple']]]",
+      "pre_mutation_expected": "[['apple'], ['banana', 'grape', 'kiwi'], ['mango', 'orange'], ['watermelon'], [], ['cherry', 'pineapple']]",
+      "post_mutation_expected": "[['cherry', 'pineapple'], [], ['watermelon'], ['mango', 'orange'], ['banana', 'grape', 'kiwi'], ['apple']]",
+      "original_llm_answer": "[['apple'], ['banana', 'grape', 'kiwi'], ['mango', 'orange'], ['watermelon'], [], ['cherry', 'pineapple']]",
+      "post_mutation_llm_answer": "[['cherry', 'pineapple'], [], ['watermelon'], ['mango', 'orange'], ['apple']]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_569",
+      "case_index": 5,
+      "input": "[[['grapeapple', 'apple'], ['dEEf', '', 'fhiTqBKG', 'D', 'mankiwio', 'fh', 'peEkNRSS', 'd', 'green'], ['orange', 'mango'], [], [], ['cherry', 'pineapple'], [], [], [], ['dEEf', '', 'fhiTqBKG', 'D', 'mankiwio', 'fh', 'peEkNRSS', 'd', 'green']]]",
+      "pre_mutation_expected": "[['apple', 'grapeapple'], ['', 'D', 'd', 'dEEf', 'fh', 'fhiTqBKG', 'green', 'mankiwio', 'peEkNRSS'], ['mango', 'orange'], [], [], ['cherry', 'pineapple'], [], [], [], ['', 'D', 'd', 'dEEf', 'fh', 'fhiTqBKG', 'green', 'mankiwio', 'peEkNRSS']]",
+      "post_mutation_expected": "[['', 'D', 'd', 'dEEf', 'fh', 'fhiTqBKG', 'green', 'mankiwio', 'peEkNRSS'], [], [], [], ['cherry', 'pineapple'], [], [], ['mango', 'orange'], ['', 'D', 'd', 'dEEf', 'fh', 'fhiTqBKG', 'green', 'mankiwio', 'peEkNRSS'], ['apple', 'grapeapple']]",
+      "original_llm_answer": "[['apple', 'grapeapple'], ['', 'D', 'd', 'dEEf', 'fh', 'fhiTqBKG', 'green', 'mankiwio', 'peEkNRSS'], ['mango', 'orange'], [], [], ['cherry', 'pineapple'], [], [], [], ['', 'D', 'd', 'dEEf', 'fh', 'fhiTqBKG', 'green', 'mankiwio', 'peEkNRSS']]",
+      "post_mutation_llm_answer": "[['D', '', 'd', 'dEEf', 'fh', 'fhiTqBKG', 'green', 'mankiwio', 'peEkNRSS'], [], [], [], ['cherry', 'pineapple'], [], [], ['mango', 'orange'], ['', 'D', 'd', 'dEEf', 'fh', 'fhiTqBKG', 'green', 'mankiwio', 'peEkNRSS'], ['apple', 'grapeapple']]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_569",
+      "case_index": 6,
+      "input": "[[['ge', 'black', 'kiwi', 'grape'], ['ge', 'black', 'kiwi', 'grape'], ['apple'], ['watermelon'], ['cherry', 'pineapple'], ['ge', 'black', 'kiwi', 'grape'], ['orange', 'mango', 'orange'], ['orange', 'mango', 'orange'], ['ge', 'black', 'kiwi', 'grape'], ['ge', 'black', 'kiwi', 'grape'], ['ge', 'black', 'kiwi', 'grape'], ['orange', 'mango', 'orange']]]",
+      "pre_mutation_expected": "[['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['apple'], ['watermelon'], ['cherry', 'pineapple'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange', 'orange'], ['mango', 'orange', 'orange'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange', 'orange']]",
+      "post_mutation_expected": "[['mango', 'orange', 'orange'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange', 'orange'], ['mango', 'orange', 'orange'], ['black', 'ge', 'grape', 'kiwi'], ['cherry', 'pineapple'], ['watermelon'], ['apple'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi']]",
+      "original_llm_answer": "[['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['apple'], ['watermelon'], ['cherry', 'pineapple'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange', 'orange'], ['mango', 'orange', 'orange'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange', 'orange']]",
+      "post_mutation_llm_answer": "[['ge', 'black', 'grape', 'kiwi'], ['mango', 'orange', 'orange'], ['mango', 'orange', 'orange'], ['ge', 'black', 'grape', 'kiwi'], ['ge', 'black', 'grape', 'kiwi'], ['ge', 'black', 'grape', 'kiwi'], ['orange', 'watermelon'], ['cherry', 'pineapple'], ['apple'], ['ge', 'black', 'grape', 'kiwi'], ['ge', 'black', 'grape', 'kiwi'], ['ge', 'black', 'grape', 'kiwi']]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_569",
+      "case_index": 9,
+      "input": "[[['ge', 'black', 'kiwi', 'grape'], ['ge', 'black', 'kiwi', 'grape'], ['apple'], ['ge', 'black', 'kiwi', 'grape'], ['orange', 'mango'], ['watermelon'], ['cherry', 'pineapple'], ['ge', 'black', 'kiwi', 'grape'], ['orange', 'mango'], ['ge', 'black', 'kiwi', 'grape'], ['ge', 'black', 'kiwi', 'grape'], ['ge', 'black', 'kiwi', 'grape']]]",
+      "pre_mutation_expected": "[['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['apple'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange'], ['watermelon'], ['cherry', 'pineapple'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi']]",
+      "post_mutation_expected": "[['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange'], ['black', 'ge', 'grape', 'kiwi'], ['cherry', 'pineapple'], ['watermelon'], ['mango', 'orange'], ['black', 'ge', 'grape', 'kiwi'], ['apple'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi']]",
+      "original_llm_answer": "[['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['apple'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange'], ['watermelon'], ['cherry', 'pineapple'], ['black', 'ge', 'grape', 'kiwi'], ['mango', 'orange'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi'], ['black', 'ge', 'grape', 'kiwi']]",
+      "post_mutation_llm_answer": "[['ge', 'black', 'grape', 'kiwi'], ['ge', 'black', 'grape', 'kiwi'], ['ge', 'black', 'grape', 'kiwi'], ['ge', 'black', 'grape', 'kiwi'], ['mango', 'orange'], ['mango', 'orange'], ['cherry', 'pineapple'], ['watermelon'], ['apple'], ['ge', 'black', 'grape', 'kiwi'], ['ge', 'black', 'grape', 'kiwi'], ['ge', 'black', 'grape', 'kiwi']]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_57",
+      "case_index": 3,
+      "input": "[[9, 5, 4, 3, 2, 2, 1, 1]]",
+      "pre_mutation_expected": "95432211",
+      "post_mutation_expected": "11223459",
+      "original_llm_answer": "95432211",
+      "post_mutation_llm_answer": "112223459",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_57",
+      "case_index": 9,
+      "input": "[[9, 6, 3, 2, 1, 1, 0]]",
+      "pre_mutation_expected": "9632110",
+      "post_mutation_expected": "112369",
+      "original_llm_answer": "9632110",
+      "post_mutation_llm_answer": "0112369",
+      "answer_type": "other",
+      "error_category": "other"
+    },
+    {
+      "task_id": "task_572",
+      "case_index": 2,
+      "input": "[[1, 2, 3, 2, 4, 5, 3, 6, 4, 7, 8, 9, 3, 2, 5, 6, 2]]",
+      "pre_mutation_expected": "[1, 7, 8, 9]",
+      "post_mutation_expected": "[2, 3, 2, 4, 5, 3, 6, 4, 3, 2, 5, 6, 2]",
+      "original_llm_answer": "[1, 7, 8, 9]",
+      "post_mutation_llm_answer": "[2, 3, 2, 5, 3, 2, 5, 2]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_572",
+      "case_index": 5,
+      "input": "[[4, 1, 2, 3, 2, 3, 4, 5, 2, 3, 6, 8, 4, 7, 8, 9, 5, 12, 6, 2, 6, 6, 4, 3, 2]]",
+      "pre_mutation_expected": "[1, 7, 9, 12]",
+      "post_mutation_expected": "[4, 2, 3, 2, 3, 4, 5, 2, 3, 6, 8, 4, 8, 5, 6, 2, 6, 6, 4, 3, 2]",
+      "original_llm_answer": "[1, 7, 9, 12]",
+      "post_mutation_llm_answer": "[4, 1, 2, 3, 2, 3, 4, 5, 2, 3, 6, 8, 4, 7, 8, 9, 5, 12, 6, 2, 6, 6, 4, 3, 2]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_572",
+      "case_index": 8,
+      "input": "[[10.355737996821157, 47.66683343680117, -0.9997483195812293, -0.9997483195812293, 8.805625175692413, -0.9997483195812293, -0.9997483195812293, 10.355737996821157, 41.68649670810572, -52.065808653681664]]",
+      "pre_mutation_expected": "[47.66683343680117, 8.805625175692413, 41.68649670810572, -52.065808653681664]",
+      "post_mutation_expected": "[10.355737996821157, -0.9997483195812293, -0.9997483195812293, -0.9997483195812293, -0.9997483195812293, 10.355737996821157]",
+      "original_llm_answer": "[47.66683343680117, 8.805625175692413, 41.68649670810572, -52.065808653681664]",
+      "post_mutation_llm_answer": "[10.355737996821157, -0.9997483195812293, -0.9997483195812293, 8.805625175692413, -0.9997483195812293, -0.9997483195812293, 10.355737996821157]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_579",
+      "case_index": 1,
+      "input": "[('apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig'), ('apple', 'banana', 'cherry', 'durian', 'elderberry', 'fig')]",
+      "pre_mutation_expected": "()",
+      "post_mutation_expected": "('elderberry', 'durian', 'fig', 'banana', 'apple', 'cherry')",
+      "original_llm_answer": "()",
+      "post_mutation_llm_answer": "('elderberry', 'apple', 'durian', 'fig', 'cherry', 'banana')",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_579",
+      "case_index": 9,
+      "input": "[(1, 1, 1, 1, 2, 2, 2, 2), (2, 2, 2, 2, 3, 3, 3, 3)]",
+      "pre_mutation_expected": "(1, 3)",
+      "post_mutation_expected": "(2,)",
+      "original_llm_answer": "(1, 3)",
+      "post_mutation_llm_answer": "(1, 2)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_579",
+      "case_index": 10,
+      "input": "[('apple', 'banana', 'egcherrygplant', 'guava', 'kiwi', 'mango', 'kiwi'), ('apple', 'banana', 'egcherrygplant', 'guava', 'kiwi', 'mango')]",
+      "pre_mutation_expected": "()",
+      "post_mutation_expected": "('egcherrygplant', 'guava', 'kiwi', 'banana', 'mango', 'apple')",
+      "original_llm_answer": "()",
+      "post_mutation_llm_answer": "('apple', 'guava', 'egcherrygplant', 'mango', 'kiwi', 'banana')",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_580",
+      "case_index": 1,
+      "input": "((1, 2, 4, (4, 5, (6, 7, (8, 9, (10, 11, (12, 13, (14, 15, (16, 17, (18, 19, (20,)))))))))),)",
+      "pre_mutation_expected": "(2, 4, (4, (6, (8, (10, (12, (14, (16, (18, (20,))))))))))",
+      "post_mutation_expected": "(1, (5, (7, (9, (11, (13, (15, (17, (19, ())))))))))",
+      "original_llm_answer": "(2, 4, (4, (6, (8, (10, (12, (14, (16, (18, (20,))))))))))",
+      "post_mutation_llm_answer": "(1, (5, (7, (9, (11, (13, (15, (17, (19,)))))))))",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_580",
+      "case_index": 9,
+      "input": "((15, 16, 14, 1, 14),)",
+      "pre_mutation_expected": "(16, 14, 14)",
+      "post_mutation_expected": "(15, 1)",
+      "original_llm_answer": "(16, 14, 14)",
+      "post_mutation_llm_answer": "(1, (3, (5, (7, (9, (11, (13, (15, (17, (19,)))))))), 21), (3, (5, (7, (9, (11, (13, (15, (17, (19,)))))))), 21))",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_583",
+      "case_index": 1,
+      "input": "[13]",
+      "pre_mutation_expected": "742900",
+      "post_mutation_expected": "1191825920",
+      "original_llm_answer": "742900",
+      "post_mutation_llm_answer": "3281928",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_583",
+      "case_index": 2,
+      "input": "[3]",
+      "pre_mutation_expected": "5",
+      "post_mutation_expected": "36",
+      "original_llm_answer": "5",
+      "post_mutation_llm_answer": "12",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_583",
+      "case_index": 3,
+      "input": "[4]",
+      "pre_mutation_expected": "14",
+      "post_mutation_expected": "176",
+      "original_llm_answer": "14",
+      "post_mutation_llm_answer": "40",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_583",
+      "case_index": 4,
+      "input": "[9]",
+      "pre_mutation_expected": "4862",
+      "post_mutation_expected": "912832",
+      "original_llm_answer": "4862",
+      "post_mutation_llm_answer": "113016",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_583",
+      "case_index": 5,
+      "input": "[11]",
+      "pre_mutation_expected": "58786",
+      "post_mutation_expected": "32282240",
+      "original_llm_answer": "58786",
+      "post_mutation_llm_answer": "214444",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_583",
+      "case_index": 6,
+      "input": "[7]",
+      "pre_mutation_expected": "429",
+      "post_mutation_expected": "27472",
+      "original_llm_answer": "429",
+      "post_mutation_llm_answer": "312",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_583",
+      "case_index": 7,
+      "input": "[8]",
+      "pre_mutation_expected": "1430",
+      "post_mutation_expected": "156864",
+      "original_llm_answer": "1430",
+      "post_mutation_llm_answer": "750",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_583",
+      "case_index": 10,
+      "input": "[14]",
+      "pre_mutation_expected": "2674440",
+      "post_mutation_expected": "7331457024",
+      "original_llm_answer": "2674440",
+      "post_mutation_llm_answer": "7572600",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_586",
+      "case_index": 2,
+      "input": "[[2, 6, 8, 0, 8, 6, 8, 4, 2, 0, 2, 0], 0]",
+      "pre_mutation_expected": "[2, 6, 8, 0, 8, 6, 8, 4, 2, 0, 2, 0]",
+      "post_mutation_expected": "[2, 6, 8, 0, 8, 6, 8, 4, 2, 0, 2, 0, 2]",
+      "original_llm_answer": "[2, 6, 8, 0, 8, 6, 8, 4, 2, 0, 2, 0]",
+      "post_mutation_llm_answer": "[6, 8, 0, 8, 6, 8, 4, 2, 0, 2, 0, 2]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_586",
+      "case_index": 3,
+      "input": "[[2, 6, 8, 0, 8, 6, 8, 2, 0, 0, 2, 0, 8], 2]",
+      "pre_mutation_expected": "[8, 0, 8, 6, 8, 2, 0, 0, 2, 0, 8, 2, 6]",
+      "post_mutation_expected": "[8, 0, 8, 6, 8, 2, 0, 0, 2, 0, 8, 2, 6, 8]",
+      "original_llm_answer": "[8, 0, 8, 6, 8, 2, 0, 0, 2, 0, 8, 2, 6]",
+      "post_mutation_llm_answer": "[0, 8, 6, 8, 2, 0, 0, 2, 0, 8, 2, 6, 8]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_586",
+      "case_index": 4,
+      "input": "[[2, 6, 8, 0, 8, 6, 8, 4, 1, 0, 2, 8, 6], 10]",
+      "pre_mutation_expected": "[2, 8, 6, 2, 6, 8, 0, 8, 6, 8, 4, 1, 0]",
+      "post_mutation_expected": "[2, 8, 6, 2, 6, 8, 0, 8, 6, 8, 4, 1, 0, 2]",
+      "original_llm_answer": "[2, 8, 6, 2, 6, 8, 0, 8, 6, 8, 4, 1, 0]",
+      "post_mutation_llm_answer": "[8, 6, 8, 4, 1, 0, 2, 8, 6, 2, 6, 8, 0, 8, 6]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_586",
+      "case_index": 5,
+      "input": "[[2, 6, 8, 0, 8, 6, 8, 4, 2, 0, 2, 0, 0], 6]",
+      "pre_mutation_expected": "[8, 4, 2, 0, 2, 0, 0, 2, 6, 8, 0, 8, 6]",
+      "post_mutation_expected": "[8, 4, 2, 0, 2, 0, 0, 2, 6, 8, 0, 8, 6, 8]",
+      "original_llm_answer": "[8, 4, 2, 0, 2, 0, 0, 2, 6, 8, 0, 8, 6]",
+      "post_mutation_llm_answer": "[8, 6, 8, 4, 2, 0, 2, 2, 6, 8, 0, 8, 6, 8]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_586",
+      "case_index": 6,
+      "input": "[[4, 6, 8, 0, 8, 6, 4, 2, 0], 3]",
+      "pre_mutation_expected": "[0, 8, 6, 4, 2, 0, 4, 6, 8]",
+      "post_mutation_expected": "[0, 8, 6, 4, 2, 0, 4, 6, 8, 0]",
+      "original_llm_answer": "[0, 8, 6, 4, 2, 0, 4, 6, 8]",
+      "post_mutation_llm_answer": "[8, 0, 8, 6, 4, 2, 0, 4]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_586",
+      "case_index": 7,
+      "input": "[[2, 6, 8, 0, 8, 6, 8, 4, 2, 0, 2, 8], 4]",
+      "pre_mutation_expected": "[8, 6, 8, 4, 2, 0, 2, 8, 2, 6, 8, 0]",
+      "post_mutation_expected": "[8, 6, 8, 4, 2, 0, 2, 8, 2, 6, 8, 0, 8]",
+      "original_llm_answer": "[8, 6, 8, 4, 2, 0, 2, 8, 2, 6, 8, 0]",
+      "post_mutation_llm_answer": "[6, 8, 4, 2, 0, 2, 8, 2, 6, 8, 0, 8, 6]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_586",
+      "case_index": 9,
+      "input": "[[2, 6, 8, 0, 8, 6, 8, 2, 0, 2, 0, 8], 1]",
+      "pre_mutation_expected": "[6, 8, 0, 8, 6, 8, 2, 0, 2, 0, 8, 2]",
+      "post_mutation_expected": "[6, 8, 0, 8, 6, 8, 2, 0, 2, 0, 8, 2, 6]",
+      "original_llm_answer": "[6, 8, 0, 8, 6, 8, 2, 0, 2, 0, 8, 2]",
+      "post_mutation_llm_answer": "[6, 8, 0, 8, 6, 8, 2, 0, 2, 0, 8, 2, 2]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_586",
+      "case_index": 10,
+      "input": "[[2, 6, 5, 8, 0, 8, 6, 8, 4, 0, 2, 0, 0, 8, 8], 2]",
+      "pre_mutation_expected": "[5, 8, 0, 8, 6, 8, 4, 0, 2, 0, 0, 8, 8, 2, 6]",
+      "post_mutation_expected": "[5, 8, 0, 8, 6, 8, 4, 0, 2, 0, 0, 8, 8, 2, 6, 5]",
+      "original_llm_answer": "[5, 8, 0, 8, 6, 8, 4, 0, 2, 0, 0, 8, 8, 2, 6]",
+      "post_mutation_llm_answer": "[8, 0, 8, 6, 8, 4, 0, 2, 0, 0, 8, 8, 2, 6, 5]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_587",
+      "case_index": 2,
+      "input": "[[['age', 'Xyd', 'MpyclUujFG', 'kdayteey', 'key', 'daatte', 'kdateey', 'nbanana'], [], []]]",
+      "pre_mutation_expected": "(['age', 'Xyd', 'MpyclUujFG', 'kdayteey', 'key', 'daatte', 'kdateey', 'nbanana'], [], [])",
+      "post_mutation_expected": "[['age', 'Xyd', 'MpyclUujFG', 'kdayteey', 'key', 'daatte', 'kdateey', 'nbanana'], [], []]",
+      "original_llm_answer": "(['age', 'Xyd', 'MpyclUujFG', 'kdayteey', 'key', 'daatte', 'kdateey', 'nbanana'], [], [])",
+      "post_mutation_llm_answer": "['age', 'Xyd', 'MpyclUujFG', 'kdayteey', 'key', 'daatte', 'kdateey', 'nbanana']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_589",
+      "case_index": 3,
+      "input": "[-1001, 0]",
+      "pre_mutation_expected": "[0]",
+      "post_mutation_expected": "[]",
+      "original_llm_answer": "[0]",
+      "post_mutation_llm_answer": "[1]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_589",
+      "case_index": 9,
+      "input": "[-1000, 0]",
+      "pre_mutation_expected": "[0]",
+      "post_mutation_expected": "[]",
+      "original_llm_answer": "[0]",
+      "post_mutation_llm_answer": "[1]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_593",
+      "case_index": 2,
+      "input": "['216.08.094.196']",
+      "pre_mutation_expected": "216.8.94.196",
+      "post_mutation_expected": "216-8-94-196",
+      "original_llm_answer": "216.8.94.196",
+      "post_mutation_llm_answer": "216-08-094-196",
+      "answer_type": "other",
+      "error_category": "other"
+    },
+    {
+      "task_id": "task_593",
+      "case_index": 5,
+      "input": "['216.08.094.0196']",
+      "pre_mutation_expected": "216.8.94.196",
+      "post_mutation_expected": "216-8-94-196",
+      "original_llm_answer": "216.8.94.196",
+      "post_mutation_llm_answer": "216-08-094-0196",
+      "answer_type": "other",
+      "error_category": "other"
+    },
+    {
+      "task_id": "task_597",
+      "case_index": 1,
+      "input": "[[1, 1, 1], [False, False, False, True, False, True], 3]",
+      "pre_mutation_expected": "False",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "False",
+      "post_mutation_llm_answer": "True",
+      "answer_type": "bool",
+      "error_category": "boundary_or_special_value"
+    },
+    {
+      "task_id": "task_597",
+      "case_index": 8,
+      "input": "[[1, 2, 4, 3, 3, 3], [96, -39, 3], 2]",
+      "pre_mutation_expected": "1",
+      "post_mutation_expected": "4",
+      "original_llm_answer": "1",
+      "post_mutation_llm_answer": "27",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_602",
+      "case_index": 3,
+      "input": "['Mlszaaabcdefghijklmnopqrstuvwxyzaabcabcxyzvopvu']",
+      "pre_mutation_expected": "a",
+      "post_mutation_expected": "None",
+      "original_llm_answer": "a",
+      "post_mutation_llm_answer": "M",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_606",
+      "case_index": 1,
+      "input": "[-88]",
+      "pre_mutation_expected": "-1.53588974175501",
+      "post_mutation_expected": "-1.5274041630712805",
+      "original_llm_answer": "-1.53588974175501",
+      "post_mutation_llm_answer": "-1.5287841948624203",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_606",
+      "case_index": 2,
+      "input": "[-91]",
+      "pre_mutation_expected": "-1.5882496193148399",
+      "post_mutation_expected": "-1.5794747595396197",
+      "original_llm_answer": "-1.5882496193148399",
+      "post_mutation_llm_answer": "-1.5802762483952869",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_606",
+      "case_index": 3,
+      "input": "[-3]",
+      "pre_mutation_expected": "-0.05235987755982988",
+      "post_mutation_expected": "-0.052070596468339114",
+      "original_llm_answer": "-0.05235987755982988",
+      "post_mutation_llm_answer": "-0.0520120881838208",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_606",
+      "case_index": 4,
+      "input": "[88]",
+      "pre_mutation_expected": "1.53588974175501",
+      "post_mutation_expected": "1.5274041630712805",
+      "original_llm_answer": "1.53588974175501",
+      "post_mutation_llm_answer": "1.5287841948624203",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_606",
+      "case_index": 5,
+      "input": "[-16]",
+      "pre_mutation_expected": "-0.2792526803190927",
+      "post_mutation_expected": "-0.27770984783114194",
+      "original_llm_answer": "-0.2792526803190927",
+      "post_mutation_llm_answer": "-0.2779931982626594",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_606",
+      "case_index": 6,
+      "input": "[-79]",
+      "pre_mutation_expected": "-1.3788101090755203",
+      "post_mutation_expected": "-1.3711923736662635",
+      "original_llm_answer": "-1.3788101090755203",
+      "post_mutation_llm_answer": "-1.372563307718997",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_606",
+      "case_index": 7,
+      "input": "[-173]",
+      "pre_mutation_expected": "-3.01941960595019",
+      "post_mutation_expected": "-3.002737729674222",
+      "original_llm_answer": "-3.01941960595019",
+      "post_mutation_llm_answer": "-3.0063324953837707",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_606",
+      "case_index": 8,
+      "input": "[-28]",
+      "pre_mutation_expected": "-0.4886921905584123",
+      "post_mutation_expected": "-0.4859922337044984",
+      "original_llm_answer": "-0.4886921905584123",
+      "post_mutation_llm_answer": "-0.48640611267986717",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_606",
+      "case_index": 9,
+      "input": "[62]",
+      "pre_mutation_expected": "1.0821041362364843",
+      "post_mutation_expected": "1.076125660345675",
+      "original_llm_answer": "1.0821041362364843",
+      "post_mutation_llm_answer": "1.0774687045512882",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_607",
+      "case_index": 1,
+      "input": "['rfvPtELLCLC', 'rfvPtELLC']",
+      "pre_mutation_expected": "('rfvPtELLC', 0, 9)",
+      "post_mutation_expected": "('rfvPtELLC', 9, 9)",
+      "original_llm_answer": "('rfvPtELLC', 0, 9)",
+      "post_mutation_llm_answer": "('rfvPtELLC', 0, 0)",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_608",
+      "case_index": 2,
+      "input": "[14]",
+      "pre_mutation_expected": "190899322",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "190899322",
+      "post_mutation_llm_answer": "-492073273600",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_608",
+      "case_index": 4,
+      "input": "[6]",
+      "pre_mutation_expected": "203",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "203",
+      "post_mutation_llm_answer": "16",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_608",
+      "case_index": 9,
+      "input": "[10]",
+      "pre_mutation_expected": "115975",
+      "post_mutation_expected": "-1",
+      "original_llm_answer": "115975",
+      "post_mutation_llm_answer": "-115975",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 1,
+      "input": "[[[['a', 'b'], [1, 2]], [['e', 'f'], [5, 6]]]]",
+      "pre_mutation_expected": "[[['a', 'b'], ['e', 'f']], [[1, 2], [5, 6]]]",
+      "post_mutation_expected": "[[[['a', 'b'], [1, 2]]], [[['e', 'f'], [5, 6]]]]",
+      "original_llm_answer": "[[['a', 'b'], ['e', 'f']], [[1, 2], [5, 6]]]",
+      "post_mutation_llm_answer": "[[[[['a', 'b'], [1, 2]], [['e', 'f'], [5, 6]]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 2,
+      "input": "[[[['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']], [['baz', 'qux'], ['python', 'programming']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']], [['baz', 'qux'], ['python', 'programming']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']]]]",
+      "pre_mutation_expected": "[[['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar'], ['baz', 'qux'], ['foo', 'bbar', 'bbar'], ['baz', 'qux'], ['foo', 'bbar', 'bbar']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar'], ['python', 'programming'], ['foo', 'bbar', 'bbar'], ['python', 'programming'], ['foo', 'bbar', 'bbar']]]",
+      "post_mutation_expected": "[[[['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']]], [[['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']]], [[['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']]], [[['baz', 'qux'], ['python', 'programming']]], [[['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']]], [[['baz', 'qux'], ['python', 'programming']]], [[['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']]]]",
+      "original_llm_answer": "[[['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar'], ['baz', 'qux'], ['foo', 'bbar', 'bbar'], ['baz', 'qux'], ['foo', 'bbar', 'bbar']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar'], ['python', 'programming'], ['foo', 'bbar', 'bbar'], ['python', 'programming'], ['foo', 'bbar', 'bbar']]]",
+      "post_mutation_llm_answer": "[[[[['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']], [['baz', 'qux'], ['python', 'programming']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']], [['baz', 'qux'], ['python', 'programming']], [['foo', 'bbar', 'bbar'], ['foo', 'bbar', 'bbar']]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 3,
+      "input": "[[[['hello', 'world'], ['foo', 'bar']]]]",
+      "pre_mutation_expected": "[[['hello', 'world']], [['foo', 'bar']]]",
+      "post_mutation_expected": "[[[['hello', 'world'], ['foo', 'bar']]]]",
+      "original_llm_answer": "[[['hello', 'world']], [['foo', 'bar']]]",
+      "post_mutation_llm_answer": "[[[[['hello', 'world'], ['foo', 'bar']]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 4,
+      "input": "[[[['a', 'b', 'b'], [1, 2]], [['c', 'd'], [3, 4]], [['a', 'b', 'b'], [1, 2]], [['e', 'f'], [5, 6]]]]",
+      "pre_mutation_expected": "[[['a', 'b', 'b'], ['c', 'd'], ['a', 'b', 'b'], ['e', 'f']], [[1, 2], [3, 4], [1, 2], [5, 6]]]",
+      "post_mutation_expected": "[[[['a', 'b', 'b'], [1, 2]]], [[['c', 'd'], [3, 4]]], [[['a', 'b', 'b'], [1, 2]]], [[['e', 'f'], [5, 6]]]]",
+      "original_llm_answer": "[[['a', 'b', 'b'], ['c', 'd'], ['a', 'b', 'b'], ['e', 'f']], [[1, 2], [3, 4], [1, 2], [5, 6]]]",
+      "post_mutation_llm_answer": "[[[[['a', 'b', 'b'], [1, 2]], [['c', 'd'], [3, 4]], [['a', 'b', 'b'], [1, 2]], [['e', 'f'], [5, 6]]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 5,
+      "input": "[[['y', 8], ['y', 8], ['y', 8], ['y', 8]]]",
+      "pre_mutation_expected": "[['y', 'y', 'y', 'y'], [8, 8, 8, 8]]",
+      "post_mutation_expected": "[[['y', 8]], [['y', 8]], [['y', 8]], [['y', 8]]]",
+      "original_llm_answer": "[['y', 'y', 'y', 'y'], [8, 8, 8, 8]]",
+      "post_mutation_llm_answer": "[[[['y', 8], ['y', 8], ['y', 8], ['y', 8]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 6,
+      "input": "[[[['c', 'd'], [3, 4]], [['a', 'b', 'b'], [1, 2]], [['e', 'f'], [5, 6]], [['e', 'f'], [5, 6]]]]",
+      "pre_mutation_expected": "[[['c', 'd'], ['a', 'b', 'b'], ['e', 'f'], ['e', 'f']], [[3, 4], [1, 2], [5, 6], [5, 6]]]",
+      "post_mutation_expected": "[[[['c', 'd'], [3, 4]]], [[['a', 'b', 'b'], [1, 2]]], [[['e', 'f'], [5, 6]]], [[['e', 'f'], [5, 6]]]]",
+      "original_llm_answer": "[[['c', 'd'], ['a', 'b', 'b'], ['e', 'f'], ['e', 'f']], [[3, 4], [1, 2], [5, 6], [5, 6]]]",
+      "post_mutation_llm_answer": "[[[[['c', 'd'], [3, 4]], [['a', 'b', 'b'], [1, 2]], [['e', 'f'], [5, 6]], [['e', 'f'], [5, 6]]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 7,
+      "input": "[[[['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']], [['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']], [['baz', 'qux'], ['python', 'programming', 'programming']], [['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']], [['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']]]]",
+      "pre_mutation_expected": "[[['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo'], ['baz', 'qux'], ['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']], [['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo'], ['python', 'programming', 'programming'], ['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']]]",
+      "post_mutation_expected": "[[[['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']]], [[['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']]], [[['baz', 'qux'], ['python', 'programming', 'programming']]], [[['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']]], [[['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']]]]",
+      "original_llm_answer": "[[['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo'], ['baz', 'qux'], ['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']], [['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo'], ['python', 'programming', 'programming'], ['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']]]",
+      "post_mutation_llm_answer": "[[[[['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']], [['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']], [['baz', 'qux'], ['python', 'programming', 'programming']], [['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']], [['foo', 'bbar', 'foo'], ['foo', 'bbar', 'foo']]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 8,
+      "input": "[[[['a', 'b'], [1, 2]], [['e', 'f'], [5, 6]], [['e', 'f'], [5, 6]]]]",
+      "pre_mutation_expected": "[[['a', 'b'], ['e', 'f'], ['e', 'f']], [[1, 2], [5, 6], [5, 6]]]",
+      "post_mutation_expected": "[[[['a', 'b'], [1, 2]]], [[['e', 'f'], [5, 6]]], [[['e', 'f'], [5, 6]]]]",
+      "original_llm_answer": "[[['a', 'b'], ['e', 'f'], ['e', 'f']], [[1, 2], [5, 6], [5, 6]]]",
+      "post_mutation_llm_answer": "[[[[['a', 'b'], [1, 2]], [['e', 'f'], [5, 6]], [['e', 'f'], [5, 6]]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 9,
+      "input": "[[[['a', 'b'], [1, 2]], [['c', 'd'], [3, 4, 4, 4]], [['c', 'd'], [3, 4, 4, 4]], [[5, 6], ['e', 'f']], [[5, 6], ['e', 'f']], [['c', 'd'], [3, 4, 4, 4]], [['c', 'd'], [3, 4, 4, 4]]]]",
+      "pre_mutation_expected": "[[['a', 'b'], ['c', 'd'], ['c', 'd'], [5, 6], [5, 6], ['c', 'd'], ['c', 'd']], [[1, 2], [3, 4, 4, 4], [3, 4, 4, 4], ['e', 'f'], ['e', 'f'], [3, 4, 4, 4], [3, 4, 4, 4]]]",
+      "post_mutation_expected": "[[[['a', 'b'], [1, 2]]], [[['c', 'd'], [3, 4, 4, 4]]], [[['c', 'd'], [3, 4, 4, 4]]], [[[5, 6], ['e', 'f']]], [[[5, 6], ['e', 'f']]], [[['c', 'd'], [3, 4, 4, 4]]], [[['c', 'd'], [3, 4, 4, 4]]]]",
+      "original_llm_answer": "[[['a', 'b'], ['c', 'd'], ['c', 'd'], [5, 6], [5, 6], ['c', 'd'], ['c', 'd']], [[1, 2], [3, 4, 4, 4], [3, 4, 4, 4], ['e', 'f'], ['e', 'f'], [3, 4, 4, 4], [3, 4, 4, 4]]]",
+      "post_mutation_llm_answer": "[[[[['a', 'b'], [1, 2]], [['c', 'd'], [3, 4, 4, 4]], [['c', 'd'], [3, 4, 4, 4]], [[5, 6], ['e', 'f']], [[5, 6], ['e', 'f']], [['c', 'd'], [3, 4, 4, 4]], [['c', 'd'], [3, 4, 4, 4]]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_612",
+      "case_index": 10,
+      "input": "[[['yy', 1], ['yy', 1]]]",
+      "pre_mutation_expected": "[['yy', 'yy'], [1, 1]]",
+      "post_mutation_expected": "[[['yy', 1]], [['yy', 1]]]",
+      "original_llm_answer": "[['yy', 'yy'], [1, 1]]",
+      "post_mutation_llm_answer": "[[[['yy', 1], ['yy', 1]]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_614",
+      "case_index": 2,
+      "input": "[[(10, -5, -5), (10, -5), (7, -2)]]",
+      "pre_mutation_expected": "10",
+      "post_mutation_expected": "11",
+      "original_llm_answer": "10",
+      "post_mutation_llm_answer": "21",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_615",
+      "case_index": 2,
+      "input": "(((2, 4, 6), (8, 10, 12), (14, 16, 18), (20, 22, 24)),)",
+      "pre_mutation_expected": "[11.0, 13.0, 15.0]",
+      "post_mutation_expected": "[176, 208, 240]",
+      "original_llm_answer": "[11.0, 13.0, 15.0]",
+      "post_mutation_llm_answer": "[88, 104, 120]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_615",
+      "case_index": 3,
+      "input": "(((500, 1000, 1500, 2000), (-100, -200, -300, -400), (500, 1000, 1500, 2000)),)",
+      "pre_mutation_expected": "[300.0, 600.0, 900.0, 1200.0]",
+      "post_mutation_expected": "[2700, 5400, 8100, 10800]",
+      "original_llm_answer": "[300.0, 600.0, 900.0, 1200.0]",
+      "post_mutation_llm_answer": "[900, 1800, 2700, 3600]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_615",
+      "case_index": 5,
+      "input": "(((-1, 3, -5, 7, -9), (2, -4, 6, -8, 10), (-3, 5, -7, 9, -11)),)",
+      "pre_mutation_expected": "[-0.6666666666666666, 1.3333333333333333, -2.0, 2.6666666666666665, -3.3333333333333335]",
+      "post_mutation_expected": "[-6, 12, -18, 24, -30]",
+      "original_llm_answer": "[-0.6666666666666666, 1.3333333333333333, -2.0, 2.6666666666666665, -3.3333333333333335]",
+      "post_mutation_llm_answer": "[-2, 4, -6, 8, -10]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_615",
+      "case_index": 7,
+      "input": "(((100, 100, 100, 120), (300, 450, 560, 450), (810, 800, 390, 320), (10, 20, 30, 40)),)",
+      "pre_mutation_expected": "[305.0, 342.5, 270.0, 232.5]",
+      "post_mutation_expected": "[4880, 5480, 4320, 3720]",
+      "original_llm_answer": "[305.0, 342.5, 270.0, 232.5]",
+      "post_mutation_llm_answer": "[1250, 1370, 1520, 1420]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_615",
+      "case_index": 8,
+      "input": "(((2,), (3,), (4,), (3,)),)",
+      "pre_mutation_expected": "[3.0]",
+      "post_mutation_expected": "[48]",
+      "original_llm_answer": "[3.0]",
+      "post_mutation_llm_answer": "[12]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_615",
+      "case_index": 9,
+      "input": "(((100, 200), (-500, 1000), (0, 0), (10, 20, 30)),)",
+      "pre_mutation_expected": "[-97.5, 305.0]",
+      "post_mutation_expected": "[-1560, 4880]",
+      "original_llm_answer": "[-97.5, 305.0]",
+      "post_mutation_llm_answer": "[300, 1220]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_615",
+      "case_index": 10,
+      "input": "(((-1, -2, -3, -4), (-5, -5, -7, -8), (-9, -10, -11, -12), (-13, -14, -15, -16)),)",
+      "pre_mutation_expected": "[-7.0, -7.75, -9.0, -10.0]",
+      "post_mutation_expected": "[-112, -124, -144, -160]",
+      "original_llm_answer": "[-7.0, -7.75, -9.0, -10.0]",
+      "post_mutation_llm_answer": "[-28, -31, -36, -39]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_619",
+      "case_index": 4,
+      "input": "['yon']",
+      "pre_mutation_expected": "yon",
+      "post_mutation_expected": "yonyon",
+      "original_llm_answer": "yon",
+      "post_mutation_llm_answer": "yonYon",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_622",
+      "case_index": 4,
+      "input": "[[5, 5], [3], 1]",
+      "pre_mutation_expected": "4.0",
+      "post_mutation_expected": "8",
+      "original_llm_answer": "4.0",
+      "post_mutation_llm_answer": "10",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_622",
+      "case_index": 8,
+      "input": "[[3, 3, 4, 5], [3, 3, 4, 5], 4]",
+      "pre_mutation_expected": "3.5",
+      "post_mutation_expected": "7",
+      "original_llm_answer": "3.5",
+      "post_mutation_llm_answer": "8",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_622",
+      "case_index": 9,
+      "input": "[[6, 7], [0, 8], 2]",
+      "pre_mutation_expected": "6.5",
+      "post_mutation_expected": "13",
+      "original_llm_answer": "6.5",
+      "post_mutation_llm_answer": "7",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_623",
+      "case_index": 4,
+      "input": "[[-5, 1, 18, 85, 0, 18], 5]",
+      "pre_mutation_expected": "[-3125, 1, 1889568, 4437053125, 0, 1889568]",
+      "post_mutation_expected": "[15625, 1, 34012224, 377149515625, 0, 34012224]",
+      "original_llm_answer": "[-3125, 1, 1889568, 4437053125, 0, 1889568]",
+      "post_mutation_llm_answer": "[-15625, 1, 34012224, 443705312500, 0, 34012224]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_623",
+      "case_index": 10,
+      "input": "[[-2, 0, 2, -4, 6], 5]",
+      "pre_mutation_expected": "[-32, 0, 32, -1024, 7776]",
+      "post_mutation_expected": "[64, 0, 64, 4096, 46656]",
+      "original_llm_answer": "[-32, 0, 32, -1024, 7776]",
+      "post_mutation_llm_answer": "[-64, 0, 64, -4096, 46656]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_624",
+      "case_index": 10,
+      "input": "['NoCsH']",
+      "pre_mutation_expected": "NOCSH",
+      "post_mutation_expected": "nocsh",
+      "original_llm_answer": "NOCSH",
+      "post_mutation_llm_answer": "noch",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_63",
+      "case_index": 9,
+      "input": "[[(-10, -5), (2, 6), (9, 15)]]",
+      "pre_mutation_expected": "6",
+      "post_mutation_expected": "4",
+      "original_llm_answer": "6",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_631",
+      "case_index": 1,
+      "input": "['JungBeWE  Jumanji The Jungle  ijjkdhe,Jgunglele']",
+      "pre_mutation_expected": "JungBeWE__Jumanji_The_Jungle__ijjkdhe,Jgunglele",
+      "post_mutation_expected": "                                               ",
+      "original_llm_answer": "JungBeWE__Jumanji_The_Jungle__ijjkdhe,Jgunglele",
+      "post_mutation_llm_answer": "JungBeWE  Jumanji The Jungle  ijjkdhe,Jgunglele",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_631",
+      "case_index": 6,
+      "input": "['BeWE  Jumanji The Jungle  ijjkdhe,']",
+      "pre_mutation_expected": "BeWE__Jumanji_The_Jungle__ijjkdhe,",
+      "post_mutation_expected": "                                  ",
+      "original_llm_answer": "BeWE__Jumanji_The_Jungle__ijjkdhe,",
+      "post_mutation_llm_answer": "BeWE  Jumanji The Jungle  ijjkdhe,",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_638",
+      "case_index": 1,
+      "input": "[5, 5]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "-1",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "2",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_639",
+      "case_index": 7,
+      "input": "[['MarY', '!Rebecca', '&arl', '-', '!!Rebecca', '_', '&arl', '_']]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "12",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "8",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_64",
+      "case_index": 6,
+      "input": "[[('Computer Science', 65), ('Biology', 72), ('History', 75), ('Physics', 78), ('Science', 79), ('Geography', 80), ('nEnglish', 82), ('English', 82), ('Social sciences', 86)]]",
+      "pre_mutation_expected": "[('Computer Science', 65), ('Biology', 72), ('History', 75), ('Physics', 78), ('Science', 79), ('Geography', 80), ('nEnglish', 82), ('English', 82), ('Social sciences', 86)]",
+      "post_mutation_expected": "[('Biology', 72), ('Computer Science', 65), ('English', 82), ('Geography', 80), ('History', 75), ('Physics', 78), ('Science', 79), ('Social sciences', 86), ('nEnglish', 82)]",
+      "original_llm_answer": "[('Computer Science', 65), ('Biology', 72), ('History', 75), ('Physics', 78), ('Science', 79), ('Geography', 80), ('nEnglish', 82), ('English', 82), ('Social sciences', 86)]",
+      "post_mutation_llm_answer": "[('Biology', 72), ('Computer Science', 65), ('English', 82), ('Geography', 80), ('History', 75), ('Science', 79), ('Social sciences', 86), ('nEnglish', 82)]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_644",
+      "case_index": 4,
+      "input": "[['apple', 'cherrry', 'banana', 'ccdateyherry', 'date'], 4]",
+      "pre_mutation_expected": "['ccdateyherry', 'banana', 'cherrry', 'apple', 'date']",
+      "post_mutation_expected": "['date', 'ccdateyherry', 'banana', 'cherrry', 'apple', 'date']",
+      "original_llm_answer": "['ccdateyherry', 'banana', 'cherrry', 'apple', 'date']",
+      "post_mutation_llm_answer": "['ccdateyherry', 'banana', 'cherrry', 'apple', 'apple', 'cherrry', 'banana', 'ccdateyherry', 'date']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_644",
+      "case_index": 6,
+      "input": "[[2, 9, 1, 5, 3, 9, 2], 3]",
+      "pre_mutation_expected": "[1, 9, 2, 5, 3, 9, 2]",
+      "post_mutation_expected": "[5, 1, 9, 2, 5, 3, 9, 2]",
+      "original_llm_answer": "[1, 9, 2, 5, 3, 9, 2]",
+      "post_mutation_llm_answer": "[5, 1, 9, 2, 2, 9, 1, 5, 3, 9, 2]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_644",
+      "case_index": 8,
+      "input": "[[6, 2, 1, 6, 5, 3], 4]",
+      "pre_mutation_expected": "[6, 1, 2, 6, 5, 3]",
+      "post_mutation_expected": "[5, 6, 1, 2, 6, 5, 3]",
+      "original_llm_answer": "[6, 1, 2, 6, 5, 3]",
+      "post_mutation_llm_answer": "[3, 5, 6, 1, 2, 6, 5, 3]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_644",
+      "case_index": 10,
+      "input": "[[9, 2, 10, 3, 9, 1, 5, 4, 9], 2]",
+      "pre_mutation_expected": "[2, 9, 10, 3, 9, 1, 5, 4, 9]",
+      "post_mutation_expected": "[10, 2, 9, 10, 3, 9, 1, 5, 4, 9]",
+      "original_llm_answer": "[2, 9, 10, 3, 9, 1, 5, 4, 9]",
+      "post_mutation_llm_answer": "[10, 2, 9, 9, 2, 10, 3, 9, 1, 5, 4, 9]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_65",
+      "case_index": 6,
+      "input": "[[[21, [22, [23, [24, [25, [26, [27, [28, [29, [30]]]]]]]]]], [21, [22, [23, [24, [25, [26, [27, [28, [29, [30]]]]]]]]]]]]",
+      "pre_mutation_expected": "510",
+      "post_mutation_expected": "10",
+      "original_llm_answer": "510",
+      "post_mutation_llm_answer": "-510",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_65",
+      "case_index": 7,
+      "input": "[[0, [1, 2, [3, [4, [5, [6, [7, [8, [9, [10, [11, [12, [13, [14, [15, [16, [17, [18, [19, [20, [21]]]]]]]]]]]]]]]]]]]]]]",
+      "pre_mutation_expected": "231",
+      "post_mutation_expected": "9",
+      "original_llm_answer": "231",
+      "post_mutation_llm_answer": "-231",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_65",
+      "case_index": 10,
+      "input": "[[[[[[1], [2]], [3]], [[4], [5]]], [[[[6], [7]], [8]], [[9], [10]]]]]",
+      "pre_mutation_expected": "55",
+      "post_mutation_expected": "-23",
+      "original_llm_answer": "55",
+      "post_mutation_llm_answer": "-55",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_66",
+      "case_index": 2,
+      "input": "[[0, -1, -1, 1, -3, 4, -5, 6, 8, -9, 10, 4, 4]]",
+      "pre_mutation_expected": "7",
+      "post_mutation_expected": "8",
+      "original_llm_answer": "7",
+      "post_mutation_llm_answer": "9",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_66",
+      "case_index": 4,
+      "input": "[[-5, -4, 3, -2, -1, 0, 1, 2, 3, 4, 5, 5]]",
+      "pre_mutation_expected": "7",
+      "post_mutation_expected": "8",
+      "original_llm_answer": "7",
+      "post_mutation_llm_answer": "9",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_67",
+      "case_index": 2,
+      "input": "[11]",
+      "pre_mutation_expected": "678570",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "678570",
+      "post_mutation_llm_answer": "-67791",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_67",
+      "case_index": 3,
+      "input": "[9]",
+      "pre_mutation_expected": "21147",
+      "post_mutation_expected": "-1",
+      "original_llm_answer": "21147",
+      "post_mutation_llm_answer": "-2035",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_7",
+      "case_index": 9,
+      "input": "['arerwordsThis is a voery long gstrigng with no words that are at least 4 characters long.This']",
+      "pre_mutation_expected": "['arerwordsThis', 'voery', 'long', 'gstrigng', 'with', 'words', 'that', 'least', 'characters', 'long', 'This']",
+      "post_mutation_expected": "['arerwordsThis', 'voery', 'gstrigng', 'words', 'least', 'characters']",
+      "original_llm_answer": "['arerwordsThis', 'voery', 'long', 'gstrigng', 'with', 'words', 'that', 'least', 'characters', 'long', 'This']",
+      "post_mutation_llm_answer": "['arerwordsThis', 'voery', 'gstrigng', 'words', 'that', 'least', 'characters', 'long', 'This']",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_722",
+      "case_index": 3,
+      "input": "[{'Alice': (5.6, 60), 'Bob': (6.1, 70), 'Charlie': (5.9, 65), 'Dave': (5.11, 72), 'Eve': (6.0, 68)}, 5.8, 9999]",
+      "pre_mutation_expected": "{}",
+      "post_mutation_expected": "{'Bob': (6.1, 70), 'Charlie': (5.9, 65), 'Eve': (6.0, 68)}",
+      "original_llm_answer": "{}",
+      "post_mutation_llm_answer": "{'Bob': (6.1, 70), 'Charlie': (5.9, 65), 'Dave': (5.11, 72), 'Eve': (6.0, 68)}",
+      "answer_type": "dict",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_722",
+      "case_index": 4,
+      "input": "[{'Alice': (5.6, 60), 'Bob': (6.1, 70), 'Charlie': (5.9, 65), 'Dave': (5.11, 72), 'Eve': (6.0, 68), 'Frank': (5.7, 63), 'Grace': (5.2, 55), 'Harry': (6.2, 75), 'Irene': (5.4, 58)}, 68, 67]",
+      "pre_mutation_expected": "{}",
+      "post_mutation_expected": "{'Bob': (6.1, 70), 'Dave': (5.11, 72), 'Eve': (6.0, 68), 'Harry': (6.2, 75)}",
+      "original_llm_answer": "{}",
+      "post_mutation_llm_answer": "{'Bob': (6.1, 70), 'Dave': (5.11, 72), 'Eve': (6.0, 68), 'Frank': (5.7, 63), 'Harry': (6.2, 75)}",
+      "answer_type": "dict",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_732",
+      "case_index": 3,
+      "input": "['Thi1,,,,,,,78.......9,,,,0This is a sentence with multiple spaces. It also has multiple commas, and some dots.s']",
+      "pre_mutation_expected": "Thi1:::::::78:::::::9::::0This:is:a:sentence:with:multiple:spaces::It:also:has:multiple:commas::and:some:dots:s",
+      "post_mutation_expected": "Thi1;;;;;;;78;;;;;;;9;;;;0This;is;a;sentence;with;multiple;spaces;;It;also;has;multiple;commas;;and;some;dots;s",
+      "original_llm_answer": "Thi1:::::::78:::::::9::::0This:is:a:sentence:with:multiple:spaces::It:also:has:multiple:commas::and:some:dots:s",
+      "post_mutation_llm_answer": "Thi1;;;;;;;78;;;;;;;9;;;;0This;is;a;sentence;with;multiple;spaces;It;also;has;multiple;commas;and;some;dots;s",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_740",
+      "case_index": 4,
+      "input": "[(1, 29, 'a', 2, 'gprape', 'c', '', 4, 'ec', 4)]",
+      "pre_mutation_expected": "{1: 29, 'a': 2, 'gprape': 'c', '': 4, 'ec': 4}",
+      "post_mutation_expected": "{29: 1, 2: 'a', 'c': 'gprape', 4: 'ec'}",
+      "original_llm_answer": "{1: 29, 'a': 2, 'gprape': 'c', '': 4, 'ec': 4}",
+      "post_mutation_llm_answer": "{29: 1, 2: 'a', 'c': 'gprape', 4: '', 4: 'ec'}",
+      "answer_type": "dict",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_743",
+      "case_index": 3,
+      "input": "[[5, 15, 25, 45, 55, 65, 75, 85, 95], 5]",
+      "pre_mutation_expected": "[55, 65, 75, 85, 95, 5, 15, 25, 45]",
+      "post_mutation_expected": "[55, 65, 75, 85, 95, 15, 25, 45, 5]",
+      "original_llm_answer": "[55, 65, 75, 85, 95, 5, 15, 25, 45]",
+      "post_mutation_llm_answer": "[95, 5, 15, 25, 45, 55, 65, 75, 85]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_748",
+      "case_index": 3,
+      "input": "['LetsUseThisOPsportunityToLearnSomethingNew']",
+      "pre_mutation_expected": "Lets Use This OPsportunity To Learn Something New",
+      "post_mutation_expected": "Lets  Use  This  OPsportunity  To  Learn  Something  New",
+      "original_llm_answer": "Lets Use This OPsportunity To Learn Something New",
+      "post_mutation_llm_answer": "Lets  Use  ThisOPsportunity  To  Learn  Something  New",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_749",
+      "case_index": 1,
+      "input": "[['1', '3', '5', '7', '1', '13', '15', '17', '5', '7 ', '9', '1', '11', '6', '8', '12', '4', '10', '777777724', '16', '18', '20', '22', '24', '26', '28', '30', '1', '6', '14']]",
+      "pre_mutation_expected": "[1, 1, 1, 1, 3, 4, 5, 5, 6, 6, 7, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 22, 24, 26, 28, 30, 777777724]",
+      "post_mutation_expected": "[0, 0, 0, 0, 2, 3, 4, 4, 5, 5, 6, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 21, 23, 25, 27, 29, 777777723]",
+      "original_llm_answer": "[1, 1, 1, 1, 3, 4, 5, 5, 6, 6, 7, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 22, 24, 26, 28, 30, 777777724]",
+      "post_mutation_llm_answer": "[0, 0, 0, 2, 4, 4, 6, 6, 8, 10, 10, 12, 15, 17, 19, 21, 23, 25, 27, 29, 776, 777777723]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_749",
+      "case_index": 3,
+      "input": "[['55', '-3', '7', '2', '-5', '5', '2', '-3', '1', '-7', '4', '1', '-2', '4']]",
+      "pre_mutation_expected": "[-7, -5, -3, -3, -2, 1, 1, 2, 2, 4, 4, 5, 7, 55]",
+      "post_mutation_expected": "[-8, -6, -4, -4, -3, 0, 0, 1, 1, 3, 3, 4, 6, 54]",
+      "original_llm_answer": "[-7, -5, -3, -3, -2, 1, 1, 2, 2, 4, 4, 5, 7, 55]",
+      "post_mutation_llm_answer": "[-8, -6, -4, -4, -3, -2, -2, 0, 0, 1, 1, 3, 6, 54]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_749",
+      "case_index": 8,
+      "input": "[['10000000000', '99999999', '88888888', '7777777', '666666', '-55555', '-4444', '-333', '222', '111', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1']]",
+      "pre_mutation_expected": "[-55555, -4444, -333, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 111, 222, 666666, 7777777, 88888888, 99999999, 10000000000]",
+      "post_mutation_expected": "[-55556, -4445, -334, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 110, 221, 666665, 7777776, 88888887, 99999998, 9999999999]",
+      "original_llm_answer": "[-55555, -4444, -333, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 111, 222, 666666, 7777777, 88888888, 99999999, 10000000000]",
+      "post_mutation_llm_answer": "[-55556, -4445, -334, 0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 221, 110, 7777776, 666665, 88888887, 99999998, 9999999999]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_75",
+      "case_index": 6,
+      "input": "[[(11, 12, 24, 36), (12, 24, 36), (5, 15, 20), (18, 9, 27), (32, 48, 64), (6, 12, 18)], 9]",
+      "pre_mutation_expected": "[(18, 9, 27)]",
+      "post_mutation_expected": "[(5, 15, 20), (32, 48, 64)]",
+      "original_llm_answer": "[(18, 9, 27)]",
+      "post_mutation_llm_answer": "[(11, 12, 24, 36), (12, 24, 36), (5, 15, 20), (18, 9, 27), (32, 48, 64), (6, 12, 18)]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_75",
+      "case_index": 7,
+      "input": "[[(13, 26, 39, 52, 65), (6, 12, 18, 24, 30), (22, 33, 44, 55, 66), (9, 18, 27, 36, 45), (6, 44, 18, 24, 30), (6, 12, 18, 24, 30)], 55]",
+      "pre_mutation_expected": "[]",
+      "post_mutation_expected": "[(13, 26, 39, 52, 65), (6, 12, 18, 24, 30), (9, 18, 27, 36, 45), (6, 44, 18, 24, 30), (6, 12, 18, 24, 30)]",
+      "original_llm_answer": "[]",
+      "post_mutation_llm_answer": "[(13, 26, 39, 52, 65), (6, 12, 18, 24, 30), (22, 33, 44, 55, 66), (9, 18, 27, 36, 45), (6, 44, 18, 24, 30), (6, 12, 18, 24, 30)]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_752",
+      "case_index": 10,
+      "input": "[32]",
+      "pre_mutation_expected": "1431655765",
+      "post_mutation_expected": "41757",
+      "original_llm_answer": "1431655765",
+      "post_mutation_llm_answer": "7799037491204375",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_753",
+      "case_index": 1,
+      "input": "[[('John', 20), ('John', 20)], -2]",
+      "pre_mutation_expected": "[]",
+      "post_mutation_expected": "[('John', 20)]",
+      "original_llm_answer": "[]",
+      "post_mutation_llm_answer": "[('John', 20), ('John', 20)]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_754",
+      "case_index": 9,
+      "input": "[[5, 3, 4, 5, 6, 7], [0, 1, 2, 3, 1, 4, 5, 6], [0, 1, 2, 3, 1, 4, 5, 6]]",
+      "pre_mutation_expected": "[]",
+      "post_mutation_expected": "[5, 3, 4, 5, 6, 7]",
+      "original_llm_answer": "[]",
+      "post_mutation_llm_answer": "[5, 3, 4, 5, 6]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_755",
+      "case_index": 1,
+      "input": "[[1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1]]",
+      "pre_mutation_expected": "2",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "2",
+      "post_mutation_llm_answer": "0",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_755",
+      "case_index": 2,
+      "input": "[[1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1]]",
+      "pre_mutation_expected": "2",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "2",
+      "post_mutation_llm_answer": "0",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_755",
+      "case_index": 3,
+      "input": "[[1, 1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1]]",
+      "pre_mutation_expected": "2",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "2",
+      "post_mutation_llm_answer": "0",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_755",
+      "case_index": 6,
+      "input": "[[1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1]]",
+      "pre_mutation_expected": "2",
+      "post_mutation_expected": "1",
+      "original_llm_answer": "2",
+      "post_mutation_llm_answer": "0",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 1,
+      "input": "[(15, 12, 20, 29, 9, 4, 18, 37, 22, 28, 9, 11, 25), 13]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 2,
+      "input": "[(9, 30, 15, 20, 29, 11, 4, 19, 37, 22, 28, 11, 25), 13]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 3,
+      "input": "[(15, 12, 20, 30, 8, 20, 19, 37, 22, 28, 11, 37, 8), 13]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 4,
+      "input": "[(15, 12, 14, 30, 8, 4, 19, 38, 22, 28, 11, 37), 12]",
+      "pre_mutation_expected": "1",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "1",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 5,
+      "input": "[(15, 20, 29, 12, 4, 18, 37, 22, 4, 11, 25, 22), 12]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 6,
+      "input": "[(9, 30, 15, 20, 29, 11, 4, 19, 37, 22, 28, 11, 24, 11), 14]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 7,
+      "input": "[(28, 12, 20, 29, 8, 4, 18, 37, 22, 28, 20, 25), 12]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 8,
+      "input": "[(37, 12, 12, 20, 29, 37, 4, 18, 37, 22, 28, 25), 12]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 9,
+      "input": "[(15, 12, 20, 30, 8, 4, 19, 30, 25, 28, 11, 25), 12]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_763",
+      "case_index": 10,
+      "input": "[(11, 12, 20, 30, 8, 4, 18, 30, 22, 28, 11, 25), 12]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "100000000000000000000",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "99999999999999999999",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_764",
+      "case_index": 10,
+      "input": "['hello 12 2 3world']",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "13",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "14",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_765",
+      "case_index": 8,
+      "input": "[1]",
+      "pre_mutation_expected": "3",
+      "post_mutation_expected": "5",
+      "original_llm_answer": "3",
+      "post_mutation_llm_answer": "6",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_767",
+      "case_index": 1,
+      "input": "[[-1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1], -2]",
+      "pre_mutation_expected": "0.0",
+      "post_mutation_expected": "-5.0",
+      "original_llm_answer": "0.0",
+      "post_mutation_llm_answer": "1.0",
+      "answer_type": "float",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_769",
+      "case_index": 1,
+      "input": "[[-1, -57, 10, 55, -6, -72], [-1, -57, 10, 55, -6, -72]]",
+      "pre_mutation_expected": "[]",
+      "post_mutation_expected": "[-57, 10, 55, -72, -6, -1]",
+      "original_llm_answer": "[]",
+      "post_mutation_llm_answer": "[-72, 10, -57, 55, -6, -1]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_769",
+      "case_index": 8,
+      "input": "[[6, 4, 25], [6, 4, 25]]",
+      "pre_mutation_expected": "[]",
+      "post_mutation_expected": "[4, 6, 25]",
+      "original_llm_answer": "[]",
+      "post_mutation_llm_answer": "[25, 4, 6]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_772",
+      "case_index": 9,
+      "input": "['aand', 9]",
+      "pre_mutation_expected": "aand",
+      "post_mutation_expected": "",
+      "original_llm_answer": "aand",
+      "post_mutation_llm_answer": "unctionof",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_777",
+      "case_index": 8,
+      "input": "[[-3, -6, 2, 3, 4, 5, 1, 2, 3, 4, 5]]",
+      "pre_mutation_expected": "6",
+      "post_mutation_expected": "20",
+      "original_llm_answer": "6",
+      "post_mutation_llm_answer": "10",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_778",
+      "case_index": 1,
+      "input": "[[2, 5, 3, 1, 1, 0, 4, 4, 2, 3, 3, 3]]",
+      "pre_mutation_expected": "[[2], [5], [3], [1, 1], [0], [4, 4], [2], [3, 3, 3]]",
+      "post_mutation_expected": "[[3, 3, 3], [2], [4, 4], [0], [1, 1], [3], [5], [2]]",
+      "original_llm_answer": "[[2], [5], [3], [1, 1], [0], [4, 4], [2], [3, 3, 3]]",
+      "post_mutation_llm_answer": "[[[3, 3, 3]], [[2]], [[4, 4]], [[0]], [[1, 1]], [[5]], [[2]], [[1, 1]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_778",
+      "case_index": 2,
+      "input": "[[3, 2, 5, 3, 3, 2, 1, 0, 4, 4, 4, 4, 5, 2, 3, 4, 3]]",
+      "pre_mutation_expected": "[[3], [2], [5], [3, 3], [2], [1], [0], [4, 4, 4, 4], [5], [2], [3], [4], [3]]",
+      "post_mutation_expected": "[[3], [4], [3], [2], [5], [4, 4, 4, 4], [0], [1], [2], [3, 3], [5], [2], [3]]",
+      "original_llm_answer": "[[3], [2], [5], [3, 3], [2], [1], [0], [4, 4, 4, 4], [5], [2], [3], [4], [3]]",
+      "post_mutation_llm_answer": "[[[3]], [[4]], [[3]], [[2]], [[5]], [[4, 4, 4, 4]], [[0]], [[1]], [[2, 2]], [[3, 3]], [[5]], [[3]], [[2]], [[3, 3]], [[5]], [[3, 3]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_778",
+      "case_index": 4,
+      "input": "[['a', 'b', 2, 3, 'b', 'd', 4, 'e', 'e', 0]]",
+      "pre_mutation_expected": "[['a'], ['b'], [2], [3], ['b'], ['d'], [4], ['e', 'e'], [0]]",
+      "post_mutation_expected": "[[0], ['e', 'e'], [4], ['d'], ['b'], [3], [2], ['b'], ['a']]",
+      "original_llm_answer": "[['a'], ['b'], [2], [3], ['b'], ['d'], [4], ['e', 'e'], [0]]",
+      "post_mutation_llm_answer": "[[[0]], [['e', 'e']], [[4]], [['d']], [['b']], [[3]], [[2]], [['b']], [['a']]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_778",
+      "case_index": 5,
+      "input": "[[0, 0, 1, 1, 1, 'a', 'a', 'b', 'b', 'bb', [1, 2, 3], [1, 2, 3], 'cabb', {'name': 'John', 'age': 25}, 'd', {'name': 'John', 'age': 25}, 'b']]",
+      "pre_mutation_expected": "[[0, 0], [1, 1, 1], ['a', 'a'], ['b', 'b'], ['bb'], [[1, 2, 3], [1, 2, 3]], ['cabb'], [{'name': 'John', 'age': 25}], ['d'], [{'name': 'John', 'age': 25}], ['b']]",
+      "post_mutation_expected": "[['b'], [{'name': 'John', 'age': 25}], ['d'], [{'name': 'John', 'age': 25}], ['cabb'], [[1, 2, 3], [1, 2, 3]], ['bb'], ['b', 'b'], ['a', 'a'], [1, 1, 1], [0, 0]]",
+      "original_llm_answer": "[[0, 0], [1, 1, 1], ['a', 'a'], ['b', 'b'], ['bb'], [[1, 2, 3], [1, 2, 3]], ['cabb'], [{'name': 'John', 'age': 25}], ['d'], [{'name': 'John', 'age': 25}], ['b']]",
+      "post_mutation_llm_answer": "[[['b']], [[{'name': 'John', 'age': 25}]], [['d']], [[{'name': 'John', 'age': 25}]], [['cabb']], [[[1, 2, 3], [1, 2, 3]]], [['bb']], [['b', 'b']], [['a', 'a']], [[1, 1, 1]], [[0, 0]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_778",
+      "case_index": 6,
+      "input": "[[0, 'a', 2.5, 'abb', True, 'b', 3, '', False, 4.5, 4, 'c', True, 5, True]]",
+      "pre_mutation_expected": "[[0], ['a'], [2.5], ['abb'], [True], ['b'], [3], [''], [False], [4.5], [4], ['c'], [True], [5], [True]]",
+      "post_mutation_expected": "[[True], [5], [True], ['c'], [4], [4.5], [False], [''], [3], ['b'], [True], ['abb'], [2.5], ['a'], [0]]",
+      "original_llm_answer": "[[0], ['a'], [2.5], ['abb'], [True], ['b'], [3], [''], [False], [4.5], [4], ['c'], [True], [5], [True]]",
+      "post_mutation_llm_answer": "[[[True]], [[5]], [[True]], [['c']], [[4]], [[4.5]], [[False]], [['']], [[3]], [['b']], [[True]], [['abb']], [[2.5]], [['a']], [[0]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_778",
+      "case_index": 7,
+      "input": "[['a', 1, 'b', 2, 'c', 3, 3, 'd', 4, 'e', 'e', False, 1.8236031742951366, True, 0, 'f', 1.5]]",
+      "pre_mutation_expected": "[['a'], [1], ['b'], [2], ['c'], [3, 3], ['d'], [4], ['e', 'e'], [False], [1.8236031742951366], [True], [0], ['f'], [1.5]]",
+      "post_mutation_expected": "[[1.5], ['f'], [0], [True], [1.8236031742951366], [False], ['e', 'e'], [4], ['d'], [3, 3], ['c'], [2], ['b'], [1], ['a']]",
+      "original_llm_answer": "[['a'], [1], ['b'], [2], ['c'], [3, 3], ['d'], [4], ['e', 'e'], [False], [1.8236031742951366], [True], [0], ['f'], [1.5]]",
+      "post_mutation_llm_answer": "[[[1.5]], [['f']], [[0]], [[True]], [[1.8236031742951366]], [[False]], [['e', 'e']], [[4]], [['d']], [[3, 3]], [[3]], [['c']], [[2]], [['b']], [[1]], [['a']]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_778",
+      "case_index": 8,
+      "input": "[['a', 4, 'b', 'ff', 2, 'ae', 3, 3, 'd', 4, 'e', False, True, 0, 'f', 1.5, 'b']]",
+      "pre_mutation_expected": "[['a'], [4], ['b'], ['ff'], [2], ['ae'], [3, 3], ['d'], [4], ['e'], [False], [True], [0], ['f'], [1.5], ['b']]",
+      "post_mutation_expected": "[['b'], [1.5], ['f'], [0], [True], [False], ['e'], [4], ['d'], [3, 3], ['ae'], [2], ['ff'], ['b'], [4], ['a']]",
+      "original_llm_answer": "[['a'], [4], ['b'], ['ff'], [2], ['ae'], [3, 3], ['d'], [4], ['e'], [False], [True], [0], ['f'], [1.5], ['b']]",
+      "post_mutation_llm_answer": "[[['b']], [[1.5]], [['f']], [[0]], [[True]], [[False]], [['e']], [[4]], [['d']], [[3, 3]], [[3]], [['ae']], [[2]], [['ff']], [[4]], [['a']]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_778",
+      "case_index": 9,
+      "input": "[['ae', 1, 3, 'a', 2, 'age', 3, 3, 'd', 4, 'bbe', 'e', 3]]",
+      "pre_mutation_expected": "[['ae'], [1], [3], ['a'], [2], ['age'], [3, 3], ['d'], [4], ['bbe'], ['e'], [3]]",
+      "post_mutation_expected": "[[3], ['e'], ['bbe'], [4], ['d'], [3, 3], ['age'], [2], ['a'], [3], [1], ['ae']]",
+      "original_llm_answer": "[['ae'], [1], [3], ['a'], [2], ['age'], [3, 3], ['d'], [4], ['bbe'], ['e'], [3]]",
+      "post_mutation_llm_answer": "[[[3]], [['e']], [['bbe']], [[4]], [['d']], [[3, 3]], [[3]], [['age']], [[2]], [['a']], [[3]], [[1]], [['ae']]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_778",
+      "case_index": 10,
+      "input": "[[10, 10, 15, 19, 18, 18, 17, 26, 26, 17, 18, 10]]",
+      "pre_mutation_expected": "[[10, 10], [15], [19], [18, 18], [17], [26, 26], [17], [18], [10]]",
+      "post_mutation_expected": "[[10], [18], [17], [26, 26], [17], [18, 18], [19], [15], [10, 10]]",
+      "original_llm_answer": "[[10, 10], [15], [19], [18, 18], [17], [26, 26], [17], [18], [10]]",
+      "post_mutation_llm_answer": "[[[10]], [[18]], [[17]], [[26, 26]], [[17]], [[18, 18]], [[19]], [[15]], [[10, 10]]]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_780",
+      "case_index": 8,
+      "input": "[[(1, 2, 3), (7, 8, 9), (4, 5, 6), (7, 8, 9)]]",
+      "pre_mutation_expected": "[(8, 10, 12), (5, 7, 9), (8, 10, 12), (11, 13, 15), (14, 16, 18), (11, 13, 15)]",
+      "post_mutation_expected": "[(12, 15, 18), (15, 18, 21), (12, 15, 18), (18, 21, 24)]",
+      "original_llm_answer": "[(8, 10, 12), (5, 7, 9), (8, 10, 12), (11, 13, 15), (14, 16, 18), (11, 13, 15)]",
+      "post_mutation_llm_answer": "[(12, 15, 18), (9, 12, 15), (15, 18, 21), (18, 21, 24)]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_784",
+      "case_index": 4,
+      "input": "[[-10, 0, 5, 10]]",
+      "pre_mutation_expected": "-50",
+      "post_mutation_expected": "100",
+      "original_llm_answer": "-50",
+      "post_mutation_llm_answer": "0",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_784",
+      "case_index": 9,
+      "input": "[[-10, -5, 0, 5, 10, -2, 0]]",
+      "pre_mutation_expected": "50",
+      "post_mutation_expected": "100",
+      "original_llm_answer": "50",
+      "post_mutation_llm_answer": "0",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_786",
+      "case_index": 8,
+      "input": "[[50.64327388212607, -72.16612625583227, -75.73998556144497, -75.73998556144497, 90.05081633927793, -90.20293226837086, -12.02758648076636, -35.964731488229475], 2]",
+      "pre_mutation_expected": "4",
+      "post_mutation_expected": "6",
+      "original_llm_answer": "4",
+      "post_mutation_llm_answer": "7",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_787",
+      "case_index": 2,
+      "input": "['gHZgHZZiSWgZHZgHZZiSWggHZmTgHZZiSWmggHZZiSWgmTLLLLHZZiSgHZZigHZZiSWmgHZgHZZiSWmgHZZiSWmTgHZZiSWmgHZZiSWgmTLiLLLgHZZiSWmgHZZiSWmZiSWmTLLSWmgHZZiSWgmTLLWmgHZZiSWgmTLLWmTLSWTLLZSWmTL']",
+      "pre_mutation_expected": "None",
+      "post_mutation_expected": "<re.Match object; span=(27, 37), match='gHZZiSWmgg'>",
+      "original_llm_answer": "None",
+      "post_mutation_llm_answer": "<re.Match object; span=(10, 20), match='gHZZiSWmgg'>",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_787",
+      "case_index": 4,
+      "input": "['gHZgHZZiSWmggHZZiSWmgHZZiSWgmTLWLHZZiSWmTLLZSWmTLgHZZiSWmTL']",
+      "pre_mutation_expected": "None",
+      "post_mutation_expected": "<re.Match object; span=(3, 13), match='gHZZiSWmgg'>",
+      "original_llm_answer": "None",
+      "post_mutation_llm_answer": "<re.Match object; span=(5, 15), match='gHZZiSWmgg'>",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_787",
+      "case_index": 9,
+      "input": "['gHZZiSWmggHZgHZgHZZiSWgZHZgHZZiSWggHZmTgHZZiSWmgHZZiSWgmTLLLLHZZiSgHZZiSWmgHZZiSWgmTLLgHZgHZZigHZZiSWmgHZ']",
+      "pre_mutation_expected": "None",
+      "post_mutation_expected": "<re.Match object; span=(0, 10), match='gHZZiSWmgg'>",
+      "original_llm_answer": "None",
+      "post_mutation_llm_answer": "<re.Match object; span=(10, 20), match='gHZZiSWmgg'>",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_791",
+      "case_index": 2,
+      "input": "((5, 7, 7, 6, ((4, 6), 3), (10, 2), ((8, (14, 10)), 12)),)",
+      "pre_mutation_expected": "(5, 7, 7, 6)",
+      "post_mutation_expected": "(((4, 6), 3), (10, 2), ((8, (14, 10)), 12))",
+      "original_llm_answer": "(5, 7, 7, 6)",
+      "post_mutation_llm_answer": "((4, 6), (10, 2), (8, (14, 10)))",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_791",
+      "case_index": 4,
+      "input": "((5, 7, 6, ((4, 6), 3), (10, 2), ((8, (14, 10)), 12)),)",
+      "pre_mutation_expected": "(5, 7, 6)",
+      "post_mutation_expected": "(((4, 6), 3), (10, 2), ((8, (14, 10)), 12))",
+      "original_llm_answer": "(5, 7, 6)",
+      "post_mutation_llm_answer": "((4, 6), (10, 2), (8, (14, 10)))",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_791",
+      "case_index": 5,
+      "input": "((2, 6, 8, (5, 7), 11, ((2, 9), (6, 3)), 4, 6),)",
+      "pre_mutation_expected": "(2, 6, 8, 11, 4, 6)",
+      "post_mutation_expected": "((5, 7), ((2, 9), (6, 3)))",
+      "original_llm_answer": "(2, 6, 8, 11, 4, 6)",
+      "post_mutation_llm_answer": "(5, 7, (2, 9), (6, 3))",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_791",
+      "case_index": 7,
+      "input": "((2, 6, 20, (5, 7), 11, ((2, 9), (19, 2, 9), (6, 3)), 4, (5, 7), (5, 7)),)",
+      "pre_mutation_expected": "(2, 6, 20, 11, 4)",
+      "post_mutation_expected": "((5, 7), ((2, 9), (19, 2, 9), (6, 3)), (5, 7), (5, 7))",
+      "original_llm_answer": "(2, 6, 20, 11, 4)",
+      "post_mutation_llm_answer": "(5, 7, (2, 9), (19, 2, 9), (6, 3), (5, 7), (5, 7))",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_791",
+      "case_index": 9,
+      "input": "((({'9': True, '1': True, '21': True, '32': False, '2': True, '-44': True}, 'BBeujUUS', -39.29936222397124, True, (81,), 'hTiPAxILj', -38.17279241711651, 15.51245915461675), ((), (), ()), ('KyvQyRlC', 'ggsHGhlSj', 'HjLKztlzPf', 'tdmtNqM', '', 'jGdwijsq', 'xbjajBrxs', 'oQjO', 'upscQa', 'iaZtoqM', 'HjLKztlzPf'), (), ('KyvQyRlC', 'ggsHGhlSj', 'HjLKztlzPf', 'tdmtNqM', '', 'jGdwijsq', 'xbjajBrxs', 'oQjO', 'upscQa', 'iaZtoqM'), ((), ())),)",
+      "pre_mutation_expected": "()",
+      "post_mutation_expected": "(({'9': True, '1': True, '21': True, '32': False, '2': True, '-44': True}, 'BBeujUUS', -39.29936222397124, True, (81,), 'hTiPAxILj', -38.17279241711651, 15.51245915461675), ((), (), ()), ('KyvQyRlC', 'ggsHGhlSj', 'HjLKztlzPf', 'tdmtNqM', '', 'jGdwijsq', 'xbjajBrxs', 'oQjO', 'upscQa', 'iaZtoqM', 'HjLKztlzPf'), (), ('KyvQyRlC', 'ggsHGhlSj', 'HjLKztlzPf', 'tdmtNqM', '', 'jGdwijsq', 'xbjajBrxs', 'oQjO', 'upscQa', 'iaZtoqM'), ((), ()))",
+      "original_llm_answer": "()",
+      "post_mutation_llm_answer": "({'9': True, '1': True, '21': True, '32': False, '2': True, '-44': True}, 'BBeujUUS', -39.29936222397124, True, (81,), 'hTiPAxILj', -38.17279241711651, 15.51245915461675), ((), (), ()), ('KyvQyRlC', 'ggsHGhlSj', 'HjLKztlzPf', 'tdmtNqM', '', 'jGdwijsq', 'xbjajBrxs', 'oQjO', 'upscQa', 'iaZtoqM', 'HjLKztlzPf'), (), ('KyvQyRlC', 'ggsHGhlSj', 'HjLKztlzPf', 'tdmtNqM', '', 'jGdwijsq', 'xbjajBrxs', 'oQjO', 'upscQa', 'iaZtoqM'), ((), ())",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_791",
+      "case_index": 10,
+      "input": "((14, 6, ((6, 3),), 10, 12, (5, 7), 11, ((2, 9), (6, 3)), 4),)",
+      "pre_mutation_expected": "(14, 6, 10, 12, 11, 4)",
+      "post_mutation_expected": "(((6, 3),), (5, 7), ((2, 9), (6, 3)))",
+      "original_llm_answer": "(14, 6, 10, 12, 11, 4)",
+      "post_mutation_llm_answer": "((6, 3), (5, 7), (2, 9), (6, 3))",
+      "answer_type": "tuple",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_796",
+      "case_index": 10,
+      "input": "[{'a': 1000002, 'b': 999998, 'c': 1000001, 'cc': 1000000}]",
+      "pre_mutation_expected": "4000001",
+      "post_mutation_expected": "4000002",
+      "original_llm_answer": "4000001",
+      "post_mutation_llm_answer": "4001001",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_797",
+      "case_index": 1,
+      "input": "[99998, 99998]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "-99999",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "2500000000",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_797",
+      "case_index": 2,
+      "input": "[2, 5]",
+      "pre_mutation_expected": "8",
+      "post_mutation_expected": "5",
+      "original_llm_answer": "8",
+      "post_mutation_llm_answer": "9",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_797",
+      "case_index": 3,
+      "input": "[10000, 10001]",
+      "pre_mutation_expected": "10001",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "10001",
+      "post_mutation_llm_answer": "25000000",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_797",
+      "case_index": 4,
+      "input": "[2, 2]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "-3",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_797",
+      "case_index": 5,
+      "input": "[0, 2]",
+      "pre_mutation_expected": "1",
+      "post_mutation_expected": "0",
+      "original_llm_answer": "1",
+      "post_mutation_llm_answer": "4",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_797",
+      "case_index": 6,
+      "input": "[0, 96]",
+      "pre_mutation_expected": "2304",
+      "post_mutation_expected": "2303",
+      "original_llm_answer": "2304",
+      "post_mutation_llm_answer": "2401",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_797",
+      "case_index": 10,
+      "input": "[0, 98]",
+      "pre_mutation_expected": "2401",
+      "post_mutation_expected": "2400",
+      "original_llm_answer": "2401",
+      "post_mutation_llm_answer": "2500",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_798",
+      "case_index": 9,
+      "input": "[[-5, 3, 7, 7, -2, -2, 7]]",
+      "pre_mutation_expected": "15",
+      "post_mutation_expected": "16",
+      "original_llm_answer": "15",
+      "post_mutation_llm_answer": "18",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_805",
+      "case_index": 7,
+      "input": "[[[10, 20, 30], [1, 2, 3, 4, 5], [100, 200, 300, 400]]]",
+      "pre_mutation_expected": "[100, 200, 300, 400]",
+      "post_mutation_expected": "[1, 2, 3, 4, 5]",
+      "original_llm_answer": "[100, 200, 300, 400]",
+      "post_mutation_llm_answer": "[10, 20, 30]",
+      "answer_type": "list",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_806",
+      "case_index": 3,
+      "input": "['AaaaaAAA']",
+      "pre_mutation_expected": "3",
+      "post_mutation_expected": "2",
+      "original_llm_answer": "3",
+      "post_mutation_llm_answer": "0",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_806",
+      "case_index": 10,
+      "input": "['AaaaaAAaaaaaAAaaaAAaAAaaAAA']",
+      "pre_mutation_expected": "3",
+      "post_mutation_expected": "2",
+      "original_llm_answer": "3",
+      "post_mutation_llm_answer": "1",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_86",
+      "case_index": 1,
+      "input": "[37]",
+      "pre_mutation_expected": "3997",
+      "post_mutation_expected": "4219",
+      "original_llm_answer": "3997",
+      "post_mutation_llm_answer": "4225",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_86",
+      "case_index": 5,
+      "input": "[31]",
+      "pre_mutation_expected": "2791",
+      "post_mutation_expected": "2977",
+      "original_llm_answer": "2791",
+      "post_mutation_llm_answer": "3079",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_86",
+      "case_index": 9,
+      "input": "[40]",
+      "pre_mutation_expected": "4681",
+      "post_mutation_expected": "4921",
+      "original_llm_answer": "4681",
+      "post_mutation_llm_answer": "4969",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_90",
+      "case_index": 5,
+      "input": "[['elephant', 'giraff', 'monkey', 'lion', 'tiger', 'mlengthonkey', 'giraffe', 'kangaroo', 'bear', 'panda', 'pada', 'hippopotamus']]",
+      "pre_mutation_expected": "12",
+      "post_mutation_expected": "4",
+      "original_llm_answer": "12",
+      "post_mutation_llm_answer": "3",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_94",
+      "case_index": 1,
+      "input": "[[('Benjamin', 100, 'LA', False, False, 100), ('Adam', 150, 'NYC', True), ('Benjamin', 100, 'LA', False, False), ('BenLAjamin', 100, 'LA', False, False), ('Benjamin', 100, 'LA', False, False, 100), ('David', 125, 'Miami', False), ('NYBenjamin', 100, 'LA', False, False), ('Benjamin', 100, 'LA'), ('Benjamin', 100, 'LA', False), ('Benjamin', 100, 'LA', False, False), ('Benjamin', 100, 'LA', False, False)]]",
+      "pre_mutation_expected": "Benjamin",
+      "post_mutation_expected": "Adam",
+      "original_llm_answer": "Benjamin",
+      "post_mutation_llm_answer": "Bob",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_94",
+      "case_index": 3,
+      "input": "[[('Adam', 150), ('Benjamin', 100), ('Charlie', 100), ('Benjamin', 100, 'Benjamin'), ('David', 125)]]",
+      "pre_mutation_expected": "Benjamin",
+      "post_mutation_expected": "Adam",
+      "original_llm_answer": "Benjamin",
+      "post_mutation_llm_answer": "David",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_94",
+      "case_index": 9,
+      "input": "[[('Alice', 100), ('Bob', 200, 'Bob'), ('Charlie', 300), ('Bob', 300, 300), ('Benjamin', 100)]]",
+      "pre_mutation_expected": "Alice",
+      "post_mutation_expected": "Charlie",
+      "original_llm_answer": "Alice",
+      "post_mutation_llm_answer": "Bob",
+      "answer_type": "text",
+      "error_category": "string_transformation_error"
+    },
+    {
+      "task_id": "task_95",
+      "case_index": 6,
+      "input": "[[[3, 2, 3], [3, 2, 3], [6, 7, 8, 5, 9], [3, 2, 3], [4, 4, 5], [6, 7, 8, 5, 9], [11, 12, 13], [11, 12, 13], [3, 2, 3]]]",
+      "pre_mutation_expected": "3",
+      "post_mutation_expected": "5",
+      "original_llm_answer": "3",
+      "post_mutation_llm_answer": "9",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_95",
+      "case_index": 7,
+      "input": "[[[1, 2, 3], [6, 7, 8, 5, 9], [4, 5], [6, 7, 8, 5, 9], [11, 12, 13], [1, 2, 3], [6, 7, 8, 5, 9]]]",
+      "pre_mutation_expected": "2",
+      "post_mutation_expected": "5",
+      "original_llm_answer": "2",
+      "post_mutation_llm_answer": "7",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_95",
+      "case_index": 8,
+      "input": "[[[], [], [], [True, False, 84.98850542252845, True], [], [], [], [], [], [], [False, False, False, True, True], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []]]",
+      "pre_mutation_expected": "0",
+      "post_mutation_expected": "5",
+      "original_llm_answer": "0",
+      "post_mutation_llm_answer": "28",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_95",
+      "case_index": 9,
+      "input": "[[[1, 2, 3], [6, 7, 8, 5, 9], [4, 5], [6, 7, 8, 5, 9], [11, 12, 13]]]",
+      "pre_mutation_expected": "2",
+      "post_mutation_expected": "5",
+      "original_llm_answer": "2",
+      "post_mutation_llm_answer": "6",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_97",
+      "case_index": 6,
+      "input": "[[[1, 2, 3, 4, 5, 6, 7, 8, 9], [1, 2, 3, 4, 5, 6, 7, 7, 8, 9], [1, 2, 3, 4, 5, 6, 7, 7, 8, 9], [1, 2, 3, 4, 5, 6, 7, 7, 8, 9]]]",
+      "pre_mutation_expected": "{1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 7, 8: 4, 9: 4}",
+      "post_mutation_expected": "{1: 3, 2: 3, 3: 3, 4: 3, 5: 3, 6: 3, 7: 6, 8: 3, 9: 3}",
+      "original_llm_answer": "{1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 7, 8: 4, 9: 4}",
+      "post_mutation_llm_answer": "{1: 3, 2: 3, 3: 3, 4: 3, 5: 3, 6: 3, 7: 5, 8: 3, 9: 3}",
+      "answer_type": "dict",
+      "error_category": "container_structure_or_order"
+    },
+    {
+      "task_id": "task_99",
+      "case_index": 1,
+      "input": "[25]",
+      "pre_mutation_expected": "11001",
+      "post_mutation_expected": "111001",
+      "original_llm_answer": "11001",
+      "post_mutation_llm_answer": "110011",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    },
+    {
+      "task_id": "task_99",
+      "case_index": 3,
+      "input": "[-72]",
+      "pre_mutation_expected": "-1001000",
+      "post_mutation_expected": "-11001000",
+      "original_llm_answer": "-1001000",
+      "post_mutation_llm_answer": "-101001",
+      "answer_type": "int",
+      "error_category": "numeric_miscalculation"
+    }
+  ]
+}

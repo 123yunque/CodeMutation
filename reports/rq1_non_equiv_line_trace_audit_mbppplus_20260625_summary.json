@@ -1,0 +1,33 @@
+{
+  "command": "05_rq1\\audit_non_equiv_line_trace.py --jsonl reports\\rq1_non_equiv_line_trace_audit_mbppplus_20260625.jsonl --summary reports\\rq1_non_equiv_line_trace_audit_mbppplus_20260625_summary.json --llm_output_dir sample_output_LLMs_non_equivalent_code\\gpt51_final",
+  "purpose": "Audit RQ1 non-equivalent mutations at input granularity. Each JSONL row stores one input case, local outputs, line traces, and pass/fail classification.",
+  "jsonl_report": "F:\\Pycharm2023\\CodeMutation\\code\\reports\\rq1_non_equiv_line_trace_audit_mbppplus_20260625.jsonl",
+  "expected_tasks": 378,
+  "expected_inputs_per_task": 10,
+  "expected_total_inputs": 3780,
+  "tasks_seen": 378,
+  "total_input_records": 3761,
+  "dataset_complete": false,
+  "tasks_with_wrong_input_count": {
+    "task_635": 4,
+    "task_734": 4,
+    "task_793": 3
+  },
+  "status_counts": {
+    "line_count_changed": 3703,
+    "original_runtime_error": 37,
+    "same_output": 14,
+    "trace_diff": 7
+  },
+  "pass_count": 0,
+  "pass_rate": 0.0,
+  "output_changed_count": 3070,
+  "same_line_trace_count": 0,
+  "same_relative_trace_count": 3412,
+  "llm_classification_counts": {
+    "other_error": 1513,
+    "original_leak": 215,
+    "mutated_correct": 2008,
+    "missing_llm_answer": 25
+  }
+}
