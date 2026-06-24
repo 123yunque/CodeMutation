@@ -6,6 +6,8 @@ output_*/
 output_mbppplus*/
 equivalent_transform_new/
 non_equivalent_transform_new/
+non_equivalent_transform_trace_preserving_batched/
+non_equivalent_transform_trace_preserving/
 sample_output_LLMs_*/
 original_local/
 equivalent_local/
@@ -21,3 +23,4 @@ config_loader.py
 
 AGENTS.md
 code.code-workspace
+
