@@ -6,7 +6,7 @@
   "expected_inputs_per_task": 10,
   "expected_total_inputs": 3780,
   "tasks_seen": 378,
-  "total_input_records": 3761,
+  "total_input_records": 3780,
   "dataset_complete": false,
   "tasks_with_wrong_input_count": {
     "task_635": 4,
@@ -17,7 +17,8 @@
     "line_count_changed": 3703,
     "original_runtime_error": 37,
     "same_output": 14,
-    "trace_diff": 7
+    "trace_diff": 7,
+    "missing_input_slot": 19
   },
   "pass_count": 0,
   "pass_rate": 0.0,
@@ -25,9 +26,9 @@
   "same_line_trace_count": 0,
   "same_relative_trace_count": 3412,
   "llm_classification_counts": {
-    "other_error": 1513,
+    "other_error": 1514,
     "original_leak": 215,
-    "mutated_correct": 2008,
+    "mutated_correct": 2007,
     "missing_llm_answer": 25
   }
 }
