@@ -135,8 +135,13 @@ def process_folder(
     if code_content is None:
         return f"[missing] {folder}/code.py"
 
+    try:
+        prompt = prompt_builder(code_content, task_dir=task_dir, folder=folder)
+    except TypeError:
+        prompt = prompt_builder(code_content)
+
     llm_output = call_llm(
-        prompt_builder(code_content),
+        prompt,
         folder,
         api_key,
         base_url,

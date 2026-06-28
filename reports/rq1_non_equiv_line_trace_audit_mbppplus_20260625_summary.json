@@ -14,21 +14,22 @@
     "task_793": 3
   },
   "status_counts": {
-    "line_count_changed": 3703,
-    "original_runtime_error": 37,
-    "same_output": 14,
-    "trace_diff": 7,
+    "pass": 2805,
+    "same_output": 664,
+    "statement_trace_diff": 290,
+    "original_runtime_error": 2,
     "missing_input_slot": 19
   },
-  "pass_count": 0,
-  "pass_rate": 0.0,
-  "output_changed_count": 3070,
+  "pass_count": 2805,
+  "pass_rate": 0.742063,
+  "output_changed_count": 3095,
   "same_line_trace_count": 0,
-  "same_relative_trace_count": 3412,
+  "same_relative_trace_count": 3409,
+  "same_statement_trace_count": 3409,
   "llm_classification_counts": {
-    "other_error": 1514,
-    "original_leak": 215,
-    "mutated_correct": 2007,
+    "other_error": 1507,
+    "original_leak": 216,
+    "mutated_correct": 2013,
     "missing_llm_answer": 25
   }
 }

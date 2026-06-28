@@ -18,9 +18,10 @@ non_equivalent_llm/
 .vscode/
 backups/
 _tmp_trace_preserving_*/
+_tmp_non_equiv_*/
 test.api.py
 config_loader.py
-
+reports/
 AGENTS.md
 code.code-workspace
 

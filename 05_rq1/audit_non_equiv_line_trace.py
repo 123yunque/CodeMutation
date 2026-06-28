@@ -112,6 +112,51 @@ def get_function_start_line(code_text, function_name):
     return None
 
 
+def build_statement_line_map(code_text, function_name):
+    tree = ast.parse(code_text)
+    function_node = None
+    for node in tree.body:
+        if isinstance(node, ast.FunctionDef) and node.name == function_name:
+            function_node = node
+            break
+    if function_node is None:
+        return {}
+
+    line_map = {}
+
+    def mark_statement(stmt, key):
+        end_line = getattr(stmt, "end_lineno", stmt.lineno)
+        for line in range(stmt.lineno, end_line + 1):
+            line_map[line] = key
+
+    def walk_statements(statements, prefix):
+        for index, stmt in enumerate(statements):
+            key = f"{prefix}.{index}:{type(stmt).__name__}"
+            mark_statement(stmt, key)
+
+            if isinstance(stmt, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+                continue
+            if isinstance(stmt, (ast.For, ast.AsyncFor, ast.While, ast.If, ast.With, ast.AsyncWith)):
+                walk_statements(stmt.body, f"{key}.body")
+                walk_statements(stmt.orelse, f"{key}.orelse")
+            elif isinstance(stmt, ast.Try):
+                walk_statements(stmt.body, f"{key}.body")
+                for handler_index, handler in enumerate(stmt.handlers):
+                    walk_statements(handler.body, f"{key}.handler{handler_index}")
+                walk_statements(stmt.orelse, f"{key}.orelse")
+                walk_statements(stmt.finalbody, f"{key}.finalbody")
+            elif hasattr(ast, "Match") and isinstance(stmt, ast.Match):
+                for case_index, case in enumerate(stmt.cases):
+                    walk_statements(case.body, f"{key}.case{case_index}")
+
+    walk_statements(function_node.body, "body")
+    return line_map
+
+
+def statement_trace(trace, line_map):
+    return [line_map.get(line, f"unmapped:{line}") for line in trace]
+
+
 def load_llm_lines(llm_output_dir, task_id):
     if not llm_output_dir:
         return None
@@ -185,6 +230,8 @@ def audit_task(task_dir, transform_root, max_events, llm_output_dir):
         mutated_func = choose_callable_function(mutated_code, parsed_inputs, preferred_name=preferred_name)
         original_start = get_function_start_line(original_code, original_func)
         mutated_start = get_function_start_line(mutated_code, mutated_func)
+        original_statement_map = build_statement_line_map(original_code, original_func)
+        mutated_statement_map = build_statement_line_map(mutated_code, mutated_func)
         original_ns = compile_namespace(original_code, original_path.resolve())
         mutated_ns = compile_namespace(mutated_code, mutated_path.resolve())
     except Exception as exc:
@@ -210,6 +257,9 @@ def audit_task(task_dir, transform_root, max_events, llm_output_dir):
         original_relative = relative_trace(original["trace"], original_start) if original_start else []
         mutated_relative = relative_trace(mutated["trace"], mutated_start) if mutated_start else []
         same_relative_trace = original_relative == mutated_relative
+        original_statement_trace = statement_trace(original["trace"], original_statement_map)
+        mutated_statement_trace = statement_trace(mutated["trace"], mutated_statement_map)
+        same_statement_trace = original_statement_trace == mutated_statement_trace
         output_changed = original["ok"] and mutated["ok"] and original["result_text"] != mutated["result_text"]
         function_name_same = original_func == mutated_func
 
@@ -219,12 +269,10 @@ def audit_task(task_dir, transform_root, max_events, llm_output_dir):
             status = "mutated_runtime_error"
         elif not function_name_same:
             status = "function_name_changed"
-        elif not line_count_same:
-            status = "line_count_changed"
         elif not output_changed:
             status = "same_output"
-        elif not same_line_trace:
-            status = "trace_diff"
+        elif not same_statement_trace:
+            status = "statement_trace_diff"
         else:
             status = "pass"
 
@@ -260,6 +308,9 @@ def audit_task(task_dir, transform_root, max_events, llm_output_dir):
                 "original_relative_trace": original_relative,
                 "mutated_relative_trace": mutated_relative,
                 "same_relative_trace": same_relative_trace,
+                "original_statement_trace": original_statement_trace,
+                "mutated_statement_trace": mutated_statement_trace,
+                "same_statement_trace": same_statement_trace,
                 "llm_answer": llm_answer,
                 "llm_classification": llm_classification,
             }
@@ -309,6 +360,7 @@ def summarize(records, task_input_counts, expected_tasks, expected_inputs_per_ta
         "output_changed_count": sum(1 for record in records if record.get("output_changed")),
         "same_line_trace_count": sum(1 for record in records if record.get("same_line_trace")),
         "same_relative_trace_count": sum(1 for record in records if record.get("same_relative_trace")),
+        "same_statement_trace_count": sum(1 for record in records if record.get("same_statement_trace")),
         "llm_classification_counts": llm_counts,
     }
 
@@ -321,9 +373,10 @@ def main():
     parser.add_argument("--summary", default=str(DEFAULT_SUMMARY), help="Output summary JSON path")
     parser.add_argument("--expected_tasks", type=int, default=378)
     parser.add_argument("--expected_inputs_per_task", type=int, default=10)
-    parser.add_argument("--max_events", type=int, default=10000)
+    parser.add_argument("--max_events", type=int, default=5000000)
     parser.add_argument("--limit", type=int)
     parser.add_argument("--task", help="Audit one task id, for example task_100")
+    parser.add_argument("--tasks", help="Comma-separated task ids, for example task_65,task_84")
     parser.add_argument("--llm_output_dir", help="Optional RQ1 LLM output directory for original-leak classification")
     parser.add_argument(
         "--no_emit_missing_input_slots",
@@ -339,7 +392,11 @@ def main():
     jsonl_path.parent.mkdir(parents=True, exist_ok=True)
     summary_path.parent.mkdir(parents=True, exist_ok=True)
 
-    if args.task:
+    selected_tasks = [item.strip() for item in args.tasks.split(",") if item.strip()] if args.tasks else None
+
+    if selected_tasks:
+        task_dirs = [task_root / task_id for task_id in selected_tasks]
+    elif args.task:
         task_dirs = [task_root / args.task]
     else:
         task_dirs = sorted((path for path in task_root.glob("task_*") if path.is_dir()), key=task_sort_key)
