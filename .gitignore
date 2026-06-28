@@ -6,6 +6,8 @@ output_*/
 output_mbppplus*/
 equivalent_transform_new/
 non_equivalent_transform_new/
+non_equivalent_transform_trace_preserving_batched/
+non_equivalent_transform_trace_preserving/
 sample_output_LLMs_*/
 original_local/
 equivalent_local/
@@ -15,8 +17,11 @@ equivalent_llm/
 non_equivalent_llm/
 .vscode/
 backups/
+_tmp_trace_preserving_*/
+_tmp_non_equiv_*/
 test.api.py
 config_loader.py
-
+reports/
 AGENTS.md
 code.code-workspace
+
